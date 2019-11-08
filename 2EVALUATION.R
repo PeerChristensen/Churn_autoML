@@ -4,6 +4,7 @@
 
 library(tidyverse)
 library(h2o)
+library(modelplotr)
 
 h2o.init()
 
@@ -11,9 +12,7 @@ model_path <- glue::glue("models2/{list.files('models2', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
-perf <- h2o.performance(mod, test_hf)
-
-h2o.confusionMatrix(perf,metrics = c("f2"))
+perf <- h2o.performance(mod,test_hf)
 
 metrics <- as.data.frame(h2o.metric(perf))
 head(metrics)
@@ -49,7 +48,6 @@ h2o.varimp(mod)
 h2o.varimp_plot(mod)
 
 
-
 # LIME
 Xtrain <- as.data.frame(train_hf)
 Xtest <- as.data.frame(test_hf)
@@ -70,3 +68,50 @@ lime::plot_features(explanation)
 
 explanation %>% 
   select(case, feature,feature_value,feature_desc,model_prediction)
+
+# modelplotr
+
+scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("train_data","test_data"),
+                                               models = list("m"),  
+                                               model_labels = list("GBM"), 
+                                               target_column="Churned30",
+                                               ntiles = 100)
+
+scores_and_ntiles <- scores_and_ntiles %>%
+  rename("ntl_0" = ntl_p0,"ntl_1" = ntl_p1)
+
+plot_input <- plotting_scope(prepared_input = scores_and_ntiles,scope="compare_datasets")
+
+plot_cumgains(data = plot_input, highlight_ntile = 20,
+              highlight_how = "text")
+
+#Cumulative lift
+plot_cumlift(data = plot_input, highlight_ntile = 20,
+             highlight_how = "text")
+
+#Response plot
+plot_response(data = plot_input)
+
+#Cumulative response plot
+plot_cumresponse(data = plot_input)
+
+plot_multiplot(data = plot_input)
+
+plot_roi(data = plot_input,
+         fixed_costs = 1000,
+         variable_costs_per_unit = 10,
+         profit_per_unit = 50,
+         highlight_ntile = "max_roi",
+         highlight_how = "text")
+
+plot_costsrevs(data = plot_input,fixed_costs = 1000,
+               variable_costs_per_unit = 10,
+               profit_per_unit = 50,
+               highlight_ntile = "max_roi",
+               highlight_how = "text")
+
+plot_profit(data = plot_input,fixed_costs = 1000,
+            variable_costs_per_unit = 10,
+            profit_per_unit = 50,
+            highlight_ntile = "max_profit",
+            highlight_how = "text")

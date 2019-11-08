@@ -8,11 +8,10 @@ library(caret)
 library(recipes)
 
 df <- read_csv("churn_data_training.csv") %>%
-  mutate(#Churned30 = factor(Churned30),
+  mutate(
          IsFree = factor(IsFree)) %>%
   mutate_if(is.character,factor) %>%
-  select(-Customer_Key,-`FirstOrderDate within 3 months`) %>%
-  select(Churned30,top10_vars[-8],DateStatus,TotalNetRevenue)
+  dplyr::select(-Customer_Key,-`FirstOrderDate within 3 months`)
 
 # New features
 
@@ -27,10 +26,30 @@ df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
 # behaviour?
 
 df <- df %>%
-  select(-DateStatus,-DateLatestSignup)
+  dplyr::select(-DateStatus,-DateLatestSignup)
 
 # feature selection
 
+# remove correlated variables
+
+cor_mat <- df %>%
+  select_if(is.numeric) %>%
+  drop_na() %>%
+  cor()
+
+cor_mat[upper.tri(cor_mat)] <- 0
+diag(cor_mat) <- 0
+
+cor_mat <- abs(cor_mat) > .95
+
+# row-wise removal, starting with col 1, then removing correlated variables
+whichKeep <- names(which(rowSums(lower.tri(cor_mat) * cor_mat) == 0))
+
+if (!is.null(whichKeep)){
+  df <- df %>%
+    select_if(function(x) !is.numeric(x)) %>%
+    cbind(df[,whichKeep])
+}
 
 ####################################
 # Partition
@@ -50,10 +69,11 @@ test_data <- test_data[index2, ]
 # Preprocess
 
 recipe_churn <- recipe(Churned30 ~ ., train_data) %>%
-  step_dummy(all_nominal(), -all_outcomes()) %>%
-  step_center(all_predictors(), -all_outcomes()) %>%
-  step_scale(all_predictors(), -all_outcomes()) %>%
-  step_nzv(all_predictors(), -all_outcomes()) %>%
+ # step_dummy(all_nominal(), -all_outcomes()) %>%
+  step_center(all_numeric(), -all_outcomes()) %>%
+  step_scale(all_numeric(), -all_outcomes()) %>%
+  step_nzv(all_numeric(), -all_outcomes()) %>%
+  step_YeoJohnson(all_numeric(), -all_outcomes()) %>%
   prep(data = train_data)
 
 train_data <- bake(recipe_churn, new_data = train_data) %>%
@@ -64,6 +84,10 @@ valid_data <- bake(recipe_churn, new_data = valid_data) %>%
 
 test_data <- bake(recipe_churn, new_data = test_data) %>%
   select(Churned30, everything())
+
+train_data$Churned30 <- factor(train_data$Churned30)
+valid_data$Churned30 <- factor(valid_data$Churned30)
+test_data$Churned30 <- factor(test_data$Churned30)
 
 # H2O frames
 
@@ -90,6 +114,7 @@ train_hf <- na.omit(train_hf)
 test_hf  <- na.omit(test_hf)
 valid_hf <- na.omit(valid_hf)
 
+
 ########################################## 
 # Train
 
@@ -98,7 +123,7 @@ aml <- h2o.automl(x = features,
                   training_frame = train_hf,
                   #validation_frame = valid_hf,
                   balance_classes = TRUE,
-                  max_runtime_secs = 60*5)
+                  max_runtime_secs = 60*2)
 
 
 aml@leaderboard
@@ -107,7 +132,7 @@ aml@leaderboard
 for (i in 1:nrow(aml@leaderboard)) {
   
   aml_model = h2o.getModel(aml@leaderboard[i, 1])
-  h2o.saveModel(object = aml_model, "models2")
+  h2o.saveModel(object = aml_model, "models4")
 }
 
 # rename file to identify the best model

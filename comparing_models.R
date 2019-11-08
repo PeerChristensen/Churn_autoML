@@ -1,22 +1,50 @@
-# precision - recall curves for best models
+# comparing models
+# "2019-11-06"
+# Peer Christensen
 
-prroc_curves <- function(H2OAutoML_object, best = F, test_data, n_models =5) {
+library(tidyverse)
+library(h2o)
+library(modelplotr)
+library(ggthemes)
+
+h2o.init()
+
+###########################################################
+# get list of models ordered according to the leaderboard
+
+files <- file.info(dir(path = "models4", full.names = TRUE), extra_cols = FALSE)
+files <- files[with(files, order(as.POSIXct(mtime))), ]
+files <- rownames(files)
+
+models <- list()
+
+for (i in files[1:5]) {
   
-  if (best == T) {
-    models <- as.vector(as.character(H2OAutoML_object@leader@model_id)) %>%
-      map(h2o.getModel)
-  }
-  else {
-    models <- as.vector(as.character(H2OAutoML_object@leaderboard$model_id))[1:n_models] %>%
-      map(h2o.getModel)
-  }
+  mod <- h2o.loadModel(i)
+  
+  models[i] = mod
+}
+
+###########################################################
+# PRROC Curves
+
+prroc_curves <- function(models, best = F, test_data, n_models =5) {
+  
+  # if (best == T) {
+  #   models <- as.vector(as.character(H2OAutoML_object@leader@model_id)) %>%
+  #     map(h2o.getModel)
+  # }
+  # else {
+  #   models <- as.vector(as.character(H2OAutoML_object@leaderboard$model_id))[1:n_models] %>%
+  #     map(h2o.getModel)
+  # }
   
   df <- tibble()
   
   for (i in 1:length(models)) {
     
-    perf <- h2o.performance(models[[i]], test_data)
-    recall  <- perf@metrics$thresholds_and_metric_scores$recall
+    perf       <- h2o.performance(models[[i]], test_data)
+    recall     <- perf@metrics$thresholds_and_metric_scores$recall
     precision  <- perf@metrics$thresholds_and_metric_scores$precision
     
     model_id  <- models[[i]]@model_id
@@ -45,35 +73,37 @@ prroc_curves <- function(H2OAutoML_object, best = F, test_data, n_models =5) {
   return(df)
 }
 
-prroc <- prroc_curves(aml,test_data = train_hf)
+prroc <- prroc_curves(models,test_data = test_hf,n_models = 5) 
 
 prroc %>%
+  filter(precision != 1) %>%
   ggplot(aes(recall,precision,colour = reorder(model_id,model_rank))) +
   geom_line(size = 1,alpha=.8) +
   coord_fixed() +
   xlab('Recall') +
   ylab('Precision') +
+  labs(colour = "Models") +
   ggtitle('PRROC curves',
           subtitle = "Comparison of the best models") +
   theme_light() +
   theme(plot.title    = element_text(size = 16),
         plot.subtitle = element_text(size = 12,face="italic",vjust=-1)) +
-  scale_colour_viridis_d("Models")
+  scale_colour_tableau()
 
+############################################################
+# Get scoring metrics + rank
 
-# metrics for each model + rank
-
-model_metrics_long <- function(H2OAutoML_object, best = F, test_data, n_models =5) {
+model_metrics_long <- function(models, best = F, test_data, n_models =5) {
   
-  if (best == T) {
-    models <- as.vector(as.character(H2OAutoML_object@leader@model_id)) %>%
-      map(h2o.getModel)
-  }
-  else {
-    models <- as.vector(as.character(H2OAutoML_object@leaderboard$model_id))[1:n_models] %>%
-      map(h2o.getModel)
-  }
-  
+  # if (best == T) {
+  #   models <- as.vector(as.character(H2OAutoML_object@leader@model_id)) %>%
+  #     map(h2o.getModel)
+  # }
+  # else {
+  #   models <- as.vector(as.character(H2OAutoML_object@leaderboard$model_id))[1:n_models] %>%
+  #     map(h2o.getModel)
+  # }
+  # 
   df <- tibble()
   
   for (i in 1:length(models)) {
@@ -84,7 +114,7 @@ model_metrics_long <- function(H2OAutoML_object, best = F, test_data, n_models =
       dplyr::select(-idx) %>%
          filter(metric %in% c("max f1","max f2","max absolute_mcc")) %>%
           mutate(metric = str_remove(metric, "max ")) %>%
-         add_row(metric="pr_auc",threshold="-",value=p@metrics$pr_auc) %>%
+         add_row(metric="pr_auc",threshold="-",value=perf@metrics$pr_auc) %>%
       mutate(model_id = models[[i]]@model_id,
              rank_auc = i)
     
@@ -106,17 +136,117 @@ model_metrics_long <- function(H2OAutoML_object, best = F, test_data, n_models =
   return(df)
 }
 
-all_metrics <- model_metrics_long(aml, test_data =test_hf)
+all_metrics <- model_metrics_long(models, test_data = test_hf)
 
 all_metrics %>%
   filter(metric == "f2")
 
+############################################################
+# confusion matrices
 
-# confusion matrix
-p@metrics$cm$table
+cm_tables <- list()
+for (i in 1:length(models)) {
+  
+  perf <- h2o.performance(models[[i]], test_hf)
+  cm <- h2o.confusionMatrix(perf,metrics = c("f2"))
+  
+  cm_tables[[i]] = cm
+}
 
+cm_tables
+
+############################################################
+# Model plots
 
 # lift curve
-a %>%
-  ggplot(aes(cumulative_data_fraction,cumulative_lift)) +
-  geom_line()
+# h2o.gainsLift(models[[1]]) %>%
+#   ggplot(aes(cumulative_data_fraction,cumulative_lift)) +
+#   geom_line()
+
+model_ids <- NULL
+
+for (i in 1:length(models)) {
+  
+  id1 <- str_split(models[[i]]@model_id, "_AutoML") %>%
+    map_chr(1) %>%
+    paste0(models[[i]]@algorithm,": ",.)
+
+  id2 <- str_split(models[[i]]@model_id,"(?<=_)(?=[_model])") %>%
+    map(2) %>%
+    paste("_",.) %>%
+    str_remove(" ")
+  
+  model_id <- paste0(id1,id2)
+  model_id <- str_remove(model_id,"_NULL")
+  
+  model_ids = c(model_ids,model_id) 
+  }
+
+m1 = models[[1]]
+m2 = models[[2]]
+m3 = models[[3]]
+m4 = models[[4]]
+m5 = models[[5]]
+
+
+scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("d"),
+                                               dataset_labels = list("test data"),
+                                               #models = list("m1","m2","m3","m4","m5"),
+                                               models = list("model_glm"),
+                                               #model_labels = model_ids,
+                                               target_column="Churned30",
+                                               ntiles = 100)
+
+scores_and_ntiles <- scores_and_ntiles %>%
+  rename("ntl_0" = ntl_p0,"ntl_1" = ntl_p1)
+
+plot_input <- plotting_scope(prepared_input = scores_and_ntiles,
+                             scope="compare_models")
+
+plot_cumgains(data = plot_input,
+              save_fig = T,
+              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumgains_compare1")
+
+#Cumulative lift
+plot_cumlift(data = plot_input,
+             save_fig = T,
+             save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumlift_compare1")
+
+#Response plot
+plot_response(data = plot_input,
+              save_fig = T,
+              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/response_compare1")
+
+#Cumulative response plot
+plot_cumresponse(data = plot_input,
+              save_fig = T,
+              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumresponse_compare1")
+
+plot_multiplot(data = plot_input, save_fig = T,
+               save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/multi_compare1")
+
+
+plot_roi(data = plot_input2,
+         fixed_costs = 1000,
+         variable_costs_per_unit = 10,
+         profit_per_unit = 50,
+         save_fig = T,
+         save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/roi_1",
+         highlight_ntile = "max_roi",
+         highlight_how = "text")
+
+plot_costsrevs(data = plot_input2,fixed_costs = 1000,
+               variable_costs_per_unit = 10,
+               profit_per_unit = 50,
+               save_fig = T,
+               save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cost_rev_1",
+               highlight_ntile = "max_roi",
+               highlight_how = "text")
+
+plot_profit(data = plot_input2,fixed_costs = 1000,
+            variable_costs_per_unit = 10,
+            profit_per_unit = 50,
+            save_fig = T,
+            save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/profit_1",
+            highlight_ntile = "max_profit",
+            highlight_how = "text")
