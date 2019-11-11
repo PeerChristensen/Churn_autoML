@@ -109,6 +109,18 @@ h2o.confusionMatrix(perf,metrics = "f2")
 h2o.confusionMatrix(perf,metrics = "absolute_mcc")
 h2o.confusionMatrix(perf,metrics = "accuracy")
 
+# in proportions
+cm_f2 <- h2o.confusionMatrix(perf,metrics = "f2") %>%
+  as_tibble()
+round(prop.table(cm_f2[1:2,1:2]),3)
+
+cm_mcc <- h2o.confusionMatrix(perf,metrics = "absolute_mcc") %>%
+  as_tibble()
+round(prop.table(cm_mcc[1:2,1:2]),3)
+
+cm_acc <- h2o.confusionMatrix(perf,metrics = "accuracy") %>%
+  as_tibble()
+round(prop.table(cm_acc[1:2,1:2]),3)
 
 ####################################################
 # GLOBAL EXPLANATIONS
