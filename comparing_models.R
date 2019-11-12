@@ -9,10 +9,14 @@ library(ggthemes)
 
 h2o.init()
 
+test_data <- read_csv("preprocessed_data/test_data.csv")
+
+test_hf <- as.h2o(test_data)
+
 ###########################################################
 # get list of models ordered according to the leaderboard
 
-files <- file.info(dir(path = "models4", full.names = TRUE), extra_cols = FALSE)
+files <- file.info(dir(path = "models2", full.names = TRUE), extra_cols = FALSE)
 files <- files[with(files, order(as.POSIXct(mtime))), ]
 files <- rownames(files)
 
@@ -76,7 +80,7 @@ prroc_curves <- function(models, best = F, test_data, n_models =5) {
 prroc <- prroc_curves(models,test_data = test_hf,n_models = 5) 
 
 prroc %>%
-  filter(precision != 1) %>%
+  filter(precision != 1, recall > ) %>%
   ggplot(aes(recall,precision,colour = reorder(model_id,model_rank))) +
   geom_line(size = 1,alpha=.8) +
   coord_fixed() +
@@ -139,7 +143,12 @@ model_metrics_long <- function(models, best = F, test_data, n_models =5) {
 all_metrics <- model_metrics_long(models, test_data = test_hf)
 
 all_metrics %>%
-  filter(metric == "f2")
+  filter(metric == "pr_auc") %>%
+  arrange(desc(value))
+
+all_metrics %>%
+  filter(metric == "f2") %>%
+  arrange(desc(value))
 
 ############################################################
 # confusion matrices
@@ -189,11 +198,11 @@ m4 = models[[4]]
 m5 = models[[5]]
 
 
-scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("d"),
+scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("test_data"),
                                                dataset_labels = list("test data"),
-                                               #models = list("m1","m2","m3","m4","m5"),
-                                               models = list("model_glm"),
-                                               #model_labels = model_ids,
+                                               models = list("m1","m2","m3","m4","m5"),
+                                               #models = list("model_glm"),
+                                               model_labels = model_ids,
                                                target_column="Churned30",
                                                ntiles = 100)
 
@@ -225,28 +234,30 @@ plot_cumresponse(data = plot_input,
 plot_multiplot(data = plot_input, save_fig = T,
                save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/multi_compare1")
 
+# !! Financial plots do not support model comparison
 
-plot_roi(data = plot_input2,
-         fixed_costs = 1000,
-         variable_costs_per_unit = 10,
-         profit_per_unit = 50,
-         save_fig = T,
-         save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/roi_1",
-         highlight_ntile = "max_roi",
-         highlight_how = "text")
-
-plot_costsrevs(data = plot_input2,fixed_costs = 1000,
-               variable_costs_per_unit = 10,
-               profit_per_unit = 50,
-               save_fig = T,
-               save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cost_rev_1",
-               highlight_ntile = "max_roi",
-               highlight_how = "text")
-
-plot_profit(data = plot_input2,fixed_costs = 1000,
-            variable_costs_per_unit = 10,
-            profit_per_unit = 50,
-            save_fig = T,
-            save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/profit_1",
-            highlight_ntile = "max_profit",
-            highlight_how = "text")
+# # financial plots
+# plot_roi(data = plot_input,
+#          fixed_costs = 1000,
+#          variable_costs_per_unit = 10,
+#          profit_per_unit = 50,
+#          save_fig = T,
+#          save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/roi_1",
+#          highlight_ntile = "max_roi",
+#          highlight_how = "text")
+# 
+# plot_costsrevs(data = plot_input2,fixed_costs = 1000,
+#                variable_costs_per_unit = 10,
+#                profit_per_unit = 50,
+#                save_fig = T,
+#                save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cost_rev_1",
+#                highlight_ntile = "max_roi",
+#                highlight_how = "text")
+# 
+# plot_profit(data = plot_input2,fixed_costs = 1000,
+#             variable_costs_per_unit = 10,
+#             profit_per_unit = 50,
+#             save_fig = T,
+#             save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/profit_1",
+#             highlight_ntile = "max_profit",
+#             highlight_how = "text")
