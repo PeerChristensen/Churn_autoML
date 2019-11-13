@@ -62,7 +62,11 @@ num_vars <- df %>%
 
 df %>%
   select(Churned30,num_vars) %>%
-  select(Churned30,starts_with("S0"),DaysSinceLatestSignup) %>%
+  select(Churned30,DaysSinceLatestSignup,
+         DateLatestSignup_month,
+         DaysSinceFirstOrder,PersonalSavingsTotal,
+         PlusOrderCount,
+         TotalOrderCount) %>%
   gather(variable, value,-Churned30) %>%
   ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
   facet_wrap(~variable,scales="free",ncol=2) +
@@ -74,7 +78,31 @@ df %>%
         legend.title = element_text(size=18)) +
   scale_fill_manual(values=c(red,blue)) +
   scale_colour_manual(values=c(red,blue))
-  
+ggsave("figures/eda_numeric.png")
+
+# Churned30 ~ numeric - transformed
+
+df %>%
+  select(Churned30,num_vars) %>%
+  select(Churned30,DaysSinceLatestSignup,
+         DateLatestSignup_month,
+         DaysSinceFirstOrder,PersonalSavingsTotal,
+         PlusOrderCount,
+         TotalOrderCount) %>%
+  mutate_if(is.numeric, yeo.johnson,lambda=.9) %>%
+  gather(variable, value,-Churned30) %>%
+  ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
+  facet_wrap(~variable,scales="free",ncol=2) +
+  geom_density(alpha = 0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 0, hjust = 1),
+        legend.position = "top",
+        legend.text = element_text(size=18),
+        legend.title = element_text(size=18)) +
+  scale_fill_manual(values=c(red,blue)) +
+  scale_colour_manual(values=c(red,blue))
+ggsave("figures/eda_numeric_transformed.png")
+
 # Churned30 ~ categorical
 
 df %>%
@@ -92,6 +120,7 @@ df %>%
         legend.title = element_text(size=18)) +
   scale_fill_manual(values=c(red,blue)) +
   scale_colour_manual(values=c(red,blue))
+ggsave("figures/eda_categorical.png", height=10, width = 7)
 
 # Churned30 ~ categorical - proportions
 
@@ -113,5 +142,6 @@ df %>%
         legend.title = element_text(size=18)) +
   scale_fill_manual(values=c(red,blue)) +
   scale_colour_manual(values=c(red,blue))
+ggsave("figures/eda_categorical_proportions.png", height=10, width = 7)
 
          
