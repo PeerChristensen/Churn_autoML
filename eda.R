@@ -38,17 +38,20 @@ df_churn_corr <- df_binarized %>%
 # all variables
 df_churn_corr %>%
   plot_correlation_funnel()
+ggsave("figures/correlation_funnel_full.png",height=10, width = 7)
 
 # top variables
 df_churn_corr %>%
   top_n(50,feature) %>%
   plot_correlation_funnel()
+ggsave("figures/correlation_funnel_top.png",height=7, width = 7)
 
 # top correlation with churn
 df_churn_corr %>%
   arrange(desc(correlation)) %>%
   top_n(15) %>%
   plot_correlation_funnel()
+ggsave("figures/correlation_funnel_churn.png",height=7, width = 7)
 
 
 ####################################################
