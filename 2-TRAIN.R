@@ -1,4 +1,4 @@
-#  Train script 1
+#  Train script
 # "2019-11-05"
 # Peer Christensen
 
@@ -11,11 +11,18 @@ library(recipes)
 # Load train, valid and test data
 
 train_data <- read_csv("preprocessed_data/train_data.csv") %>%
-  select(-Customer_Key)
+  select(-Customer_Key) %>%
+  mutate_if(is.character,factor) %>%
+  mutate(IsFree = factor(IsFree))
 valid_data <- read_csv("preprocessed_data/valid_data.csv") %>%
-  select(-Customer_Key)
+  select(-Customer_Key) %>%
+  mutate_if(is.character,factor)  %>%
+  mutate(IsFree = factor(IsFree))
 test_data  <- read_csv("preprocessed_data/test_data.csv") %>%
-  select(-Customer_Key)
+  select(-Customer_Key) %>%
+  mutate_if(is.character,factor)  %>%
+  mutate(IsFree = factor(IsFree))
+  
 
 ####################################################
 # start H2O
@@ -51,7 +58,7 @@ aml <- h2o.automl(x = features,
                   training_frame = train_hf,
                   validation_frame = valid_hf,
                   balance_classes = TRUE,
-                  max_runtime_secs = 36*5)
+                  max_runtime_secs = 60*2)
 
 
 aml@leaderboard
@@ -60,9 +67,11 @@ aml@leaderboard
 for (i in 1:nrow(aml@leaderboard)) {
   
   aml_model = h2o.getModel(aml@leaderboard[i, 1])
-  h2o.saveModel(object = aml_model, "models4")
+  h2o.saveModel(object = aml_model, "models6")
 }
 
 # rename file to identify the best model
+aml@leader@model_id
+
 
 

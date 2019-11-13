@@ -16,7 +16,7 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models2/{list.files('models2', pattern = 'best')}")
+model_path <- glue::glue("models6/{list.files('models6', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
@@ -43,6 +43,7 @@ test_hf <- as.h2o(test_data)
 # CREATE PERFORMANCE OBJECT AND PLOT METRICS
 
 perf <- h2o.performance(mod,test_hf)
+perf
 
 metrics <- as.data.frame(h2o.metric(perf))
 head(metrics)
@@ -57,12 +58,13 @@ metrics %>%
   theme_minimal()
 
 # f2, tpr, tnr
-intersect_threshold <- metrics %>% filter(round(tpr,3) == round(tnr,3)) %>%
+intersect_threshold <- metrics %>% filter(round(tpr,2) == round(tnr,2)) %>%
   pull(threshold) %>%
   first()
 
-intersect_max <- metrics %>% filter(round(tpr,3) == round(tnr,3)) %>% 
-  pull(tpr)
+intersect_max <- metrics %>% filter(round(tpr,2) == round(tnr,2)) %>% 
+  pull(tpr) %>%
+  first()
   
 f2_threshold <- metrics %>% filter(f2 == max(f2)) %>% pull(threshold)
 

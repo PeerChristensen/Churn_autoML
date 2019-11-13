@@ -87,10 +87,11 @@ test_data  <- test_data %>% select(-Customer_Key)
 
 recipe_churn <- recipe(Churned30 ~ ., train_data) %>%
   # step_dummy(all_nominal(), -all_outcomes()) %>%
-  step_center(all_numeric(), -all_outcomes()) %>%
-  step_scale(all_numeric(), -all_outcomes()) %>%
   step_nzv(all_numeric(), -all_outcomes()) %>%
   step_YeoJohnson(all_numeric(), -all_outcomes()) %>%
+  step_corr(all_numeric(), -all_outcomes()) %>%
+  step_center(all_numeric(), -all_outcomes()) %>%
+  step_scale(all_numeric(), -all_outcomes()) %>%
   prep(data = train_data)
 
 train_data <- bake(recipe_churn, new_data = train_data) %>%
@@ -101,6 +102,9 @@ valid_data <- bake(recipe_churn, new_data = valid_data) %>%
 
 test_data <- bake(recipe_churn, new_data = test_data) %>%
   select(Churned30, everything())
+
+# save recipe
+saveRDS(recipe_churn,"recipe_preprocess.rds")
 
 # train_data$Churned30 <- factor(train_data$Churned30)
 # valid_data$Churned30 <- factor(valid_data$Churned30)
