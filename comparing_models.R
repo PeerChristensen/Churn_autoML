@@ -80,20 +80,19 @@ prroc_curves <- function(models, best = F, test_data, n_models =5) {
 prroc <- prroc_curves(models,test_data = test_hf,n_models = 5) 
 
 prroc %>%
-  filter(precision != 1, recall > ) %>%
+  filter(precision != 1, recall > 0.1) %>%
   ggplot(aes(recall,precision,colour = reorder(model_id,model_rank))) +
   geom_line(size = 1,alpha=.8) +
   coord_fixed() +
   xlab('Recall') +
   ylab('Precision') +
   labs(colour = "Models") +
-  ggtitle('PRROC curves',
-          subtitle = "Comparison of the best models") +
+  ggtitle('PR-ROC') +
   theme_light() +
   theme(plot.title    = element_text(size = 16),
         plot.subtitle = element_text(size = 12,face="italic",vjust=-1)) +
   scale_colour_tableau()
-
+ggsave("figures/prroc.png")
 ############################################################
 # Get scoring metrics + rank
 
@@ -212,29 +211,32 @@ scores_and_ntiles <- scores_and_ntiles %>%
 plot_input <- plotting_scope(prepared_input = scores_and_ntiles,
                              scope="compare_models")
 
+save_path <- "C:/Users/pech/Desktop/Projects/Churn_2.0/figures/"
+
+#Cumulative gains
 plot_cumgains(data = plot_input,
               save_fig = T,
-              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumgains_compare1")
+              save_fig_filename = paste0(save_path,"cumgains_compare"))
 
 #Cumulative lift
 plot_cumlift(data = plot_input,
              save_fig = T,
-             save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumlift_compare1")
+             save_fig_filename = paste0(save_path,"cumlift_compare"))
 
 #Response plot
 plot_response(data = plot_input,
               save_fig = T,
-              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/response_compare1")
+              save_fig_filename = paste0(save_path,"response_compare"))
 
 #Cumulative response plot
 plot_cumresponse(data = plot_input,
               save_fig = T,
-              save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/cumresponse_compare1")
+              save_fig_filename = paste0(save_path,"cumresponse_compare"))
 
 plot_multiplot(data = plot_input, save_fig = T,
-               save_fig_filename = "C:/Users/pech/Desktop/Projects/Churn_2.0/multi_compare1")
+               save_fig_filename = paste0(save_path,"multiplot_compare"))
 
-# !! Financial plots do not support model comparison
+# !! Financial plots do not support model comparison, see evaluation script
 
 # # financial plots
 # plot_roi(data = plot_input,

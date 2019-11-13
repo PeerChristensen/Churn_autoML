@@ -16,7 +16,7 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models6/{list.files('models6', pattern = 'best')}")
+model_path <- glue::glue("models2/{list.files('models2', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
@@ -56,6 +56,7 @@ metrics %>%
   facet_wrap(~ metric, ncol = 4, scales = "free") +
   geom_line() +
   theme_minimal()
+ggsave("figures/all_metrics.png")
 
 # f2, tpr, tnr
 intersect_threshold <- metrics %>% filter(round(tpr,2) == round(tnr,2)) %>%
@@ -87,6 +88,7 @@ metrics %>%
            x = intersect_threshold, y = intersect_max +.05, size = 5) +
   annotate("text", label = paste0("max F2 = ",round(f2_threshold,2)),
            x = f2_threshold+.05, y=f2_max+.05,size = 5)
+ggsave("figures/max_f2_tpr_tnr.png")
 
 # mcc, f1, f2, precision, recall
 
@@ -129,6 +131,7 @@ round(prop.table(cm_acc[1:2,1:2]),3)
 
 h2o.varimp(mod)
 h2o.varimp_plot(mod)
+ggsave("figures/varImp.png")
 
 ####################################################
 # LOCAL EXPLANATIONS
@@ -149,7 +152,11 @@ explanation <- lime::explain(x = test_data[1:5, ],
                              kernel_width = 0.5)
 
 lime::plot_explanations(explanation)
+ggsave("figures/lime_explanations.png",width=10,height=7)
+
 lime::plot_features(explanation)
+ggsave("figures/lime_expl_features.png",width=10,height=7)
+
 
 case_numbers <- tibble(Customer_Key,case = as.character(1:length(Customer_Key)))
 
@@ -161,7 +168,7 @@ explanation %>%
 ####################################################
 # Performance plots
 
-scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("train_data","test_data"),
+scores_and_ntiles <- prepare_scores_and_ntiles(datasets=list("test_data"),
                                                models = list("mod"),  
                                                model_labels = list("GBM"), 
                                                target_column="Churned30",
@@ -171,6 +178,8 @@ scores_and_ntiles <- scores_and_ntiles %>%
   rename("ntl_0" = ntl_p0,"ntl_1" = ntl_p1)
 
 plot_input <- plotting_scope(prepared_input = scores_and_ntiles,scope="compare_datasets")
+
+save_path <- "C:/Users/pech/Desktop/Projects/Churn_2.0/figures/"
 
 #Cumulative gains
 plot_cumgains(data = plot_input, highlight_ntile = 20,
@@ -195,18 +204,24 @@ plot_roi(data = plot_input,
          variable_costs_per_unit = 10,
          profit_per_unit = 50,
          highlight_ntile = "max_roi",
-         highlight_how = "text")
+         highlight_how = "text",
+         save_fig = T,
+         save_fig_filename = paste0(save_path,"roi"))
 
 # Cost-revenue
 plot_costsrevs(data = plot_input,fixed_costs = 1000,
                variable_costs_per_unit = 10,
                profit_per_unit = 50,
                highlight_ntile = "max_roi",
-               highlight_how = "text")
+               highlight_how = "text",
+               save_fig = T,
+               save_fig_filename = paste0(save_path,"cost_revenue"))
 
 # Profit
 plot_profit(data = plot_input,fixed_costs = 1000,
             variable_costs_per_unit = 10,
             profit_per_unit = 50,
             highlight_ntile = "max_profit",
-            highlight_how = "text")
+            highlight_how = "text",
+            save_fig = T,
+            save_fig_filename = paste0(save_path,"profit"))
