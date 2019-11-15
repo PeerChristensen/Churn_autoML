@@ -16,7 +16,7 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models2/{list.files('models2', pattern = 'best')}")
+model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
@@ -129,9 +129,122 @@ round(prop.table(cm_acc[1:2,1:2]),3)
 ####################################################
 # GLOBAL EXPLANATIONS
 
+
+# if stackedensemble, we need to unpack models to get variable importance
+
+varImp_ggplot <- function(H2OAutoML_object, save_pngs = F, return_data = F, n_vars = 25) {
+    
+    if (mod@algorithm == "stackedensemble") {
+      print("Ensemble model: Plotting Model importance and Variable importances of model with highest importance")
+      metaLearner <- h2o.getModel(mod@model$metalearner$name)
+      
+      # plot model importance using ggplot2
+      metaLearner_df <- metaLearner@model$coefficients_table[-1,] %>%
+        arrange(desc(standardized_coefficients)) %>%
+        mutate(order = row_number()) %>%
+        filter(coefficients > 0.000)
+      
+      metaLearner_df$names1 <- str_split(metaLearner_df$names, "_AutoML") %>%
+        map_chr(1) %>%
+        paste0(metaLearner_df$order,": ",.)
+      
+      metaLearner_df$names2 <- str_split(metaLearner_df$names,"(?<=_)(?=[_model])") %>%
+        map(2) %>%
+        paste("_",.) %>%
+        str_remove(" ")
+      
+      metaLearner_df$names <- paste0(metaLearner_df$names1,metaLearner_df$names2)
+      metaLearner_df$names <- str_remove(metaLearner_df$names,"_NULL")
+      
+      p1 <- metaLearner_df %>%
+        ggplot(aes(x=reorder(names,rev(order)),standardized_coefficients, fill = rev(order))) +
+        geom_col() +
+        coord_flip() +
+        labs(x= "Models", y = "Standard. coefficients") +
+        ggtitle("Model importance in ensemble") +
+        scale_fill_continuous_tableau() +
+        theme_minimal() +
+        theme(plot.title = element_text(size = 16),
+              axis.title = element_text(size = 12),
+              axis.text  = element_text(size = 12),
+              panel.grid.major.y = element_blank(),
+              panel.grid.minor.y = element_blank(),
+              legend.position = "none")
+      
+      print(p1)
+      
+      if (save_pngs == T) {
+        ggsave("figures/modelImp.png",height=8,width=8)
+      }
+      
+      # VarImp of most important model
+      modelImp <- h2o.varimp(metaLearner) # data frame
+      
+      highestImpName <- modelImp[1,1]
+      
+      model  <- h2o.getModel(as.character(highestImpName))
+      varImp <- h2o.varimp(model)
+    } else {
+      varImp <- h2o.varimp(model)
+    }
+    
+    if (model@algorithm == "glm") {
+      
+      p2 <- varImp %>%
+        drop_na() %>%
+        top_n(n_vars,variable) %>%
+        ggplot(aes(x=reorder(variable,relative_importance),relative_importance,fill=log(relative_importance))) +
+        geom_col() +
+        coord_flip() +
+        labs(x= "Variables", y = "Coefficients") +
+        ggtitle(paste("Variable importance for", model@algorithm, "model")) +
+        scale_fill_continuous_tableau() +
+        thene_minimal() +
+        theme(plot.title = element_text(size = 16),
+              axis.title = element_text(size = 12),
+              axis.text  = element_text(size = 12),
+              panel.grid.major.y = element_blank(),
+              panel.grid.minor.y = element_blank()) +
+        scale_fill_continuous_tableau()
+      
+    } else {
+      
+      p2 <- varImp %>%
+        drop_na() %>%
+        top_n(n_vars,scaled_importance) %>%
+        ggplot(aes(x=reorder(variable,scaled_importance ),scaled_importance, fill = log(scaled_importance))) + #fill = factor(sign)
+        geom_col() +
+        coord_flip() +
+        labs(x= "Variables", y = "Coefficients") +
+        ggtitle(paste("Variable importance for", model@algorithm, "model")) +
+        scale_fill_continuous_tableau() +
+        theme_light() +
+        theme(plot.title = element_text(size = 16),
+              axis.title = element_text(size = 12),
+              axis.text  = element_text(size = 12),
+              panel.grid.major.y = element_blank(),
+              panel.grid.minor.y = element_blank(),
+              legend.position = "none") 
+    
+    }
+    print(p2)
+    
+    if (save_pngs == T) {
+      ggsave("figures/varImp_best_meta.png",height=8,width=8)
+    }
+    
+    if (return_data == T) {
+      return(list(modelImp,varImp))
+    }
+  }
+
+if (mod@algorithm == "stackedensmeble") {
+  
+  varImp_ggplot(mod,save_pngs = T)
+}
+
 h2o.varimp(mod)
-h2o.varimp_plot(mod)
-ggsave("figures/varImp.png")
+h2o.varimp_plot(mod, num_of_features = 15)
 
 ####################################################
 # LOCAL EXPLANATIONS
@@ -152,11 +265,10 @@ explanation <- lime::explain(x = test_data[1:5, ],
                              kernel_width = 0.5)
 
 lime::plot_explanations(explanation)
-ggsave("figures/lime_explanations.png",width=10,height=7)
+ggsave("figures/lime_explanations_all.png",width=10,height=7)
 
 lime::plot_features(explanation)
-ggsave("figures/lime_expl_features.png",width=10,height=7)
-
+ggsave("figures/lime_expl_features_all.png",width=10,height=7)
 
 case_numbers <- tibble(Customer_Key,case = as.character(1:length(Customer_Key)))
 
@@ -200,27 +312,27 @@ plot_multiplot(data = plot_input)
 
 # ROI
 plot_roi(data = plot_input,
-         fixed_costs = 1000,
-         variable_costs_per_unit = 10,
-         profit_per_unit = 50,
+         fixed_costs = 0,
+         variable_costs_per_unit = 0,
+         profit_per_unit = 40,
          highlight_ntile = "max_roi",
          highlight_how = "text",
          save_fig = T,
          save_fig_filename = paste0(save_path,"roi"))
 
 # Cost-revenue
-plot_costsrevs(data = plot_input,fixed_costs = 1000,
-               variable_costs_per_unit = 10,
-               profit_per_unit = 50,
+plot_costsrevs(data = plot_input,fixed_costs = 0,
+               variable_costs_per_unit = 0,
+               profit_per_unit = 40,
                highlight_ntile = "max_roi",
                highlight_how = "text",
                save_fig = T,
                save_fig_filename = paste0(save_path,"cost_revenue"))
 
 # Profit
-plot_profit(data = plot_input,fixed_costs = 1000,
-            variable_costs_per_unit = 10,
-            profit_per_unit = 50,
+plot_profit(data = plot_input,fixed_costs = 0,
+            variable_costs_per_unit = 0,
+            profit_per_unit = 40,
             highlight_ntile = "max_profit",
             highlight_how = "text",
             save_fig = T,

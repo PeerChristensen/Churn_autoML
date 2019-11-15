@@ -44,7 +44,7 @@ new_hf <- as.h2o(new_data)
 ############################################
 # LOAD MODEL
 
-model_path <- glue::glue("models2/{list.files('models2', pattern = 'best')}")
+model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
@@ -58,15 +58,22 @@ table(predictions$predict)
 prop.table(table(predictions$predict))
 
 new_predictions <- predictions %>%
-  mutate(predict = if_else(p1 >= 0.11,1,0))
+  mutate(predict = if_else(p1 >= 0.138,1,0))
 
 table(new_predictions$predict)
 prop.table(table(new_predictions$predict))
 
-new_predictions$Customer_Key <- Customer_Key
+new_predictions <- new_predictions %>%
+  mutate(Customer_Key = Customer_Key) %>%
+  select(Customer_Key,everything())
 
 #############################################
-# ADD EXPLANATIONS
+# SAVE PREDICTIONS
+
+write_csv(new_predictions,"churn_output.csv")
+
+#############################################
+# LOCAL EXPLANATIONS
 
 train_data <- read_csv("preprocessed_data/train_data.csv") %>%
   select(-Customer_Key) %>%
@@ -80,9 +87,15 @@ explainer <- lime::lime(x = train_data,
 
 new_data_Churn <- new_data %>%
   mutate(Churned30 = factor(new_predictions$predict)) %>%
-  select(Churned30,everything())
-
-new_data_Churn <- new_data_Churn[names(train_data)] # order columns
+  select(Churned30,everything()) %>%
+  select(names(train_data)) %>%    # order columns
+  mutate(Customer_Key = Customer_Key) %>% # for joining later
+  filter(Churned30 == "1")  # select only churners
+  
+Customer_Key_churn = new_data_Churn$Customer_Key
+  
+new_data_Churn <- new_data_Churn %>%
+  select(-Customer_Key)
 
 # run explain() on the explainer
 explanation <- lime::explain(x = new_data_Churn[1:5, ], 
@@ -93,17 +106,15 @@ explanation <- lime::explain(x = new_data_Churn[1:5, ],
 
 lime::plot_explanations(explanation)
 lime::plot_features(explanation)
+ggsave("figures/local_explanation_churners.png",height = 10, width = 11)
 
-case_numbers <- tibble(Customer_Key,case = as.character(1:length(Customer_Key)))
+case_numbers <- tibble(Customer_Key = Customer_Key_churn,case = as.character(1:length(Customer_Key_churn)))
 
-output_data <- explanation %>% 
-  dplyr::select(case, feature,feature_value,feature_desc,model_prediction) %>%
+churn_output_explanation <- explanation %>% 
+  dplyr::select(case, feature,feature_weight,feature_desc) %>%
   left_join(case_numbers) %>%
-  dplyr::select(Customer_Key,everything()) %>%
+  select(Customer_Key, everything()) %>%
   left_join(new_predictions)
 
-#############################################
-# SAVE PREDICTIONS
-
-write_csv(output_data,"churn_predicted.csv")
+write_csv(churn_output_explanation,"churn_output_explanation.csv")
 

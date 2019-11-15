@@ -16,13 +16,13 @@ test_hf <- as.h2o(test_data)
 ###########################################################
 # get list of models ordered according to the leaderboard
 
-files <- file.info(dir(path = "models2", full.names = TRUE), extra_cols = FALSE)
+files <- file.info(dir(path = "models7", full.names = TRUE), extra_cols = FALSE)
 files <- files[with(files, order(as.POSIXct(mtime))), ]
 files <- rownames(files)
 
 models <- list()
 
-for (i in files[1:5]) {
+for (i in files[1:10]) {
   
   mod <- h2o.loadModel(i)
   
