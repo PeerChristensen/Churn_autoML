@@ -8,7 +8,7 @@ library(correlationfunnel)
 red   <- "#c51924"
 blue  <- "#028ccc"
 
-df <- read_csv("churn_data_training.csv") %>%
+df <- read_csv2("new_churn_train.csv") %>%
   mutate(
     IsFree = factor(IsFree),Churned30 = factor(Churned30)) %>%
   mutate_if(is.character,factor) %>%

@@ -70,7 +70,7 @@ new_predictions <- new_predictions %>%
 #############################################
 # SAVE PREDICTIONS
 
-write_csv(new_predictions,"churn_output.csv")
+write_csv(new_predictions,"output_data/churn_output.csv")
 
 #############################################
 # LOCAL EXPLANATIONS
@@ -98,15 +98,16 @@ new_data_Churn <- new_data_Churn %>%
   select(-Customer_Key)
 
 # run explain() on the explainer
-explanation <- lime::explain(x = new_data_Churn[1:5, ], 
+explanation <- lime::explain(x = new_data_Churn[1:100,], 
                              explainer = explainer, 
                              labels = "p1",
                              n_features = 3,
+                             feature_select = "none",
                              kernel_width = 0.5)
 
-lime::plot_explanations(explanation)
-lime::plot_features(explanation)
-ggsave("figures/local_explanation_churners.png",height = 10, width = 11)
+#lime::plot_explanations(explanation)
+#lime::plot_features(explanation)
+#ggsave("figures/local_explanation_churners.png",height = 10, width = 11)
 
 case_numbers <- tibble(Customer_Key = Customer_Key_churn,case = as.character(1:length(Customer_Key_churn)))
 
