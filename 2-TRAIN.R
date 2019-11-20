@@ -2,6 +2,8 @@
 # "2019-11-05"
 # Peer Christensen
 
+Sys.setlocale("LC_ALL","English")
+
 library(tidyverse)
 library(h2o)
 library(caret)
