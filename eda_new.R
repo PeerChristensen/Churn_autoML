@@ -10,12 +10,32 @@ library(correlationfunnel)
 red   <- "#c51924"
 blue  <- "#028ccc"
 
-df <- read_csv2("new_churn_train.csv") %>%
-  mutate(
-    IsFree = factor(IsFree),Churned30 = factor(Churned30)) %>%
+df <- read_csv("new_churn_training4.csv") %>%
+  mutate(Perm_anyperm = factor(Perm_anyperm),
+       #  IsFree = factor(IsFree),
+         Churned30 = factor(Churned30)) %>%
   mutate_if(is.character,factor) %>%
-  dplyr::select(-`FirstOrderDate within 3 months`,
-                -Customer_Key)  
+  select(-Customer_Key,-IsFree) %>%
+  drop_na() %>%
+  filter(DaysSinceLatestSignup > 30)  %>%
+  dplyr::select(-`FirstOrderDate within 3 months`) 
+
+# add F_S ratio
+
+f_lit_mean <- df %>% 
+  select(starts_with("F0")) %>%
+  transmute(m = rowMeans(.)) %>%
+  pull(m)
+
+s_lit_mean <- df %>% 
+  select(starts_with("S0")) %>%
+  transmute(m = rowMeans(.))  %>%
+  pull(m)
+
+f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
+
+df$f_ratio <- f_ratio
+
 
 df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
 
@@ -27,6 +47,7 @@ df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
 
 df <- df %>%
   dplyr::select(-DateStatus,-DateLatestSignup)
+
 
 ####################################################
 # Correlation funnel
@@ -40,7 +61,7 @@ df_churn_corr <- df_binarized %>%
 # all variables
 df_churn_corr %>%
   plot_correlation_funnel()
-ggsave("figures/correlation_funnel_full.png",height=10, width = 7)
+ggsave("figures/new_correlation_funnel_full.png",height=10, width = 7)
 
 # top variables
 df_churn_corr %>%
@@ -116,7 +137,7 @@ df %>%
   mutate(value = ifelse(is.na(value),"na",value)) %>%
   count(Churned30, variable, value) %>%
   ggplot(aes(x = reorder(value,-n), y = n, fill = Churned30, color = Churned30)) +
-  facet_wrap(~ variable, ncol = 2, scales = "free") +
+  facet_wrap(~ variable, ncol = 4, scales = "free") +
   geom_bar(stat = "identity", alpha = 0.5) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
@@ -138,7 +159,7 @@ df %>%
   mutate(sum= sum(n)) %>%
   mutate(Proportion = n / sum * 100) %>%
   ggplot(aes(x = reorder(value,-n), y = Proportion, fill = Churned30, color = Churned30)) +
-  facet_wrap(~ variable, ncol = 2, scales = "free") +
+  facet_wrap(~ variable, ncol = 5, scales = "free") +
   geom_bar(stat = "identity", alpha = 0.5) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
@@ -149,4 +170,3 @@ df %>%
   scale_colour_manual(values=c(red,blue))
 ggsave("figures/eda_categorical_proportions.png", height=10, width = 7)
 
-         
