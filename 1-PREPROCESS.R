@@ -9,11 +9,18 @@ library(h2o)
 library(caret)
 library(recipes)
 
-df <- read_csv("churn_data_training.csv") %>%
-  mutate(
-    IsFree = factor(IsFree),Churned30 = factor(Churned30)) %>%
-  mutate_if(is.character,factor) %>%
-  dplyr::select(-`FirstOrderDate within 3 months`)
+# df <- read_csv("churn_data_training.csv") %>%
+df <- read_csv("new_churn_training5.csv") %>%
+  mutate(Perm_anyperm = factor(Perm_anyperm),
+         Churned30    = factor(Churned30),
+         Perm_recommendations = factor(Perm_recommendations),
+         Perm_newsletter      = factor(Perm_newsletter),
+         MatasUser = factor(MatasUser),
+         CoopUser  = factor(CoopUser)) %>%
+  mutate_if(is.character, factor) %>%
+  select(-IsFree) %>%
+  drop_na() %>%
+  filter(DaysSinceLatestSignup > 30)
 
 Customer_Key <- df$Customer_Key
 
@@ -33,6 +40,45 @@ df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
 
 df <- df %>%
   dplyr::select(-DateStatus,-DateLatestSignup)
+
+# add F_S ratio
+
+f_lit_mean <- df %>% 
+  select(starts_with("F0")) %>%
+  transmute(m = rowMeans(.)) %>%
+  pull(m)
+
+s_lit_mean <- df %>% 
+  select(starts_with("S0")) %>%
+  transmute(m = rowMeans(.))  %>%
+  pull(m)
+
+f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
+
+#PCA
+s_lit_vars <- df %>% 
+  select(starts_with("S0")) %>%
+           names()
+
+f_lit_vars <- df %>% 
+  select(starts_with("F0")) %>%
+  names()
+
+pca_s <- prcomp(df[s_lit_vars], scale = FALSE) 
+pca_f <- prcomp(df[f_lit_vars], scale = FALSE)
+
+df <- df %>%
+  mutate(
+    pc_s1 = pca_s$x[,1],
+    pc_s2 = pca_s$x[,2],
+    pc_f1 = pca_f$x[,1],
+    pc_f2 = pca_f$x[,2]
+  )
+
+#remove original f-s variables
+
+df <- df %>%
+  select(-f_lit_vars,-s_lit_vars)
 
 ##################################################
 # FEATURE SELECTION
@@ -121,9 +167,13 @@ valid_data$Customer_Key <- Customer_Key_valid
 test_data$Customer_Key <- Customer_Key_test
 
 
-write_csv(train_data,"preprocessed_data/train_data.csv")
-write_csv(valid_data,"preprocessed_data/valid_data.csv")
-write_csv(test_data,"preprocessed_data/test_data.csv")
+write_csv(train_data,"preprocessed_data/train_data_new.csv")
+write_csv(valid_data,"preprocessed_data/valid_data_new.csv")
+write_csv(test_data,"preprocessed_data/test_data_new.csv")
+
+#write_csv(train_data,"preprocessed_data/train_data.csv")
+#write_csv(valid_data,"preprocessed_data/valid_data.csv")
+#write_csv(test_data,"preprocessed_data/test_data.csv")
 
 
 

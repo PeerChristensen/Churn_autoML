@@ -1,8 +1,8 @@
--- !preview conn=DBI::dbConnect(RSQLite::SQLite())
 
 /****** Script for SelectTopNRows command from SSMS  ******/
 SELECT [t1].[Customer_Key]
 
+      ,[Churned30]
       ,[SubscriptionCount]
       ,[DaysSinceLatestSignup]
       ,[SubscriptionSignupSeason]
@@ -48,10 +48,8 @@ SELECT [t1].[Customer_Key]
       ,[S007]
       ,[S008]
 	  ,[StreamingCost]
-      ,[SubscriptionProductPlanType]
       ,[IsFree]
       ,[PremiumMembershipSource]
-      ,[FirstOrderDate within 3 months]
       ,[AppLogins]
       ,[RFM_cluster]
       ,[DateStatus]
@@ -71,9 +69,16 @@ SELECT [t1].[Customer_Key]
 	  ,[t2].[StreamingBenefit]
 	  ,[MembershipSignupSource]
 	  ,[DigitalOrPhysicalCustomer]
+	  ,[MatasUser]
+    ,[CoopUser]
 
   FROM [DataMartMisc].[machinelearning].Churn_CurrentDataset [t1]
   LEFT JOIN [EDW].[edw].[Customer] [t2] on [t2].[Customer_Key] = [t1].[Customer_Key]
   LEFT JOIN [DataMartMisc].[emp].[SubscribedCustomersPersisted] [t3] on [t3].[Email] = [t2].[email]
+  LEFT JOIN [EDW].[bi].[AfterburnData] [t4] on [t4].[Customer_Key] = [t1].[Customer_Key]
+  WHERE TotalNetRevenue IS NOT NULL 
+  AND PlusNetRevenue IS NOT NULL
+  AND F001 IS NOT NULL
+  AND BooksOnShelf IS NOT NULL
 
 

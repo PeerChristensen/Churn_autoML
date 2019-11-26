@@ -8,6 +8,7 @@ library(tidyverse)
 library(h2o)
 library(modelplotr)
 library(lime)
+library(data.tree)
 
 red   <- "#c51924"
 blue  <- "#028ccc"
@@ -18,17 +19,15 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
+model_path <- glue::glue("models10/{list.files('models10', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
-train_data  <- read_csv("preprocessed_data/train_data.csv") %>%
-  mutate(Churned30 = factor(Churned30),
-         IsFree = factor(IsFree))
+train_data  <- read_csv("preprocessed_data/train_data_new.csv") %>%
+  mutate(Churned30 = factor(Churned30))
 
-test_data  <- read_csv("preprocessed_data/test_data.csv")  %>%
-  mutate(Churned30 = factor(Churned30),
-         IsFree = factor(IsFree))  
+test_data  <- read_csv("preprocessed_data/test_data_new.csv")  %>%
+  mutate(Churned30 = factor(Churned30))  
 
 Customer_Key <- test_data$Customer_Key
 
@@ -278,6 +277,102 @@ explanation %>%
   dplyr::select(case, feature,feature_value,feature_desc,model_prediction) %>%
   left_join(case_numbers) %>%
   dplyr::select(Customer_Key,everything())
+
+####################################################
+# Decision Tree
+
+modH2oTree = h2o.getModelTree(model = mod, tree_number = 1)
+
+createDataTree <- function(h2oTree) {
+  h2oTreeRoot = h2oTree@root_node
+  dataTree = Node$new(h2oTreeRoot@split_feature)
+  dataTree$type = 'split'
+  addChildren(dataTree, h2oTreeRoot)
+  return(dataTree)
+}
+
+addChildren <- function(dtree, node) {
+  
+  if(class(node)[1] != 'H2OSplitNode') return(TRUE)
+  
+  feature = node@split_feature
+  id = node@id
+  na_direction = node@na_direction
+  
+  if(is.na(node@threshold)) {
+    leftEdgeLabel = printValues(node@left_levels, 
+                                na_direction=='LEFT', 4)
+    rightEdgeLabel = printValues(node@right_levels, 
+                                 na_direction=='RIGHT', 4)
+  }else {
+    leftEdgeLabel = paste("<", node@threshold, 
+                          ifelse(na_direction=='LEFT',',NA',''))
+    rightEdgeLabel = paste(">=", node@threshold, 
+                           ifelse(na_direction=='RIGHT',',NA',''))
+  }
+  
+  left_node = node@left_child
+  right_node = node@right_child
+  
+  if(class(left_node)[[1]] == 'H2OLeafNode')
+    leftLabel = paste("prediction:", left_node@prediction)
+  else
+    leftLabel = left_node@split_feature
+  
+  if(class(right_node)[[1]] == 'H2OLeafNode')
+    rightLabel = paste("prediction:", right_node@prediction)
+  else
+    rightLabel = right_node@split_feature
+  
+  if(leftLabel == rightLabel) {
+    leftLabel = paste(leftLabel, "(L)")
+    rightLabel = paste(rightLabel, "(R)")
+  }
+  
+  dtreeLeft = dtree$AddChild(leftLabel)
+  dtreeLeft$edgeLabel = leftEdgeLabel
+  dtreeLeft$type = ifelse(class(left_node)[1] == 'H2OSplitNode', 'split', 'leaf')
+  
+  dtreeRight = dtree$AddChild(rightLabel)
+  dtreeRight$edgeLabel = rightEdgeLabel
+  dtreeRight$type = ifelse(class(right_node)[1] == 'H2OSplitNode', 'split', 'leaf')
+  
+  addChildren(dtreeLeft, left_node)
+  addChildren(dtreeRight, right_node)
+  
+  return(FALSE)
+}
+
+printValues <- function(values, is_na_direction, n=4) {
+  l = length(values)
+  if(l == 0)
+    value_string = ifelse(is_na_direction, "NA", "")
+  else
+    value_string = paste0(paste0(values[1:min(n,l)], collapse = ', '),
+                          ifelse(l > n, ",...", ""),
+                          ifelse(is_na_direction, ", NA", ""))
+  return(value_string)
+}
+
+modDataTree = createDataTree(modH2oTree)
+
+GetEdgeLabel <- function(node) {return (node$edgeLabel)}
+GetNodeShape <- function(node) {switch(node$type, 
+                                       split = "diamond", leaf = "oval")}
+GetFontName <- function(node) {switch(node$type, 
+                                      split = 'Palatino-bold', 
+                                      leaf = 'Palatino')}
+SetEdgeStyle(modDataTree, fontname = 'Palatino-italic', 
+             label = GetEdgeLabel, labelfloat = TRUE,
+             fontsize = "26", fontcolor='royalblue4')
+SetNodeStyle(modDataTree, fontname = GetFontName, shape = GetNodeShape, 
+             fontsize = "26", fontcolor='royalblue4',
+             height="0.75", width="1")
+
+SetGraphStyle(modDataTree, rankdir = "LR", dpi=70.)
+
+plot(modDataTree, output = "graph")
+ggsave("figures/model_tree.png",width=12,height=9)
 
 ####################################################
 # Performance plots

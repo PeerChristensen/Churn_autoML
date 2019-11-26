@@ -15,10 +15,8 @@ h2o.init(nthreads = -1)
 
 new_data <- read_csv("churn_data_current.csv") %>%
   select(-HasLittPref) %>%
-  mutate(
-    IsFree = factor(IsFree)) %>%
   mutate_if(is.character,factor) %>%
-  dplyr::select(-`FirstOrderDate within 3 months`)
+  dplyr::select(-`FirstOrderDate within 3 months`,-IsFree)
 
 Customer_Key <- new_data$Customer_Key
 
@@ -35,6 +33,46 @@ new_data$DateLatestSignup_month <- lubridate::month(new_data$DateLatestSignup)
 
 new_data <- new_data %>%
   dplyr::select(-DateStatus,-DateLatestSignup)
+
+# add F_S ratio
+
+f_lit_mean <- df %>% 
+  select(starts_with("F0")) %>%
+  transmute(m = rowMeans(.)) %>%
+  pull(m)
+
+s_lit_mean <- df %>% 
+  select(starts_with("S0")) %>%
+  transmute(m = rowMeans(.))  %>%
+  pull(m)
+
+f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
+
+#PCA
+s_lit_vars <- df %>% 
+  select(starts_with("S0")) %>%
+  names()
+
+f_lit_vars <- df %>% 
+  select(starts_with("F0")) %>%
+  names()
+
+pca_s <- prcomp(df[s_lit_vars], scale = FALSE) 
+pca_f <- prcomp(df[f_lit_vars], scale = FALSE)
+
+df <- df %>%
+  mutate(
+    pc_s1 = pca_s$x[,1],
+    pc_s2 = pca_s$x[,2],
+    pc_f1 = pca_f$x[,1],
+    pc_f2 = pca_f$x[,2]
+  )
+
+#remove original f-s variables
+
+df <- df %>%
+  select(-f_lit_vars,-s_lit_vars)
+
 
 recipe_churn <- readRDS("recipe_preprocess.rds")
 
@@ -119,5 +157,5 @@ churn_output_explanation <- explanation %>%
   select(Customer_Key, everything()) %>%
   left_join(new_predictions)
 
-write_csv(churn_output_explanation,"churn_output_explanation.csv")
+write_csv(churn_output_explanation,"output_data/churn_output_explanation.csv")
 

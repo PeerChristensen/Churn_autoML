@@ -10,15 +10,18 @@ library(correlationfunnel)
 red   <- "#c51924"
 blue  <- "#028ccc"
 
-df <- read_csv("new_churn_training4.csv") %>%
+df <- read_csv("new_churn_training5.csv") %>%
   mutate(Perm_anyperm = factor(Perm_anyperm),
-       #  IsFree = factor(IsFree),
-         Churned30 = factor(Churned30)) %>%
+         IsFree = factor(IsFree),
+         Churned30 = factor(Churned30),
+       Perm_recommendations = factor(Perm_recommendations),
+       Perm_newsletter = factor(Perm_newsletter),
+       MatasUser = factor(MatasUser),
+       CoopUser = factor(CoopUser)) %>%
   mutate_if(is.character,factor) %>%
-  select(-Customer_Key,-IsFree) %>%
+  select(-Customer_Key, -IsFree) %>%
   drop_na() %>%
-  filter(DaysSinceLatestSignup > 30)  %>%
-  dplyr::select(-`FirstOrderDate within 3 months`) 
+  filter(DaysSinceLatestSignup > 30) 
 
 # add F_S ratio
 
@@ -33,9 +36,6 @@ s_lit_mean <- df %>%
   pull(m)
 
 f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
-
-df$f_ratio <- f_ratio
-
 
 df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
 

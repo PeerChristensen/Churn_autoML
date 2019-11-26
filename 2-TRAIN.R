@@ -12,11 +12,10 @@ library(recipes)
 ##################################################
 # Load train, valid and test data
 
-train_data <- read_csv("preprocessed_data/train_data.csv") %>%
+train_data <- read_csv("preprocessed_data/train_data_new.csv") %>%
   select(-Customer_Key) %>%
   mutate_if(is.character,factor) %>%
-  mutate(IsFree = factor(IsFree),
-         Churned30 = factor(Churned30))
+  mutate(Churned30 = factor(Churned30))
 # valid_data <- read_csv("preprocessed_data/valid_data_new1.csv") %>%
 #   select(-Customer_Key) %>%
 #   mutate_if(is.character,factor)  %>%
@@ -27,8 +26,7 @@ train_data <- read_csv("preprocessed_data/train_data.csv") %>%
 test_data  <- read_csv("preprocessed_data/test_data_new1.csv") %>%
   select(-Customer_Key) %>%
   mutate_if(is.character,factor)  %>%
-  mutate(IsFree = factor(IsFree),
-         Churned30 = factor(Churned30))
+  mutate(Churned30 = factor(Churned30))
   
 
 ####################################################
@@ -73,7 +71,7 @@ aml@leaderboard
 for (i in 1:nrow(aml@leaderboard)) {
   
   aml_model = h2o.getModel(aml@leaderboard[i, 1])
-  h2o.saveModel(object = aml_model, "models9")
+  h2o.saveModel(object = aml_model, "models10")
 }
 
 # rename file to identify the best model
