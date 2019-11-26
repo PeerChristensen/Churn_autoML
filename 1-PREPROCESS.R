@@ -85,27 +85,6 @@ df <- df %>%
 
 # see variable selection script
 
-# remove correlated variables
-
-cor_mat <- df %>%
-  select_if(is.numeric) %>%
-  drop_na() %>%
-  cor()
-
-cor_mat[upper.tri(cor_mat)] <- 0
-diag(cor_mat) <- 0
-
-cor_mat <- abs(cor_mat) > .95
-
-# row-wise removal, starting with col 1, then removing correlated variables
-whichKeep <- names(which(rowSums(lower.tri(cor_mat) * cor_mat) == 0))
-
-if (!is.null(whichKeep)){
-  df <- df %>%
-    select_if(function(x) !is.numeric(x)) %>%
-    cbind(df[,whichKeep])
-}
-
 ####################################
 # Partition
 
