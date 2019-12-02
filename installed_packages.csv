@@ -1,0 +1,1464 @@
+Package,LibPath,Version,Priority,Depends,Imports,LinkingTo,Suggests,Enhances,License,License_is_FOSS,License_restricts_use,OS_type,MD5sum,NeedsCompilation,Built
+abind,C:/Users/pech/Documents/R/win-library/3.6,1.4-5,NA,R (>= 1.5.0),"methods, utils",NA,NA,NA,LGPL (>= 2),NA,NA,NA,NA,no,3.6.0
+acepack,C:/Users/pech/Documents/R/win-library/3.6,1.4.1,NA,NA,NA,NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+AER,C:/Users/pech/Documents/R/win-library/3.6,1.2-8,NA,"R (>= 3.0.0), car (>= 2.0-19), lmtest, sandwich (>= 2.4-0),
+survival (>= 2.37-5), zoo","stats, Formula (>= 0.2-0)",NA,"boot, dynlm, effects, fGarch, forecast, foreign, ineq,
+KernSmooth, lattice, longmemo, MASS, mlogit, nlme, nnet, np,
+plm, pscl, quantreg, rgl, ROCR, rugarch, sampleSelection,
+scatterplot3d, strucchange, systemfit (>= 1.1-20), truncreg,
+tseries, urca, vars",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+agridat,C:/Users/pech/Documents/R/win-library/3.6,1.16,NA,NA,NA,NA,"AER, agricolae, betareg, broom, car, coin, corrgram, desplot,
+dplyr, effects, equivalence, emmeans, FrF2, gam, gge, ggplot2,
+gnm, gstat, HH, knitr, lattice, latticeExtra, lme4, lucid,
+mapproj, maps, MASS, MCMCglmm, metafor, mgcv, NADA, nlme,
+nullabor, ordinal, pbkrtest, pls, pscl, reshape2, rgdal,
+qicharts, qtl, sp, SpATS, survival, vcd, testthat",NA,CC BY-SA 4.0,NA,NA,NA,NA,no,3.6.1
+alr4,C:/Users/pech/Documents/R/win-library/3.6,1.0.6,NA,"R (>= 3.0), car, effects",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+anytime,C:/Users/pech/Documents/R/win-library/3.6,0.3.6,NA,R (>= 3.2.0),Rcpp (>= 0.12.9),"Rcpp (>= 0.12.9), BH","tinytest (>= 1.0.0), gettz",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+ape,C:/Users/pech/Documents/R/win-library/3.6,5.3,NA,R (>= 3.2.0),"nlme, lattice, graphics, methods, stats, tools, utils,
+parallel, Rcpp (>= 0.12.0)",Rcpp,"gee, expm, igraph",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+AppliedPredictiveModeling,C:/Users/pech/Documents/R/win-library/3.6,1.1-7,NA,R (>= 2.10),"CORElearn, MASS, plyr, reshape2, lattice, ellipse",NA,caret (>= 6.0-22),NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+arm,C:/Users/pech/Documents/R/win-library/3.6,1.10-1,NA,"R (>= 3.1.0), MASS, Matrix (>= 1.0), stats, lme4 (>= 1.0)","abind, coda, graphics, grDevices, methods, nlme, utils",NA,NA,NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+ash,C:/Users/pech/Documents/R/win-library/3.6,1.0-15,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+askpass,C:/Users/pech/Documents/R/win-library/3.6,1.1,NA,NA,sys (>= 2.1),NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+assertthat,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,NA,tools,NA,"testthat, covr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+attempt,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,NA,rlang,NA,"testthat, knitr, rmarkdown, curl",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+audio,C:/Users/pech/Documents/R/win-library/3.6,0.1-6,NA,R (>= 2.0.0),NA,NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.0
+autoMLviz,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.5.0),"ggplot2, h2o, dplyr, stringr, glue, purrr, tibble, tidyr",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+available,C:/Users/pech/Documents/R/win-library/3.6,1.0.4,NA,R (>= 3.3.0),"cli, clisymbols, crayon, tidytext, desc, glue, jsonlite,
+memoise, SnowballC, stringdist, tibble, udapi, yesno",NA,"usethis, BiocInstaller, BiocManager, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+aweek,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.0),NA,NA,"testthat, stats, roxygen2, knitr, covr, spelling",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+babynames,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 2.10),tibble,NA,testthat (>= 2.0.0),NA,CC0,NA,NA,NA,NA,no,3.6.1
+backports,C:/Users/pech/Documents/R/win-library/3.6,1.1.5,NA,R (>= 3.0.0),utils,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+base64enc,C:/Users/pech/Documents/R/win-library/3.6,0.1-3,NA,R (>= 2.9.0),NA,NA,NA,png,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.0
+base64url,C:/Users/pech/Documents/R/win-library/3.6,1.4,NA,NA,backports (>= 1.1.0),NA,"base64enc, checkmate, knitr, microbenchmark, openssl,
+rmarkdown, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+BayesFactor,C:/Users/pech/Documents/R/win-library/3.6,0.9.12-4.2,NA,"R (>= 3.2.0), coda, Matrix (>= 1.1-1)","pbapply, mvtnorm, stringr, utils, graphics, gtools,
+MatrixModels, Rcpp (>= 0.11.2), methods, hypergeo","Rcpp (>= 0.11.2), RcppEigen (>= 0.3.2.2.0)","doMC, foreach, testthat, knitr, markdown, arm, lme4, xtable,
+languageR",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+bayesplot,C:/Users/pech/Documents/R/win-library/3.6,1.7.0,NA,R (>= 3.1.0),"dplyr (>= 0.8.0), ggplot2 (>= 2.2.1), ggridges, glue,
+reshape2, rlang (>= 0.3.0), stats, tibble, tidyselect, utils",NA,"gridExtra (>= 2.2.1), hexbin, knitr (>= 1.16), loo (>=
+2.0.0), RColorBrewer, rmarkdown (>= 1.0.0), rstan (>= 2.17.1),
+rstanarm (>= 2.17.4), rstantools (>= 1.5.0), scales, shinystan
+(>= 2.3.0), testthat (>= 2.0.0), vdiffr",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+bayestestR,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 3.0),"insight (>= 0.6.0), methods, stats, utils",NA,"BayesFactor, bridgesampling, brms, broom, covr, dplyr,
+emmeans, GGally, ggplot2, ggridges, KernSmooth, knitr, MASS,
+mclust, lme4, logspline, performance, rmarkdown, rstan,
+rstanarm, see, stringr, testthat, tidyr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+BayesX,C:/Users/pech/Documents/R/win-library/3.6,0.3-1,NA,shapefiles,"sp, maptools, colorspace, coda, splines, methods",NA,"spdep, akima, gpclib, rgeos",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+BBmisc,C:/Users/pech/Documents/R/win-library/3.6,1.11,NA,NA,"utils, methods, stats, checkmate (>= 1.8.0)",NA,"testthat, microbenchmark, codetools",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+bdsmatrix,C:/Users/pech/Documents/R/win-library/3.6,1.3-3,NA,"methods, R (>= 2.0.0)",NA,NA,NA,NA,LGPL-2,NA,NA,NA,NA,yes,3.6.0
+beepr,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,NA,"stringr (>= 1.0.0), audio",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+beeswarm,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,NA,"stats, graphics, grDevices, utils",NA,NA,NA,Artistic-2.0,NA,NA,NA,NA,no,3.6.0
+betareg,C:/Users/pech/Documents/R/win-library/3.6,3.1-2,NA,R (>= 3.0.0),"graphics, grDevices, methods, stats, flexmix, Formula, lmtest,
+modeltools, sandwich",NA,"car, lattice, partykit, strucchange",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+BH,C:/Users/pech/Documents/R/win-library/3.6,1.69.0-1,NA,NA,NA,NA,NA,NA,BSL-1.0,NA,NA,NA,NA,no,3.6.0
+bibtex,C:/Users/pech/Documents/R/win-library/3.6,0.4.2,NA,R (>= 3.0.2),"stringr, utils",NA,testthat,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+bigmemory,C:/Users/pech/Documents/R/win-library/3.6,4.5.33,NA,"R (>= 3.2.0),","methods, Rcpp, utils, bigmemory.sri","BH, Rcpp","knitr, testthat","biganalytics, bigtabulate",LGPL-3 | Apache License 2.0,NA,NA,NA,NA,yes,3.6.1
+bigmemory.sri,C:/Users/pech/Documents/R/win-library/3.6,0.1.3,NA,NA,methods,NA,NA,"bigmemory, synchronicity",LGPL-3 | Apache License 2.0,NA,NA,NA,NA,no,3.6.0
+bigrquery,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,R (>= 3.2),"assertthat, bit64, curl, DBI, gargle (>= 0.3.0), glue (>=
+1.3.0), httr, jsonlite, methods, prettyunits, progress, Rcpp,
+rlang, tibble","progress, rapidjsonr, Rcpp","covr, DBItest, dbplyr, dplyr (>= 0.7.0), hms, readr, sodium,
+testthat (>= 2.1.0), withr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+bindr,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,NA,NA,NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+bindrcpp,C:/Users/pech/Documents/R/win-library/3.6,0.2.2,NA,NA,"bindr (>= 0.1.1), Rcpp (>= 0.12.16)","plogr, Rcpp",testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+BiocManager,C:/Users/pech/Documents/R/win-library/3.6,1.30.10,NA,NA,utils,NA,"BiocStyle, BiocVersion, remotes, testthat, withr, curl, knitr",NA,Artistic-2.0,NA,NA,NA,NA,no,3.6.1
+bit,C:/Users/pech/Documents/R/win-library/3.6,1.1-14,NA,R (>= 2.9.2),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+bit64,C:/Users/pech/Documents/R/win-library/3.6,0.9-7,NA,"R (>= 3.0.1), bit (>= 1.1-12), utils, methods, stats",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+bitops,C:/Users/pech/Documents/R/win-library/3.6,1.0-6,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+blme,C:/Users/pech/Documents/R/win-library/3.6,1.0-4,NA,"R (>= 3.0-0), lme4 (>= 1.0-6)","methods, stats, utils",NA,testthat (>= 0.9-0),NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+blob,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,NA,"methods, prettyunits, rlang, vctrs (>= 0.2.0)",NA,"covr, crayon, pillar (>= 1.2.1), testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+blogdown,C:/Users/pech/Documents/R/win-library/3.6,0.16,NA,NA,"rmarkdown (>= 1.11), bookdown (>= 0.9), knitr (>= 1.21),
+htmltools, yaml (>= 2.1.19), httpuv (>= 1.4.0), xfun (>= 0.5),
+servr (>= 0.13)",NA,"testit, shiny, miniUI, stringr, rstudioapi, tools, processx,
+later",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+bmp,C:/Users/pech/Documents/R/win-library/3.6,0.3,NA,NA,NA,NA,"pixmap, testthat",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+bookdown,C:/Users/pech/Documents/R/win-library/3.6,0.14,NA,NA,"htmltools (>= 0.3.6), knitr (>= 1.22), rmarkdown (>= 1.12),
+xfun (>= 0.6), tinytex (>= 0.12)",NA,"htmlwidgets, rstudioapi, miniUI, rsconnect (>= 0.4.3), servr
+(>= 0.13), shiny, testit (>= 0.9), tufte, webshot",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+boot,C:/Users/pech/Documents/R/win-library/3.6,1.3-23,recommended,"R (>= 3.0.0), graphics, stats",NA,NA,"MASS, survival",NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+BradleyTerry2,C:/Users/pech/Documents/R/win-library/3.6,1.1-0,NA,R (>= 2.10),"brglm, gtools, lme4 (>= 1.0), qvcalc, stats",NA,prefmod,gnm,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+brew,C:/Users/pech/Documents/R/win-library/3.6,1.0-6,NA,NA,NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,NA,3.6.0
+brglm,C:/Users/pech/Documents/R/win-library/3.6,0.6.2,NA,"R (>= 2.6.0), profileModel",NA,NA,MASS,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+bridgesampling,C:/Users/pech/Documents/R/win-library/3.6,0.7-2,NA,R (>= 3.0.0),"mvnfast, Matrix, Brobdingnag, stringr, coda, parallel, scales,
+utils, methods",NA,"testthat, Rcpp, RcppEigen, R2jags, rjags, runjags, knitr,
+rmarkdown, R.rsp, BayesFactor, rstan, rstanarm, nimble,
+MCMCpack",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+brms,C:/Users/pech/Documents/R/win-library/3.6,2.10.0,NA,"R (>= 3.5.0), Rcpp (>= 0.12.0), methods","rstan (>= 2.19.2), ggplot2 (>= 2.0.0), loo (>= 2.1.0), Matrix
+(>= 1.1.1), mgcv (>= 1.8-13), rstantools (>= 1.5.1), bayesplot
+(>= 1.5.0), shinystan (>= 2.4.0), bridgesampling (>= 0.3-0),
+glue (>= 1.3.0), matrixStats, nleqslv, nlme, coda, abind,
+future, stats, utils, parallel, grDevices, backports",NA,"testthat (>= 0.9.1), RWiener, mice, spdep, mnormt, lme4,
+MCMCglmm, splines2, ape, arm, statmod, digest, R.rsp, knitr,
+rmarkdown",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+Brobdingnag,C:/Users/pech/Documents/R/win-library/3.6,1.2-6,NA,"R (>= 2.13.0), methods",NA,NA,NA,NA,GPL,NA,NA,NA,NA,no,3.6.0
+broom,C:/Users/pech/Documents/R/win-library/3.6,0.5.2,NA,R (>= 3.1),"backports, dplyr, generics (>= 0.0.2), methods, nlme, purrr,
+reshape2, stringr, tibble, tidyr",NA,"AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, brms,
+btergm, car, caret, coda, covr, e1071, emmeans, ergm, gam (>=
+1.15), gamlss, gamlss.data, gamlss.dist, geepack, ggplot2,
+glmnet, gmm, Hmisc, irlba, joineRML, Kendall, knitr, ks,
+Lahman, lavaan, lfe, lme4, lmodel2, lmtest, lsmeans, maps,
+maptools, MASS, Matrix, mclust, mgcv, muhaz, multcomp, network,
+nnet, orcutt (>= 2.2), ordinal, plm, plyr, poLCA, psych,
+quantreg, rgeos, rmarkdown, robust, rsample, rstan, rstanarm,
+sp, speedglm, statnet.common, survey, survival, testthat,
+tseries, xergm, zoo",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+BTM,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,NA,"Rcpp, utils",Rcpp,udpipe,NA,Apache License 2.0,NA,NA,NA,NA,yes,3.6.1
+Cairo,C:/Users/pech/Documents/R/win-library/3.6,1.5-10,NA,R (>= 2.4.0),"grDevices, graphics",NA,png,FastRWeb,GPL-2,NA,NA,NA,NA,yes,3.6.0
+callr,C:/Users/pech/Documents/R/win-library/3.6,3.3.2,NA,NA,"processx (>= 3.4.0), R6, utils",NA,"cliapp, covr, crayon, fansi, knitr, pingr, ps, rmarkdown,
+rprojroot, spelling, testthat, tibble, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+car,C:/Users/pech/Documents/R/win-library/3.6,3.0-5,NA,"R (>= 3.5.0), carData (>= 3.0-0)","abind, MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg,
+grDevices, utils, stats, graphics, maptools, rio, lme4, nlme",NA,"alr4, boot, coxme, leaps, lmtest, Matrix, MatrixModels, rgl
+(>= 0.93.960), sandwich, SparseM, survival, survey",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+carData,C:/Users/pech/Documents/R/win-library/3.6,3.0-2,NA,R (>= 3.0),NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+caret,C:/Users/pech/Documents/R/win-library/3.6,6.0-84,NA,"R (>= 3.2.0), lattice (>= 0.20), ggplot2","foreach, methods, plyr, ModelMetrics (>= 1.1.0), nlme,
+reshape2, stats, stats4, utils, grDevices, recipes (>= 0.1.4),
+withr (>= 2.0.0)",NA,"BradleyTerry2, e1071, earth (>= 2.2-3), fastICA, gam (>=
+1.15), ipred, kernlab, knitr, klaR, MASS, ellipse, mda, mgcv,
+mlbench, MLmetrics, nnet, party (>= 0.9-99992), pls, pROC,
+proxy, randomForest, RANN, spls, subselect, pamr, superpc,
+Cubist, testthat (>= 0.9.1), rpart, dplyr",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+caTools,C:/Users/pech/Documents/R/win-library/3.6,1.17.1.2,NA,R (>= 2.2.0),bitops,NA,"MASS, rpart",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+cellranger,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 3.0.0),"rematch, tibble",NA,"covr, testthat (>= 1.0.0), knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+checkmate,C:/Users/pech/Documents/R/win-library/3.6,1.9.4,NA,R (>= 3.0.0),"backports (>= 1.1.0), utils",NA,"R6, bit, fastmatch, data.table (>= 1.9.8), devtools, ggplot2,
+knitr, magrittr, microbenchmark, rmarkdown, testthat (>=
+0.11.0), tibble",NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+chron,C:/Users/pech/Documents/R/win-library/3.6,2.3-54,NA,R (>= 2.12.0),"graphics, stats",NA,"scales, ggplot2",zoo,GPL-2,NA,NA,NA,NA,yes,3.6.1
+circlize,C:/Users/pech/Documents/R/win-library/3.6,0.4.8,NA,"R (>= 3.0.0), graphics","GlobalOptions (>= 0.1.0), shape, grDevices, utils, stats,
+colorspace, methods, grid",NA,"knitr, dendextend (>= 1.0.1), ComplexHeatmap (>= 1.99.0),
+gridBase, png",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+class,C:/Users/pech/Documents/R/win-library/3.6,7.3-15,recommended,"R (>= 3.0.0), stats, utils",MASS,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+classInt,C:/Users/pech/Documents/R/win-library/3.6,0.4-2,NA,R (>= 2.2),"grDevices, stats, graphics, e1071, class, KernSmooth",NA,"spData (>= 0.2.6.2), units",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+cli,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 2.10),"assertthat, crayon (>= 1.3.4), methods, utils",NA,"covr, fansi, mockery, testthat, webshot, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+clipr,C:/Users/pech/Documents/R/win-library/3.6,0.7.0,NA,NA,utils,NA,"covr, knitr, rmarkdown, rstudioapi (>= 0.5), testthat (>=
+2.0.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+clisymbols,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,NA,NA,NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+cluster,C:/Users/pech/Documents/R/win-library/3.6,2.1.0,recommended,R (>= 3.3.0),"graphics, grDevices, stats, utils",NA,"MASS, Matrix",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+cmprsk,C:/Users/pech/Documents/R/win-library/3.6,2.2-9,NA,"R (>= 3.0.0), survival",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+coda,C:/Users/pech/Documents/R/win-library/3.6,0.19-3,NA,R (>= 2.14.0),lattice,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+codetools,C:/Users/pech/Documents/R/win-library/3.6,0.2-16,recommended,R (>= 2.1),NA,NA,NA,NA,GPL,NA,NA,NA,NA,no,3.6.0
+coin,C:/Users/pech/Documents/R/win-library/3.6,1.3-1,NA,"R (>= 3.4.0), survival","methods, parallel, stats, stats4, utils, libcoin (>= 1.0-0),
+matrixStats (>= 0.54.0), modeltools (>= 0.2-9), mvtnorm (>=
+1.0-5), multcomp",libcoin (>= 1.0-0),"xtable, e1071, vcd, TH.data (>= 1.0-7)",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+colorspace,C:/Users/pech/Documents/R/win-library/3.6,1.4-1,NA,"R (>= 3.0.0), methods","graphics, grDevices, stats",NA,"datasets, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd,
+tcltk, shiny, shinyjs, ggplot2, dplyr, scales, grid, png, jpeg,
+knitr, rmarkdown, RColorBrewer, rcartocolor, scico, viridis,
+wesanderson",NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+colortools,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,NA,NA,NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.0
+colourpicker,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,R (>= 3.1.0),"ggplot2, htmltools, htmlwidgets (>= 0.7), jsonlite, miniUI (>=
+0.1.1), shiny (>= 0.11.1), shinyjs, utils",NA,"knitr (>= 1.7), rmarkdown, rstudioapi (>= 0.5)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+combinat,C:/Users/pech/Documents/R/win-library/3.6,0.0-8,NA,NA,NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,NA,3.6.0
+commonmark,C:/Users/pech/Documents/R/win-library/3.6,1.7,NA,NA,NA,NA,"curl, testthat, xml2",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+CompQuadForm,C:/Users/pech/Documents/R/win-library/3.6,1.4.3,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+config,C:/Users/pech/Documents/R/win-library/3.6,0.3,NA,NA,yaml (>= 2.1.13),NA,"testthat, knitr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+contfrac,C:/Users/pech/Documents/R/win-library/3.6,1.1-12,NA,NA,NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+CORElearn,C:/Users/pech/Documents/R/win-library/3.6,1.53.1,NA,NA,"cluster,rpart, stats,nnet",NA,"lattice,MASS,rpart.plot,ExplainPrediction",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+corpcor,C:/Users/pech/Documents/R/win-library/3.6,1.6.9,NA,R (>= 3.0.2),stats,NA,,NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.0
+correlationfunnel,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.1),"ggplot2, rlang, recipes, magrittr, plotly, tibble, dplyr,
+tidyr, stats, utils, ggrepel, stringr, forcats, purrr, cli,
+crayon, rstudioapi",NA,"scales, knitr, rmarkdown, covr, lubridate, testthat (>=
+2.1.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+corrgram,C:/Users/pech/Documents/R/win-library/3.6,1.13,NA,NA,"graphics, grDevices, seriation, stats",NA,"gridBase, knitr, Matrix, psych, rmarkdown, sfsmisc, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+corrplot,C:/Users/pech/Documents/R/win-library/3.6,0.84,NA,NA,NA,NA,"knitr, RColorBrewer, testthat",NA,GPL,NA,NA,NA,NA,no,3.6.1
+countrycode,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 2.10),NA,NA,testthat (>= 0.5),NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+covr,C:/Users/pech/Documents/R/win-library/3.6,3.3.2,NA,"R (>= 3.1.0), methods","digest, stats, utils, jsonlite, rex, httr, crayon, withr (>=
+1.0.2), yaml",NA,"R6, knitr, rmarkdown, htmltools, DT (>= 0.2), testthat,
+rlang, rstudioapi (>= 0.2), xml2 (>= 1.0.0), parallel, memoise,
+mockery",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+cowplot,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.5.0),"ggplot2 (> 2.2.1), grid, gtable, grDevices, methods, rlang,
+scales, utils",NA,"Cairo, covr, dplyr, forcats, gridGraphics (>= 0.4-0), knitr,
+lattice, magick, maps, PASWR, rmarkdown, testthat (>= 1.0.0),
+tidyr, vdiffr (>= 0.3.0), VennDiagram",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+CoxBoost,C:/Users/pech/Documents/R/win-library/3.6,1.4,NA,"R (>= 2.14.0), survival, Matrix, prodlim",NA,NA,"parallel, snowfall",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+coxme,C:/Users/pech/Documents/R/win-library/3.6,2.2-14,optional,"survival (>= 2.36.14), methods, bdsmatrix(>= 1.3), R(>= 2.10)","nlme, Matrix (>= 1.0)",bdsmatrix,"mvtnorm, kinship2",NA,LGPL-2,NA,NA,NA,NA,yes,3.6.1
+crayon,C:/Users/pech/Documents/R/win-library/3.6,1.3.4,NA,NA,"grDevices, methods, utils",NA,"mockery, rstudioapi, testthat, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+crosstalk,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,NA,"htmltools (>= 0.3.5), jsonlite, lazyeval, R6, shiny (>= 0.11),
+ggplot2",NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+crrstep,C:/Users/pech/Documents/R/win-library/3.6,2015-2.1,NA,cmprsk,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+cubature,C:/Users/pech/Documents/R/win-library/3.6,2.0.3,NA,NA,Rcpp,Rcpp,"testthat, knitr, mvtnorm, benchr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+Cubist,C:/Users/pech/Documents/R/win-library/3.6,0.2.2,NA,lattice,reshape2,NA,"mlbench, caret, knitr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+curl,C:/Users/pech/Documents/R/win-library/3.6,4.2,NA,R (>= 3.0.0),NA,NA,"askpass, spelling, testthat (>= 1.0.0), knitr, jsonlite,
+rmarkdown, magrittr, httpuv (>= 1.4.4), webutils",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+CVST,C:/Users/pech/Documents/R/win-library/3.6,0.2-2,NA,"kernlab,Matrix",NA,NA,NA,NA,GPL (>= 2.0),NA,NA,NA,NA,no,3.6.1
+cyclocomp,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,NA,"callr, crayon, desc, remotes, withr",NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+DAAG,C:/Users/pech/Documents/R/win-library/3.6,1.22.1,NA,"R (>= 2.10.0), lattice","latticeExtra, methods",NA,"leaps, oz, lme4, quantreg, knitr, boot, rpart, randomForest,
+MASS, survival",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+data.table,C:/Users/pech/Documents/R/win-library/3.6,1.12.6,NA,R (>= 3.1.0),methods,NA,"bit64, curl, R.utils, knitr, xts, nanotime, zoo, yaml",NA,MPL-2.0 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+data.tree,C:/Users/pech/Documents/R/win-library/3.6,0.7.11,NA,R (>= 3.0),"R6, stringr, methods",NA,"Formula, graphics, testthat, knitr, rmarkdown, ape, yaml,
+networkD3, jsonlite, treemap, party, partykit, doParallel,
+foreach, htmlwidgets, DiagrammeR (>= 1.0.0), mockery, rpart",igraph,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+DBI,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,"R (>= 3.0.0), methods",NA,NA,"blob, covr, hms, knitr, magrittr, rprojroot, rmarkdown,
+RSQLite (>= 1.1-2), testthat, xml2",NA,LGPL (>= 2),NA,NA,NA,NA,no,3.6.1
+dbplyr,C:/Users/pech/Documents/R/win-library/3.6,1.4.2,NA,R (>= 3.1),"assertthat (>= 0.2.0), DBI (>= 1.0.0), dplyr (>= 0.8.0), glue
+(>= 1.2.0), methods, purrr (>= 0.2.5), R6 (>= 2.2.2), rlang (>=
+0.2.0), tibble (>= 1.4.2), tidyselect (>= 0.2.4), utils",NA,"bit64, covr, knitr, Lahman, nycflights13, RMariaDB (>=
+1.0.2), rmarkdown, RMySQL (>= 0.10.11), RPostgreSQL (>= 0.4.1),
+RSQLite (>= 2.1.0), testthat (>= 2.0.0), withr (>= 2.1.2)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ddalpha,C:/Users/pech/Documents/R/win-library/3.6,1.3.9,NA,"R (>= 2.10), stats, utils, graphics, grDevices, MASS, class,
+robustbase, sfsmisc, geometry",Rcpp (>= 0.11.0),"BH, Rcpp",NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+deldir,C:/Users/pech/Documents/R/win-library/3.6,0.1-23,NA,R (>= 0.99),"graphics, grDevices",NA,polyclip,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+dendextend,C:/Users/pech/Documents/R/win-library/3.6,1.12.0,NA,R (>= 3.0.0),"utils, stats, datasets, magrittr (>= 1.0.1), ggplot2, viridis",NA,"knitr, rmarkdown, testthat, seriation, colorspace, ape,
+profdpm, microbenchmark, gplots, heatmaply, d3heatmap,
+dynamicTreeCut, pvclust, corrplot, DendSer, MASS, cluster, fpc,
+circlize (>= 0.2.5), covr","ggdendro, dendroextras, Hmisc, data.table, rpart",GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+DEoptimR,C:/Users/pech/Documents/R/win-library/3.6,1.0-8,NA,NA,stats,NA,NA,robustbase,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+desc,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,R (>= 3.1.0),"assertthat, utils, R6, crayon, rprojroot",NA,"covr, testthat, whoami, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+descr,C:/Users/pech/Documents/R/win-library/3.6,1.1.4,NA,NA,"xtable, utils, grDevices, graphics, stats",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+deSolve,C:/Users/pech/Documents/R/win-library/3.6,1.24,NA,R (>= 2.15.0),"methods, graphics, grDevices, stats",NA,"scatterplot3d, FME",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+devtools,C:/Users/pech/Documents/R/win-library/3.6,2.2.1,NA,"R (>= 3.0.2), usethis (>= 1.5.0)","callr, cli, covr (>= 3.2.0), crayon, desc, digest, DT,
+ellipsis (>= 0.3.0), glue, git2r (>= 0.23.0), httr (>= 0.4),
+jsonlite, memoise (>= 1.0.0), pkgbuild (>= 1.0.3), pkgload (>=
+1.0.2), rcmdcheck (>= 1.3.3), remotes (>= 2.1.0), rlang,
+roxygen2 (>= 6.1.1), rstudioapi (>= 0.7), rversions,
+sessioninfo (>= 1.1.1), stats, testthat (>= 2.1.1), tools,
+utils, withr",NA,"BiocManager, bitops, curl (>= 0.9), evaluate, foghorn (>=
+1.1.0), gmailr (> 0.7.0), knitr, lintr (>= 0.2.1), mockery,
+pingr, MASS, pkgdown, Rcpp (>= 0.10.0), rhub (>= 1.0.2),
+rmarkdown, spelling (>= 1.1), whisker",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+DiagrammeR,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,R (>= 3.2.0),"dplyr (>= 0.7.4), downloader (>= 0.4), glue (>= 1.2.0),
+htmltools (>= 0.3.6), htmlwidgets (>= 1.0), igraph (>= 1.1.2),
+influenceR (>= 0.1.0), magrittr (>= 1.5), purrr (>= 0.2.4),
+RColorBrewer (>= 1.1-2), readr (>= 1.1.1), rlang (>= 0.2.0),
+rstudioapi (>= 0.7), rgexf (>= 0.15.3), scales (>= 0.5.0),
+stringr (>= 1.3.0), tibble (>= 1.4.2), tidyr (>= 0.8.0),
+viridis (>= 0.5.0), visNetwork (>= 2.0.3)",NA,"covr, DiagrammeRsvg, rsvg, knitr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+dials,C:/Users/pech/Documents/R/win-library/3.6,0.0.3,NA,"scales, R (>= 2.10)","glue, purrr, tibble, rlang, utils, withr, DiceDesign, dplyr",NA,"testthat, knitr, rpart, covr, kernlab, xml2",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+DiceDesign,C:/Users/pech/Documents/R/win-library/3.6,1.8-1,NA,R (>= 2.10),NA,NA,"rgl, randtoolbox, lattice",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+dichromat,C:/Users/pech/Documents/R/win-library/3.6,2.0-0,NA,"R (>= 2.10), stats",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,NA,3.6.0
+diffobj,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,R (>= 3.1.0),"crayon (>= 1.3.2), tools, methods, utils, stats",NA,"knitr, rmarkdown, testthat",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+digest,C:/Users/pech/Documents/R/win-library/3.6,0.6.21,NA,R (>= 3.1.0),NA,NA,"tinytest, knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+dimRed,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,"R (>= 3.0.0), DRR","magrittr, methods",NA,"NMF, MASS, Matrix, RANN, RSpectra, Rtsne, cccd, coRanking,
+diffusionMap, energy, fastICA, ggplot2, graphics, igraph,
+keras, kernlab, knitr, lle, loe, optimx, pcaL1, pcaPP,
+reticulate, rgl, scales, scatterplot3d, stats, tensorflow,
+testthat, tidyr, tinytex, umap, vegan",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+diptest,C:/Users/pech/Documents/R/win-library/3.6,0.75-7,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+doParallel,C:/Users/pech/Documents/R/win-library/3.6,1.0.15,NA,"R (>= 2.14.0), foreach(>= 1.2.0), iterators(>= 1.0.0),
+parallel, utils",NA,NA,"caret, mlbench, rpart, RUnit",compiler,GPL-2,NA,NA,NA,NA,no,3.6.1
+dotCall64,C:/Users/pech/Documents/R/win-library/3.6,1.0-0,NA,R (>= 3.1),NA,NA,"microbenchmark, OpenMPController, RColorBrewer, roxygen2,
+spam, testthat,",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+downloader,C:/Users/pech/Documents/R/win-library/3.6,0.4,NA,NA,"utils, digest",NA,testthat,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+dplyr,C:/Users/pech/Documents/R/win-library/3.6,0.8.3,NA,R (>= 3.2.0),"assertthat (>= 0.2.0), glue (>= 1.3.0), magrittr (>= 1.5),
+methods, pkgconfig, R6, Rcpp (>= 1.0.1), rlang (>= 0.4.0),
+tibble (>= 2.0.0), tidyselect (>= 0.2.5), utils","BH, plogr (>= 0.2.0), Rcpp (>= 1.0.1)","bit64, callr, covr, crayon (>= 1.3.4), DBI, dbplyr, dtplyr,
+ggplot2, hms, knitr, Lahman, lubridate, MASS, mgcv,
+microbenchmark, nycflights13, rmarkdown, RMySQL, RPostgreSQL,
+RSQLite, testthat, withr, broom, purrr, readr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+drake,C:/Users/pech/Documents/R/win-library/3.6,7.7.0,NA,R (>= 3.3.0),"base64url, digest, igraph, methods, rlang (>= 0.2.0), storr
+(>= 1.1.0), txtq (>= 0.1.3), utils",NA,"abind, bindr, callr, cli (>= 1.1.0), clustermq (>= 0.8.8),
+crayon, curl (>= 2.7), data.table, datasets, disk.frame,
+downloader, fst, future, ggplot2, ggraph, grDevices, keras,
+knitr, lubridate, networkD3, parallel, prettycode, Rcpp,
+rmarkdown, rstudioapi, stats, styler, testthat (>= 2.1.0),
+tibble, tidyselect (>= 0.2.4), txtplot, usethis, visNetwork,
+webshot",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+DRR,C:/Users/pech/Documents/R/win-library/3.6,0.0.3,NA,"kernlab, CVST, Matrix","stats, methods",NA,"knitr, rmarkdown",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+DT,C:/Users/pech/Documents/R/win-library/3.6,0.9,NA,NA,"htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>=
+0.9.16), magrittr, crosstalk, promises",NA,"knitr (>= 1.8), rmarkdown, shiny (>= 1.1.0)",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+dtplyr,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.2),"crayon, data.table (>= 1.9.6), dplyr (>= 0.8.1), rlang,
+tibble, tidyselect",NA,"bench, covr, knitr, rmarkdown, testthat (>= 2.1.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+dygraphs,C:/Users/pech/Documents/R/win-library/3.6,1.1.1.6,NA,R (>= 3.0),"magrittr, htmlwidgets (>= 0.6), htmltools (>= 0.3.5), zoo (>=
+1.7-10), xts (>= 0.9-7)",NA,testthat,"rmarkdown (>= 0.3.3), shiny (>= 0.10.2.1)",MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+dynlm,C:/Users/pech/Documents/R/win-library/3.6,0.3-6,NA,"R (>= 2.10.0), zoo","stats, car (>= 2.0-0), lmtest",NA,"datasets, sandwich, strucchange, TSA",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+e1071,C:/Users/pech/Documents/R/win-library/3.6,1.7-3,NA,NA,"graphics, grDevices, class, stats, methods, utils",NA,"cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,
+Matrix, MASS, slam",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+earth,C:/Users/pech/Documents/R/win-library/3.6,5.1.2,NA,"R (>= 3.4.0), Formula (>= 1.2-3), plotmo (>= 3.5.4),
+TeachingDemos (>= 2.10)",NA,NA,"gam (>= 1.16), mgcv (>= 1.8-26), mda (>= 0.4-10), MASS (>=
+7.3-51)",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+effects,C:/Users/pech/Documents/R/win-library/3.6,4.1-2,NA,"R (>= 3.5.0), carData","lme4, nnet, lattice, grid, colorspace, graphics, grDevices,
+stats, survey, utils, estimability",NA,"pbkrtest (>= 0.4-4), nlme, MASS, poLCA, heplots, splines,
+ordinal, car, knitr, betareg, alr4",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+effsize,C:/Users/pech/Documents/R/win-library/3.6,0.7.6,NA,NA,NA,NA,testthat,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+egg,C:/Users/pech/Documents/R/win-library/3.6,0.4.5,NA,"gridExtra (>= 2.3), ggplot2","gtable, grid, grDevices, utils",NA,"knitr, png",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+elasticnet,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,"R (>= 2.10), lars",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+ellipse,C:/Users/pech/Documents/R/win-library/3.6,0.4.1,NA,"R (>= 2.0.0),graphics,stats",NA,NA,MASS,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+ellipsis,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.2),rlang (>= 0.3.0),NA,"covr, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+elliptic,C:/Users/pech/Documents/R/win-library/3.6,1.4-0,NA,R (>= 2.5.0),MASS,NA,"emulator, calibrator (>= 1.2-8)",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+emmeans,C:/Users/pech/Documents/R/win-library/3.6,1.4.1,NA,R (>= 3.2),"estimability (>= 1.3), graphics, methods, numDeriv, stats,
+utils, plyr, mvtnorm, xtable (>= 1.8-2)",NA,"bayesplot, biglm, brms, car, coda (>= 0.17), ggplot2,
+lattice, mediation, mgcv, multcomp, multcompView, nlme, ordinal
+(>= 2014.11-12), pbkrtest (>= 0.4-1), lme4, lmerTest (>=
+2.0.32), MASS, MuMIn, rsm, knitr, rmarkdown, scales, testthat","CARBayes, coxme, gee, geepack, MCMCglmm, MCMCpack, mice,
+nnet, pscl, rstanarm, sommer, survival",GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+emojifont,C:/Users/pech/Documents/R/win-library/3.6,0.5.2,NA,R (>= 3.4.0),"ggplot2, proto, showtext, sysfonts, utils",NA,"colorspace, knitr, prettydoc",NA,Artistic-2.0,NA,NA,NA,NA,no,3.6.1
+enc,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.1),methods,NA,"digest, pillar, readr, rlang, testthat, withr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+epubr,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,NA,"xml2, xslt, magrittr, dplyr, tidyr",NA,"testthat, knitr, rmarkdown, lintr, covr, readr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+estimability,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,stats,NA,NA,NA,NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.0
+eurostat,C:/Users/pech/Documents/R/win-library/3.6,3.3.55,NA,"methods, R (>= 3.1.0)","broom, classInt, countrycode, dplyr, httr, jsonlite,
+RColorBrewer, readr, RefManageR, sf, sp, stringi, stringr,
+tibble, tidyr",NA,"Cairo, ggplot2, knitr, lubridate, mapproj, plotrix,
+rmarkdown, roxygen2, rsdmx, rvest, testthat, tmap, usethis",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,no,3.6.1
+evaluate,C:/Users/pech/Documents/R/win-library/3.6,0.14,NA,R (>= 3.0.2),methods,NA,"testthat, lattice, ggplot2",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+exifr,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,NA,"curl, plyr, tibble, jsonlite, utils, rappdirs",NA,"testthat, covr",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+extrafont,C:/Users/pech/Documents/R/win-library/3.6,0.17,NA,R (>= 2.15),"extrafontdb, grDevices, utils, Rttf2pt1",NA,fontcm,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+extrafontdb,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,R (>= 2.14),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,NA,3.6.0
+factoextra,C:/Users/pech/Documents/R/win-library/3.6,1.0.5,NA,"R (>= 3.1.2), ggplot2 (>= 2.2.0)","abind, cluster, dendextend, FactoMineR, ggpubr(>= 0.1.5),
+grid, stats, reshape2, ggrepel, tidyr",NA,"ade4, ca, igraph, MASS, knitr, mclust",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+FactoMineR,C:/Users/pech/Documents/R/win-library/3.6,1.42,NA,R (>= 3.0.0),"car,cluster,ellipse,flashClust,graphics,grDevices,lattice,leaps,MASS,scatterplot3d,stats,utils",NA,"missMDA,knitr",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+fansi,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 3.1.0),NA,NA,"unitizer, knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+farver,C:/Users/pech/Documents/R/win-library/3.6,2.0.1,NA,NA,NA,NA,"testthat (>= 2.1.0), covr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+fastGHQuad,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,Rcpp (>= 0.11.0),NA,Rcpp,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+fastICA,C:/Users/pech/Documents/R/win-library/3.6,1.2-2,NA,R (>= 3.0.0),NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+fastmap,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,NA,NA,NA,testthat (>= 2.1.1),NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+fastmatch,C:/Users/pech/Documents/R/win-library/3.6,1.1-0,NA,NA,NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+fields,C:/Users/pech/Documents/R/win-library/3.6,10.0,NA,"R (>= 3.0), methods, spam, maps",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+filehash,C:/Users/pech/Documents/R/win-library/3.6,2.4-2,NA,"R (>= 3.0.0), methods",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+filelock,C:/Users/pech/Documents/R/win-library/3.6,1.0.2,NA,NA,NA,NA,"callr (>= 2.0.0), covr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+fit.models,C:/Users/pech/Documents/R/win-library/3.6,0.5-14,NA,NA,"lattice, stats",NA,MASS,NA,GPL,NA,NA,NA,NA,no,3.6.1
+fivethirtyeight,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,R (>= 3.2.4),NA,NA,"ggplot2, dplyr, tidyr, curl, readr, tibble, lubridate,
+stringr, janitor, knitr, gridExtra, ggthemes, scales, broom,
+magrittr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+flashClust,C:/Users/pech/Documents/R/win-library/3.6,1.01-2,NA,R (>= 2.3.0),NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.0
+flatxml,C:/Users/pech/Documents/R/win-library/3.6,0.0.2,NA,NA,"RCurl, xml2",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+flexmix,C:/Users/pech/Documents/R/win-library/3.6,2.3-15,NA,"R (>= 2.15.0), lattice","graphics, grid, grDevices, methods, modeltools (>= 0.2-16),
+nnet, stats, stats4, utils",NA,"actuar, codetools, diptest, Ecdat, ellipse, gclus, glmnet,
+lme4 (>= 1.1), MASS, mgcv (>= 1.8-0), mlbench, multcomp,
+mvtnorm, SuppDists, survival",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+flextable,C:/Users/pech/Documents/R/win-library/3.6,0.5.5,NA,NA,"stats, utils, grDevices, graphics, officer (>= 0.2.0),
+rmarkdown, knitr, htmltools, xml2, data.table, gdtools (>=
+0.1.6), rlang, base64enc",NA,"testthat, xtable, magrittr, webshot, magick, ggplot2",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+FNN,C:/Users/pech/Documents/R/win-library/3.6,1.1.3,NA,R (>= 3.0.0),NA,NA,"chemometrics, mvtnorm",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+foghorn,C:/Users/pech/Documents/R/win-library/3.6,1.1.4,NA,R (>= 3.1.0),"clisymbols (>= 1.0.0), crayon (>= 1.3.2), curl (>= 2.2), httr
+(>= 1.2.1), jsonlite (>= 1.5), rvest (>= 0.3.2), tibble (>=
+1.2), xml2 (>= 1.0.0)",NA,"covr, dplyr, knitr, progress, rmarkdown, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+fontBitstreamVera,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,R (>= 3.0.0),NA,NA,NA,NA,file LICENCE,yes,NA,NA,NA,no,3.6.0
+fontLiberation,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.0),NA,NA,NA,NA,file LICENSE,NA,NA,NA,NA,no,3.6.0
+fontquiver,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.0.0),"fontBitstreamVera (>= 0.1.0), fontLiberation (>= 0.1.0)",NA,"testthat, htmltools",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+forcats,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 3.1),"ellipsis, magrittr, rlang, tibble",NA,"covr, ggplot2, testthat, readr, knitr, rmarkdown, dplyr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+foreach,C:/Users/pech/Documents/R/win-library/3.6,1.4.7,NA,R (>= 2.5.0),"codetools, utils, iterators",NA,randomForest,"compiler, doMC, RUnit, doParallel",Apache License (== 2.0),NA,NA,NA,NA,no,3.6.1
+forecast,C:/Users/pech/Documents/R/win-library/3.6,8.9,NA,"R (>= 3.0.2),","colorspace, fracdiff, ggplot2 (>= 2.2.1), graphics, lmtest,
+magrittr, nnet, parallel, Rcpp (>= 0.11.0), stats, timeDate,
+tseries, urca, zoo","Rcpp (>= 0.11.0), RcppArmadillo (>= 0.2.35)","uroot, knitr, rmarkdown, rticles, testthat, methods",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+foreign,C:/Users/pech/Documents/R/win-library/3.6,0.8-72,recommended,R (>= 3.0.0),"methods, utils, stats",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+forge,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,R (>= 3.1.2),"rlang (>= 0.3.1), magrittr",NA,"testthat, covr",NA,Apache License (>= 2.0),NA,NA,NA,NA,no,3.6.1
+formatR,C:/Users/pech/Documents/R/win-library/3.6,1.7,NA,R (>= 3.0.2),NA,NA,"codetools, shiny, testit, rmarkdown, knitr",NA,GPL,NA,NA,NA,NA,no,3.6.1
+Formula,C:/Users/pech/Documents/R/win-library/3.6,1.2-3,NA,"R (>= 2.0.0), stats",NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.0
+fpc,C:/Users/pech/Documents/R/win-library/3.6,2.2-3,NA,R (>= 2.0),"MASS, cluster, mclust, flexmix, prabclus, class, diptest,
+robustbase, kernlab, grDevices, graphics, methods, stats,
+utils, parallel",NA,"tclust, pdfCluster, EMMIXskew, mvtnorm",NA,GPL,NA,NA,NA,NA,no,3.6.1
+fracdiff,C:/Users/pech/Documents/R/win-library/3.6,1.4-2,NA,NA,NA,NA,"longmemo, urca",NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.1
+freetypeharfbuzz,C:/Users/pech/Documents/R/win-library/3.6,0.2.5,NA,R (>= 3.2),fontquiver,NA,"covr, testthat",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+fs,C:/Users/pech/Documents/R/win-library/3.6,1.3.1,NA,R (>= 3.1),"methods, Rcpp",Rcpp,"testthat, covr, pillar (>= 1.0.0), crayon, rmarkdown, knitr,
+withr, spelling",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+furrr,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,"R (>= 3.2.0), future (>= 1.6.2)","globals (>= 0.10.3), rlang (>= 0.2.0), purrr (>= 0.2.4)",NA,"listenv (>= 0.6.0), dplyr (>= 0.7.4), testthat",NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.1
+futile.logger,C:/Users/pech/Documents/R/win-library/3.6,1.4.3,NA,R (>= 3.0.0),"utils, lambda.r (>= 1.1.0), futile.options",NA,"testthat, jsonlite",NA,LGPL-3,NA,NA,NA,NA,no,3.6.1
+futile.options,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,R (>= 2.8.0),NA,NA,NA,NA,LGPL-3,NA,NA,NA,NA,no,3.6.0
+future,C:/Users/pech/Documents/R/win-library/3.6,1.14.0,NA,NA,"digest, globals (>= 0.12.4), listenv (>= 0.7.0), parallel,
+utils",NA,"R.rsp, markdown",NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.1
+future.apply,C:/Users/pech/Documents/R/win-library/3.6,1.3.0,NA,"R (>= 3.2.0), future (>= 1.13.0)",globals (>= 0.12.4),NA,"datasets, stats, tools, listenv (>= 0.7.0), R.rsp, markdown",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gam,C:/Users/pech/Documents/R/win-library/3.6,1.16.1,NA,"stats, splines, foreach",NA,NA,akima,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+GAMBoost,C:/Users/pech/Documents/R/win-library/3.6,1.2-3,NA,"R (>= 2.14.0), Matrix",NA,NA,"parallel, snowfall",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+gameofthrones,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 2.10),"ggplot2 (>= 1.0.1), gridExtra, MASS",NA,"hexbin (>= 1.27.0), testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gamlss,C:/Users/pech/Documents/R/win-library/3.6,5.1-5,NA,"R (>= 3.3.0), graphics, stats, splines, utils, grDevices,
+gamlss.data (>= 5.0-0), gamlss.dist (>= 4.3.1), nlme, parallel","MASS, survival, methods",NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+gamlss.data,C:/Users/pech/Documents/R/win-library/3.6,5.1-4,NA,R (>= 2.10),NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.0
+gamlss.dist,C:/Users/pech/Documents/R/win-library/3.6,5.1-5,NA,"R (>= 2.15.0), MASS, graphics, stats, methods, grDevices",NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+gapminder,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.1.0),tibble,NA,"dplyr, ggplot2, testthat",NA,CC0,NA,NA,NA,NA,no,3.6.1
+gargle,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 3.2),"fs (>= 1.3.1), glue (>= 1.3.0), httr (>= 1.4.0), jsonlite,
+rlang (>= 0.4.0), stats, withr",NA,"covr, knitr, rmarkdown, sodium, testthat (>= 2.1.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gbm,C:/Users/pech/Documents/R/win-library/3.6,2.1.5,NA,R (>= 2.9.0),"gridExtra, lattice, parallel, survival",NA,"knitr, pdp, RUnit, splines, viridis",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+gclus,C:/Users/pech/Documents/R/win-library/3.6,1.3.2,NA,"R (>= 2.10), cluster",NA,NA,"knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gdalUtils,C:/Users/pech/Documents/R/win-library/3.6,2.0.1.14,NA,R (>= 2.14.0),"sp, foreach, R.utils, raster, rgdal",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gdata,C:/Users/pech/Documents/R/win-library/3.6,2.18.0,NA,R (>= 2.3.0),"gtools, stats, methods, utils",NA,RUnit,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+gdtools,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,NA,"Rcpp (>= 0.12.12), systemfonts (>= 0.1.1)",Rcpp,"htmltools, testthat, fontquiver (>= 0.2.0), curl",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+generics,C:/Users/pech/Documents/R/win-library/3.6,0.0.2,NA,R (>= 3.1),methods,NA,"covr, pkgload, testthat, tibble",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+genius,C:/Users/pech/Documents/R/win-library/3.6,2.2.0,NA,R (>= 3.1.2),"dplyr (>= 0.7.0), rvest, stringr, tidyr, purrr, readr, tibble,
+tidytext, reshape2",NA,"knitr, rmarkdown, testthat",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+geofacet,C:/Users/pech/Documents/R/win-library/3.6,0.1.10,NA,R (>= 3.2),"ggplot2, gtable, graphics, rnaturalearth, sp, ggrepel, imguR,
+gridExtra, geogrid",NA,"testthat, covr, lintr, knitr, rmarkdown, packagedocs",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+geogrid,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,NA,"methods, sp, sf, rgeos, Rcpp","Rcpp, RcppArmadillo","testthat, lintr, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+geometry,C:/Users/pech/Documents/R/win-library/3.6,0.4.4,NA,R (>= 3.0.0),"magic, Rcpp, lpSolve, linprog","Rcpp, RcppProgress","spelling, testthat, rgl, R.matlab, tripack",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+geosphere,C:/Users/pech/Documents/R/win-library/3.6,1.5-10,NA,R (>= 3.0.0),sp,NA,"methods, raster",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+GGally,C:/Users/pech/Documents/R/win-library/3.6,1.4.0,NA,"R (>= 3.1), ggplot2 (> 2.2.0)","grDevices, grid, gtable (>= 0.2.0), plyr (>= 1.8.3), progress,
+RColorBrewer, reshape (>= 0.8.5), utils, rlang",NA,"broom (>= 0.4.0), chemometrics, geosphere (>= 1.5-1), igraph
+(>= 1.0.1), intergraph (>= 2.0-2), maps (>= 3.1.0), mapproj,
+network (>= 1.12.0), scagnostics, scales (>= 0.4.0), sna (>=
+2.3-2), survival, packagedocs (>= 0.4.0), rmarkdown, roxygen2,
+testthat, crosstalk",NA,GPL (>= 2.0),NA,NA,NA,NA,no,3.6.1
+ggalt,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,"R (>= 3.2.0), ggplot2 (>= 2.2.1)","utils, graphics, grDevices, dplyr, RColorBrewer, KernSmooth,
+proj4, scales, grid, gtable, ash, maps, MASS, extrafont,
+tibble, plotly (>= 3.4.1)",NA,"testthat, gridExtra, knitr, rmarkdown, ggthemes, reshape2",NA,AGPL + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gganimate,C:/Users/pech/Documents/R/win-library/3.6,1.0.3,NA,ggplot2 (>= 3.0.0),"stringi, tweenr (>= 1.0.1), grid, rlang, glue, progress, plyr,
+scales, grDevices, utils",NA,"magick, svglite, knitr, rmarkdown, testthat, base64enc,
+htmltools, covr, transformr, av, png, gifski",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggbeeswarm,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,"R (>= 3.0.0), ggplot2 (>= 2.0)","beeswarm, vipor",NA,gridExtra,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+ggcorrplot,C:/Users/pech/Documents/R/win-library/3.6,0.1.3,NA,ggplot2,"reshape2, stats",NA,"knitr, spelling",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ggdark,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.1),ggplot2 (>= 3.0),NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggedit,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,"R (>= 3.2.0), ggplot2 (>= 3.0.0)","dplyr (>= 0.7.5), plyr, tidyr, purrr, rlang, scales,
+rstudioapi, shiny, miniUI, shinyBS, colourpicker (>= 0.2),
+shinyAce, magrittr, utils, graphics, grid, tools, stats",NA,"testthat, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggeffects,C:/Users/pech/Documents/R/win-library/3.6,0.12.0,NA,"R (>= 3.2), graphics, stats, utils","dplyr, insight (>= 0.4.1), magrittr, MASS, purrr, rlang,
+scales, sjlabelled (>= 1.1.0), sjmisc (>= 2.8.0)",NA,"AER, aod, betareg, brms, effects (>= 4.1-0), emmeans, gam,
+gamm4, gee, geepack, ggplot2, GLMMadaptive, glmmTMB, httr,
+knitr, lme4, logistf, Matrix, MCMCglmm, mgcv, nlme, ordinal,
+prediction, pscl, quantreg, rmarkdown, rms, robust, robustbase,
+rstanarm, rstantools, sandwich, see, sjstats, survey, survival,
+testthat, VGAM",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+ggfittext,C:/Users/pech/Documents/R/win-library/3.6,0.8.1,NA,R (>= 3.2.3),"grid (>= 3.1), stringi (>= 1.1.2), ggplot2 (>= 2.2.1), shades
+(>= 1.3.1)",NA,"knitr, rmarkdown, testthat, vdiffr, spelling",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ggforce,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,"ggplot2 (>= 3.0.0), R (>= 3.3.0)","Rcpp (>= 0.12.2), grid, scales, MASS, tweenr (>= 0.1.5),
+gtable, rlang, polyclip, stats, grDevices, tidyselect, withr,
+utils","Rcpp, RcppEigen","sessioninfo, concaveman, deldir, reshape2, units (>= 0.4-6)",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+ggfortify,C:/Users/pech/Documents/R/win-library/3.6,0.4.7,NA,"methods, ggplot2 (>= 2.0.0)","dplyr (>= 0.3), tidyr, gridExtra, grid, scales, stringr,
+tibble",NA,"testthat, cluster, changepoint, dlm, fGarch, forecast,
+ggrepel, glmnet, grDevices, KFAS, knitr, lintr, mapdata, MASS,
+MSwM, nlme, raster, ROCR, sp, stats, strucchange, survival,
+timeSeries, tseries, utils, vars, xts, zoo, lfda",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+gghighlight,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,"ggplot2 (>= 3.0.0), R (>= 3.1.0)","dplyr (> 0.7.0), tibble, ggrepel, magrittr, purrr, rlang",NA,"testthat, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggiraph,C:/Users/pech/Documents/R/win-library/3.6,0.6.1,NA,NA,"grid, ggplot2 (>= 3.0.0), htmlwidgets (>= 0.6), stats, xml2
+(>= 1.0.0), htmltools, Rcpp (>= 0.12.12), gdtools (>= 0.1.6),","Rcpp, gdtools","knitr, testthat, rmarkdown, maps, shiny, sf (>= 0.3-4), dplyr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+ggiraphExtra,C:/Users/pech/Documents/R/win-library/3.6,0.2.9,NA,R (>= 2.10),"ggplot2 (>= 2.2.0), ggiraph (>= 0.3.2), scales, reshape2,
+plyr, mycor, ppcor, grid, mgcv, sjlabelled, sjmisc, stringr,
+webshot, tidyr, purrr, dplyr, magrittr, ggforce, ztable,
+RColorBrewer",NA,"TH.data, moonBook, maps, gcookbook, knitr, rmarkdown,
+testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+ggmap,C:/Users/pech/Documents/R/win-library/3.6,3.0.0,NA,"R (>= 3.1.0), ggplot2 (>= 2.2.0)","RgoogleMaps, png, plyr, rjson, jpeg, digest, scales, dplyr,
+bitops, grid, glue, httr, stringr, purrr, magrittr, tibble,
+tidyr",NA,"MASS, hexbin, testthat",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ggpage,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,R (>= 3.0.0),"dplyr, ggplot2 (>= 2.0.0), magrittr, purrr, rlang, stringr,
+tidytext (>= 0.1.0)",NA,"covr, knitr, rmarkdown, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggplot2,C:/Users/pech/Documents/R/win-library/3.6,3.2.1,NA,R (>= 3.2),"digest, grDevices, grid, gtable (>= 0.1.1), lazyeval, MASS,
+mgcv, reshape2, rlang (>= 0.3.0), scales (>= 0.5.0), stats,
+tibble, viridisLite, withr (>= 2.0.0)",NA,"covr, dplyr, ggplot2movies, hexbin, Hmisc, knitr, lattice,
+mapproj, maps, maptools, multcomp, munsell, nlme, profvis,
+quantreg, rgeos, rmarkdown, rpart, sf (>= 0.7-3), svglite (>=
+1.2.0.9001), testthat (>= 0.11.0), vdiffr (>= 0.3.0)",sp,GPL-2 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggpmisc,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,"R (>= 3.4.0), ggplot2 (>= 3.1.0)","grid, rlang (>= 0.3.1), magrittr (>= 1.5), gridExtra (>= 2.3),
+scales (>= 1.0.0), MASS (>= 7.3-51.1), polynom (>= 1.3-9),
+splus2R (>= 1.2-2), tibble (>= 2.0.1), plyr (>= 1.8.4), dplyr
+(>= 0.8.0.1), xts (>= 0.11-2), zoo (>= 1.8-4), broom (>=
+0.5.1), lubridate (>= 1.7.4), stringr (>= 1.4.0)",NA,"knitr (>= 1.22), rmarkdown (>= 1.12), nlme (>= 3.1-137),
+ggrepel (>= 0.8.0), magick (>= 2.0)",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+ggpubr,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,"R (>= 3.1.0), ggplot2, magrittr","ggrepel, grid, ggsci, stats, utils, tidyr, purrr, dplyr (>=
+0.7.1), cowplot, ggsignif, scales, gridExtra, glue, polynom,
+rlang",NA,"grDevices, knitr, RColorBrewer, gtable",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ggraph,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,"R (>= 2.10), ggplot2 (>= 3.0.0)","Rcpp (>= 0.12.2), dplyr, ggforce (>= 0.3.1), grid, igraph (>=
+1.0.0), scales, MASS, digest, gtable, ggrepel, utils, stats,
+viridis, rlang, tidygraph, graphlayouts (>= 0.5.0)",Rcpp,"network, knitr, rmarkdown, purrr, tibble, seriation, deldir,
+gganimate",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+ggrepel,C:/Users/pech/Documents/R/win-library/3.6,0.8.1,NA,"R (>= 3.0.0), ggplot2 (>= 2.2.0)","grid, Rcpp, scales (>= 0.3.0)",Rcpp,"knitr, rmarkdown, testthat, gridExtra, devtools, prettydoc",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+ggridges,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,R (>= 3.2),"ggplot2 (>= 2.2.0), grid (>= 3.0.0), plyr (>= 1.8.0), scales
+(>= 0.4.1), withr (>= 2.1.1)",NA,"covr, dplyr, gridExtra, ggplot2movies, DAAG, forcats, knitr,
+rmarkdown, testthat, vdiffr, viridis",NA,GPL-2 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggsci,C:/Users/pech/Documents/R/win-library/3.6,2.9,NA,R (>= 3.0.2),"grDevices, scales, ggplot2 (>= 2.0.0)",NA,"knitr, rmarkdown, gridExtra, reshape2",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+ggsignif,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,NA,ggplot2 (>= 2.0.0),NA,"testthat, knitr, rmarkdown",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+ggstance,C:/Users/pech/Documents/R/win-library/3.6,0.3.3,NA,R (>= 3.1.0),"ggplot2 (>= 3.2.0), plyr, rlang, withr (>= 2.0.0)",NA,"Hmisc, testthat, vdiffr (>= 0.3.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+ggthemes,C:/Users/pech/Documents/R/win-library/3.6,4.2.0,NA,R (>= 3.3.0),"ggplot2 (>= 3.0.0), graphics, grid, methods, purrr, scales,
+stringr, tibble",NA,"dplyr, covr, extrafont, glue, knitr, lattice, lintr, maps,
+mapproj, pander, rlang, rmarkdown, spelling, testthat, tidyr,
+vdiffr, withr",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ggvoronoi,C:/Users/pech/Documents/R/win-library/3.6,0.8.3,NA,"R (>= 2.10), ggplot2 (>= 2.2.0)","deldir, sp, rgeos, raster, methods",NA,"knitr, rmarkdown, ggmap, dplyr, scales, testthat, vdiffr,
+mapproj",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gh,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,NA,"ini, jsonlite, httr",NA,"covr, pingr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gifski,C:/Users/pech/Documents/R/win-library/3.6,0.8.6,NA,NA,NA,NA,"ggplot2, gapminder",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+git2r,C:/Users/pech/Documents/R/win-library/3.6,0.26.1,NA,R (>= 3.1),"graphics, utils",NA,getPass,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+glmmTMB,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,R (>= 3.2.0),"methods, TMB (>= 1.7.13), lme4 (>= 1.1-18.9000), Matrix, nlme","TMB, RcppEigen","knitr, rmarkdown, testthat, MASS, lattice, ggplot2 (>=
+2.2.1), mlmRev, bbmle (>= 1.0.19), pscl, coda, reshape2, car,
+emmeans, estimability, DHARMa, multcomp, MuMIn, effects,
+dotwhisker, broom, plyr, png, boot",NA,AGPL-3,NA,NA,NA,NA,yes,3.6.1
+glmnet,C:/Users/pech/Documents/R/win-library/3.6,3.0-1,NA,"R (>= 3.6.0), Matrix (>= 1.0-6)","methods, utils, foreach, shape",NA,"survival, knitr, lars",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+GlobalOptions,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,"R (>= 3.3.0), methods",utils,NA,"testthat (>= 1.0.0), knitr, markdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+globals,C:/Users/pech/Documents/R/win-library/3.6,0.12.4,NA,R (>= 3.1.2),codetools,NA,NA,NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.0
+glue,C:/Users/pech/Documents/R/win-library/3.6,1.3.1,NA,R (>= 3.1),methods,NA,"testthat, covr, magrittr, crayon, knitr, rmarkdown, DBI,
+RSQLite, R.utils, forcats, microbenchmark, rprintf, stringr,
+ggplot2, dplyr, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+gmailr,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.0.0),"base64enc, crayon, gargle, httr, jsonlite, lifecycle,
+magrittr, mime, rematch2",NA,"covr, knitr, methods, sodium, rmarkdown, testthat, xml2",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+gmodels,C:/Users/pech/Documents/R/win-library/3.6,2.18.1,NA,R (>= 1.9.0),"MASS, gdata",NA,"gplots, gtools, Matrix, nlme, lme4 (>= 0.999999-0)",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+gmp,C:/Users/pech/Documents/R/win-library/3.6,0.5-13.5,NA,R (>= 3.0.0),methods,NA,Rmpfr,NA,GPL,NA,NA,NA,NA,yes,3.6.1
+gofastr,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.2.2),"data.table (>= 1.9.5), quanteda, slam, SnowballC, stats, tm",NA,testthat,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+gower,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,NA,NA,NA,"tinytest (>= 0.9.3),",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+gplots,C:/Users/pech/Documents/R/win-library/3.6,3.0.1.1,NA,R (>= 3.0),"gtools, gdata, stats, caTools, KernSmooth",NA,"grid, MASS",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+graphlayouts,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,R (>= 3.2.0),"igraph, Rcpp","Rcpp, RcppArmadillo","oaqc, testthat, ggraph, ggplot2, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+gridBase,C:/Users/pech/Documents/R/win-library/3.6,0.4-7,NA,R (>= 2.3.0),"graphics, grid",NA,lattice,NA,GPL,NA,NA,NA,NA,no,3.6.1
+gridExtra,C:/Users/pech/Documents/R/win-library/3.6,2.3,NA,NA,"gtable, grid, grDevices, graphics, utils",NA,"ggplot2, egg, lattice, knitr, testthat",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gstat,C:/Users/pech/Documents/R/win-library/3.6,2.0-3,NA,R (>= 2.10),"utils, stats, graphics, methods, lattice, sp (>= 0.9-72), zoo,
+spacetime (>= 1.0-0), FNN",NA,"fields, maps, mapdata, maptools, rgdal (>= 0.5.2), rgeos, sf
+(>= 0.7-2), stars (>= 0.3-0), xts, raster",NA,GPL (>= 2.0),NA,NA,NA,NA,yes,3.6.1
+gsubfn,C:/Users/pech/Documents/R/win-library/3.6,0.7,NA,proto,NA,NA,"boot, chron, grid, lattice, quantreg, svUnit, tcltk, zoo",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gtable,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.0),grid,NA,"covr, testthat, knitr, rmarkdown, ggplot2, profvis",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+gtools,C:/Users/pech/Documents/R/win-library/3.6,3.8.1,NA,"methods, stats, utils",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+gtrendsR,C:/Users/pech/Documents/R/win-library/3.6,1.4.4,NA,R (>= 3.2.0),"ggplot2, jsonlite, anytime, curl",NA,"knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+gutenbergr,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,R (>= 2.10),"dplyr, readr, purrr, urltools, stringr, lazyeval",NA,"knitr, rmarkdown, testthat, tidytext, ggplot2, tidyr, curl",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+h2o,C:/Users/pech/Documents/R/win-library/3.6,3.26.0.2,NA,"R (>= 2.13.0), methods, stats","graphics, tools, utils, RCurl, jsonlite",NA,"ggplot2, mlbench, Matrix, slam, bit64 (>= 0.9.7), data.table
+(>= 1.9.8), rgl (>= 0.100.19), plot3Drgl (>= 1.0.1), survival",NA,Apache License (== 2.0),NA,NA,NA,NA,no,3.6.1
+harrypotter,C:/Users/pech/Documents/R/win-library/3.6,2.1.0,NA,R (>= 2.10),"ggplot2 (>= 1.0.1), gridExtra",NA,"hexbin (>= 1.27.0), testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+haven,C:/Users/pech/Documents/R/win-library/3.6,2.1.1,NA,R (>= 3.2),"forcats (>= 0.2.0), hms, Rcpp (>= 0.11.4), readr (>= 0.1.0),
+tibble",Rcpp,"covr, fs, knitr, rmarkdown, testthat, pillar (>= 1.1.1), cli,
+crayon",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+here,C:/Users/pech/Documents/R/win-library/3.6,0.1,NA,NA,rprojroot (>= 1.2),NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+hexbin,C:/Users/pech/Documents/R/win-library/3.6,1.27.3,NA,"R (>= 2.0.1), methods","lattice, grid, graphics, grDevices, stats, utils",NA,"marray, affy, Biobase, limma",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+highr,C:/Users/pech/Documents/R/win-library/3.6,0.8,NA,R (>= 3.2.3),NA,NA,"knitr, testit",NA,GPL,NA,NA,NA,NA,no,3.6.1
+Hmisc,C:/Users/pech/Documents/R/win-library/3.6,4.2-0,NA,"lattice, survival (>= 2.40-1), Formula, ggplot2 (>= 2.2)","methods, latticeExtra, cluster, rpart, nnet, acepack, foreign,
+gtable, grid, gridExtra, data.table, htmlTable (>= 1.11.0),
+viridis, htmltools, base64enc",NA,"chron, rms, mice, tables, knitr, ff, ffbase, plotly (>=
+4.5.6), rlang",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+hms,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,NA,"methods, pkgconfig, rlang, vctrs (>= 0.2.0)",NA,"crayon, lubridate, pillar (>= 1.1.0), testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+htmlTable,C:/Users/pech/Documents/R/win-library/3.6,1.13.2,NA,NA,"stringr, knitr (>= 1.6), magrittr (>= 1.5), methods,
+checkmate, htmlwidgets, htmltools, rstudioapi (>= 0.6)",NA,"testthat, XML, xtable, ztable, Hmisc, reshape, rmarkdown,
+pander, chron, lubridate, tibble, tidyr (>= 0.7.2), dplyr (>=
+0.7.4)",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+htmltools,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 2.14.1),"utils, digest, Rcpp, rlang",Rcpp,"markdown, testthat, withr",knitr,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+htmlwidgets,C:/Users/pech/Documents/R/win-library/3.6,1.5.1,NA,NA,"grDevices, htmltools (>= 0.3), jsonlite (>= 0.9.16), yaml",NA,knitr (>= 1.8),shiny (>= 1.1),MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+hts,C:/Users/pech/Documents/R/win-library/3.6,5.1.5,NA,"R (>= 3.2.0), forecast (>= 8.1)","SparseM, Matrix, matrixcalc, parallel, utils, methods,
+graphics, grDevices, stats","Rcpp (>= 0.11.0), RcppEigen","testthat, knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+httpuv,C:/Users/pech/Documents/R/win-library/3.6,1.5.2,NA,R (>= 2.15.1),"Rcpp (>= 0.11.0), utils, R6, promises, later (>= 0.8.0)","Rcpp, BH, later","testthat, callr, curl, websocket",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+httr,C:/Users/pech/Documents/R/win-library/3.6,1.4.1,NA,R (>= 3.2),"curl (>= 3.0.0), jsonlite, mime, openssl (>= 0.8), R6",NA,"covr, httpuv, jpeg, knitr, png, readr, rmarkdown, testthat
+(>= 0.8.0), xml2",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+huge,C:/Users/pech/Documents/R/win-library/3.6,1.3.3,NA,R (>= 3.0.0),"Matrix, igraph, MASS, grDevices, graphics, methods, stats,
+utils, Rcpp","Rcpp, RcppEigen",NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+hunspell,C:/Users/pech/Documents/R/win-library/3.6,3.0,NA,R (>= 3.0.2),"Rcpp, digest",Rcpp (>= 0.12.12),"spelling, testthat, pdftools, janeaustenr, wordcloud2, knitr,
+stopwords, rmarkdown",NA,GPL-2 | LGPL-2.1 | MPL-1.1,NA,NA,NA,NA,yes,3.6.1
+hypergeo,C:/Users/pech/Documents/R/win-library/3.6,1.2-13,NA,"R (>= 3.1.0),","elliptic (>= 1.3-5), contfrac (>= 1.1-9), deSolve",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+igraph,C:/Users/pech/Documents/R/win-library/3.6,1.2.4.1,NA,methods,"graphics, grDevices, magrittr, Matrix, pkgconfig (>= 2.0.0),
+stats, utils",NA,"ape, digest, graph, igraphdata, rgl, scales, stats4, tcltk,
+testthat",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+imager,C:/Users/pech/Documents/R/win-library/3.6,0.41.2,NA,"R (>= 2.10.0),magrittr","Rcpp (>=
+0.11.5),methods,stringr,png,jpeg,readbitmap,grDevices,purrr,Cairo,downloader,igraph,plyr",Rcpp,"knitr, rmarkdown,ggplot2,dplyr,scales,
+testthat,OpenMPController,raster,spatstat",NA,LGPL,NA,NA,NA,NA,yes,3.6.1
+imguR,C:/Users/pech/Documents/R/win-library/3.6,1.0.3,NA,NA,"httr, png, jpeg, tools",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+import,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,NA,NA,NA,knitr,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+incidence,C:/Users/pech/Documents/R/win-library/3.6,1.7.0,NA,NA,"ggplot2, aweek (>= 0.2.0)",NA,"magrittr, outbreaks, testthat, vdiffr, covr, knitr,
+rmarkdown, scales, cowplot",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+infer,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,R (>= 3.1.2),"dplyr (>= 0.7.0), methods, tibble, rlang (>= 0.2.0), ggplot2,
+magrittr, glue (>= 1.3.0), grDevices, purrr",NA,"broom, devtools (>= 1.12.0), knitr, rmarkdown, nycflights13,
+stringr, testthat, covr, vdiffr",NA,CC0,NA,NA,NA,NA,no,3.6.1
+influenceR,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.2.0),"igraph (>= 1.0.1), Matrix (>= 1.1-4), methods, utils",NA,testthat,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+InformationValue,C:/Users/pech/Documents/R/win-library/3.6,1.2.3,NA,R (>= 3.0.0),"ggplot2, data.table",NA,knitr,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+ini,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,NA,NA,NA,testthat,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+inline,C:/Users/pech/Documents/R/win-library/3.6,0.3.15,NA,R (>= 2.4.0),methods,NA,Rcpp (>= 0.11.0),NA,LGPL,NA,NA,NA,NA,no,3.6.1
+insight,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,R (>= 3.2),"methods, stats, utils",NA,"AER, afex, aod, BayesFactor, bayestestR, betareg, biglm,
+blavaan, blme, brms, censReg, crch, coxme, estimatr, feisr,
+gam, gamm4, gamlss, gbm, gee, geepack, GLMMadaptive, glmmTMB,
+gmnl, HRQoL, httr, lavaan, lfe, logistf, MASS, Matrix,
+MCMCglmm, mlogit, multgee, lme4, mgcv, nnet, nlme, ordinal,
+panelr, plm, pscl, quantreg, rms, robust, robustbase,
+robustlmm, rstanarm, rstudioapi, speedglm, splines, survey,
+survival, truncreg, testthat, VGAM, knitr, rmarkdown, spelling",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+intervals,C:/Users/pech/Documents/R/win-library/3.6,0.15.1,NA,R (>= 2.9.0),"utils, graphics, methods",NA,NA,NA,Artistic-2.0,NA,NA,NA,NA,yes,3.6.0
+inum,C:/Users/pech/Documents/R/win-library/3.6,1.0-1,NA,R (>= 3.3.0),"stats, libcoin (>= 1.0-0)",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ipred,C:/Users/pech/Documents/R/win-library/3.6,0.9-9,NA,R (>= 2.10),"rpart (>= 3.1-8), MASS, survival, nnet, class, prodlim",NA,"mvtnorm, mlbench, TH.data",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+irlba,C:/Users/pech/Documents/R/win-library/3.6,2.3.3,NA,Matrix,"stats, methods",Matrix,NA,NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+irr,C:/Users/pech/Documents/R/win-library/3.6,0.84.1,NA,"R (>= 2.10), lpSolve",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+ISLR,C:/Users/pech/Documents/R/win-library/3.6,1.2,NA,R (>= 2.10),NA,NA,MASS,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ISOcodes,C:/Users/pech/Documents/R/win-library/3.6,2019.04.22,NA,R (>= 2.10.0),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+ISOweek,C:/Users/pech/Documents/R/win-library/3.6,0.6-2,NA,NA,stringr,NA,testthat,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.1
+ISwR,C:/Users/pech/Documents/R/win-library/3.6,2.0-7,NA,R (>= 2.6.0),NA,NA,"survival,MASS",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+iterators,C:/Users/pech/Documents/R/win-library/3.6,1.0.12,NA,"R (>= 2.5.0), utils",NA,NA,"RUnit, foreach",NA,Apache License (== 2.0),NA,NA,NA,NA,no,3.6.1
+itertools,C:/Users/pech/Documents/R/win-library/3.6,0.1-3,NA,"R (>= 2.14.0), iterators(>= 1.0.0)",parallel,NA,foreach,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+itsadug,C:/Users/pech/Documents/R/win-library/3.6,2.3,NA,"R (>= 2.14.0), mgcv (>= 1.8), plotfunctions (>= 1.3)",NA,NA,"knitr, xtable, sp, data.table",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+janeaustenr,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,R (>= 3.1.2),NA,NA,"dplyr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+janitor,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,R (>= 3.1.2),"dplyr (>= 0.7.0), tidyr (>= 0.7.0), snakecase (>= 0.9.2),
+magrittr, purrr, rlang",NA,"testthat, knitr, rmarkdown, sf, tibble",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+jcolors,C:/Users/pech/Documents/R/win-library/3.6,0.0.4,NA,R (>= 3.2.0),"grDevices, scales, ggplot2 (>= 3.0.0)",NA,"knitr, rmarkdown, gridExtra",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+jomo,C:/Users/pech/Documents/R/win-library/3.6,2.6-9,NA,NA,"stats, lme4, survival, MASS, ordinal",NA,mitml,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+jpeg,C:/Users/pech/Documents/R/win-library/3.6,0.1-8,NA,R (>= 2.9.0),NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.0
+jsonlite,C:/Users/pech/Documents/R/win-library/3.6,1.6,NA,methods,NA,NA,"httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sp",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+jtools,C:/Users/pech/Documents/R/win-library/3.6,2.0.1,NA,NA,"ggplot2 (>= 3.0.0), crayon, magrittr, pander, pkgconfig, rlang
+(>= 0.3.0), tibble",NA,"boot, broom, ggstance, huxtable (>= 3.0.0), kableExtra, lme4,
+lmerTest, MASS, methods, pbkrtest, RColorBrewer, sandwich,
+scales, survey, weights, knitr, rmarkdown, testthat","brms, quantreg, rstanarm",MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+JuliaCall,C:/Users/pech/Documents/R/win-library/3.6,0.17.1,NA,R (>= 3.4.0),"utils, Rcpp (>= 0.12.7), knitr (>= 1.18)",Rcpp,"testthat, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+kableExtra,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 3.1.0),"knitr (>= 1.16), magrittr, stringr (>= 1.0), xml2 (>= 1.1.1),
+rvest, rmarkdown (>= 1.6.0), readr, scales, viridisLite, stats,
+grDevices, htmltools, rstudioapi, glue, tools, webshot, digest",NA,"testthat, magick, formattable, dplyr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+kangar00,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,R (>= 3.1.0),"methods, biomaRt, bigmemory, sqldf, CompQuadForm, data.table,
+lattice, igraph",NA,testthat,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+keras,C:/Users/pech/Documents/R/win-library/3.6,2.2.5.0,NA,R (>= 3.2),"generics (>= 0.0.1), reticulate (>= 1.10), tensorflow (>=
+2.0.0), tfruns (>= 1.0), magrittr, zeallot, methods, R6",NA,"ggplot2, testthat (>= 2.1.0), knitr, rmarkdown, tfdatasets,
+jpeg",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+kernlab,C:/Users/pech/Documents/R/win-library/3.6,0.9-27,NA,R (>= 2.10),"methods, stats, grDevices, graphics",NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+KernSmooth,C:/Users/pech/Documents/R/win-library/3.6,2.23-16,recommended,"R (>= 2.5.0), stats",NA,NA,MASS,NA,Unlimited,NA,NA,NA,NA,yes,3.6.1
+klaR,C:/Users/pech/Documents/R/win-library/3.6,0.6-14,NA,"R (>= 2.10.0), MASS","combinat, questionr, grDevices, stats, utils, graphics",NA,"scatterplot3d (>= 0.3-22), som, mlbench, rpart, e1071",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+knitr,C:/Users/pech/Documents/R/win-library/3.6,1.26,NA,R (>= 3.2.3),"evaluate (>= 0.10), highr, markdown, stringr (>= 0.6), yaml
+(>= 2.1.19), methods, xfun, tools",NA,"formatR, testit, digest, rgl (>= 0.95.1201), codetools,
+rmarkdown, htmlwidgets (>= 0.7), webshot, tikzDevice (>= 0.10),
+tinytex, reticulate (>= 1.4), JuliaCall (>= 0.11.1), magick,
+png, jpeg, gifski, xml2 (>= 1.2.0), httr, DBI (>= 0.4-1),
+showtext, tibble, sass, styler (>= 1.2.0)",NA,GPL,NA,NA,NA,NA,no,3.6.1
+ks,C:/Users/pech/Documents/R/win-library/3.6,1.11.6,NA,R (>= 2.10.0),"FNN (>= 1.1), kernlab, KernSmooth (>= 2.22), Matrix, mclust,
+mgcv, multicool, mvtnorm (>= 1.0-0)",NA,"maps, MASS, misc3d (>= 0.4-0), OceanView, oz, rgl (>= 0.66)",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+labeling,C:/Users/pech/Documents/R/win-library/3.6,0.3,NA,NA,NA,NA,NA,NA,MIT + file LICENSE | Unlimited,NA,NA,NA,NA,no,3.6.0
+labelled,C:/Users/pech/Documents/R/win-library/3.6,2.2.1,NA,NA,"haven (>= 2.1.0), dplyr, stats",NA,"testthat, knitr, rmarkdown, questionr, snakecase",memisc,GPL-3,NA,NA,NA,NA,no,3.6.1
+Lahman,C:/Users/pech/Documents/R/win-library/3.6,7.0-1,NA,R (>= 2.10),dplyr,NA,"lattice, ggplot2, googleVis, data.table, vcd, reshape2,
+tidyr, zipcode, knitr, rmarkdown, car",NA,GPL,NA,NA,NA,NA,no,3.6.1
+lambda.r,C:/Users/pech/Documents/R/win-library/3.6,1.2.4,NA,R (>= 3.0.0),formatR,NA,testit,NA,LGPL-3,NA,NA,NA,NA,no,3.6.1
+languageR,C:/Users/pech/Documents/R/win-library/3.6,1.5.0,NA,R(>= 3.0.2),methods,NA,"cluster, e1071, rms, Hmisc, MASS, rpart, lattice, zipfR,
+lme4, multcomp, lmerTest, optimx",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+lars,C:/Users/pech/Documents/R/win-library/3.6,1.2,NA,R (>= 2.10),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+later,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,NA,"Rcpp (>= 0.12.9), rlang","Rcpp, BH","knitr, rmarkdown, testthat",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+lattice,C:/Users/pech/Documents/R/win-library/3.6,0.20-38,recommended,R (>= 3.0.0),"grid, grDevices, graphics, stats, utils",NA,"KernSmooth, MASS, latticeExtra",chron,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+latticeExtra,C:/Users/pech/Documents/R/win-library/3.6,0.6-28,NA,"R (>= 2.10.0), lattice, RColorBrewer","grid, stats, utils, grDevices",NA,"maps, mapproj, deldir, tripack, zoo, MASS, quantreg, mgcv",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+lava,C:/Users/pech/Documents/R/win-library/3.6,1.6.6,NA,R (>= 3.0),"grDevices, graphics, methods, numDeriv, stats, survival,
+SQUAREM, utils",NA,"KernSmooth, Matrix, Rgraphviz, data.table, ellipse, fields,
+foreach, geepack, gof (>= 0.9), graph, igraph (>= 0.6),
+lava.tobit (>= 0.4.7), lme4, mets (>= 1.1), nlme, optimx,
+polycor, quantreg, rgl, testthat (>= 0.11), visNetwork, zoo",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+lazyeval,C:/Users/pech/Documents/R/win-library/3.6,0.2.2,NA,R (>= 3.1.0),NA,NA,"knitr, rmarkdown (>= 0.2.65), testthat, covr",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+lda,C:/Users/pech/Documents/R/win-library/3.6,1.4.2,NA,R (>= 2.10),NA,NA,"Matrix, reshape2, ggplot2 (>= 1.0.0), penalized, nnet",NA,LGPL,NA,NA,NA,NA,yes,3.6.1
+LDAvis,C:/Users/pech/Documents/R/win-library/3.6,0.3.2,NA,R (>= 2.10),"proxy, RJSONIO, parallel",NA,"mallet, lda, topicmodels, gistr (>= 0.0.8.99), servr, shiny,
+knitr, rmarkdown, digest, htmltools",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+leafem,C:/Users/pech/Documents/R/win-library/3.6,0.0.1,NA,R (>= 3.1.0),"htmltools (>= 0.3), htmlwidgets, leaflet (>= 2.0.1), raster,
+sf, sp",NA,"gdalUtils, plainview, png",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+leaflet,C:/Users/pech/Documents/R/win-library/3.6,2.0.2,NA,R (>= 3.1.0),"base64enc, crosstalk, htmlwidgets, htmltools, magrittr,
+markdown, methods, png, RColorBrewer, raster, scales (>=
+1.0.0), sp, stats, viridis (>= 0.5.1)",NA,"knitr, maps, sf, shiny, testit (>= 0.4), rgdal, rgeos, R6,
+RJSONIO, purrr, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+leaflet.extras,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,"R (>= 3.1.0), leaflet (>= 2.0.0)","htmlwidgets, htmltools, stringr, magrittr",NA,"jsonlite, readr",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+leaflet.minicharts,C:/Users/pech/Documents/R/win-library/3.6,0.5.4,NA,R (>= 2.10),"leaflet (>= 1.1.0), htmltools",NA,"knitr, rmarkdown, dplyr, shiny, manipulateWidget, testthat,
+covr",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,no,3.6.1
+leafpop,C:/Users/pech/Documents/R/win-library/3.6,0.0.1,NA,NA,"base64enc, brew, gdalUtils, htmlwidgets, Rcpp (>= 1.0.0),
+svglite, uuid",Rcpp,"lattice, leaflet (>= 2.0.0), sf, sp",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+leaps,C:/Users/pech/Documents/R/win-library/3.6,3.0,NA,,NA,NA,biglm,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+learnr,C:/Users/pech/Documents/R/win-library/3.6,0.9.2.1,NA,NA,"utils, parallel, withr, rappdirs, rprojroot, jsonlite,
+htmltools (>= 0.3.5), htmlwidgets, evaluate, knitr (>= 1.14),
+markdown, shiny (>= 1.0), rmarkdown (>= 1.8)",NA,testthat,NA,Apache License 2.0 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+libcoin,C:/Users/pech/Documents/R/win-library/3.6,1.0-5,NA,R (>= 3.4.0),"stats, mvtnorm",mvtnorm,coin,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+LiblineaR,C:/Users/pech/Documents/R/win-library/3.6,2.10-8,NA,NA,NA,NA,SparseM,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+lifecycle,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.2),"glue, rlang (>= 0.4.0)",NA,"covr, crayon, knitr, rmarkdown, testthat (>= 2.1.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+lift,C:/Users/pech/Documents/R/win-library/3.6,0.0.2,NA,NA,"stats, graphics",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+lime,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,NA,"glmnet, stats, ggplot2, tools, stringi, Matrix, Rcpp,
+assertthat, htmlwidgets, shiny, shinythemes, methods,
+grDevices, gower","Rcpp, RcppEigen","xgboost, testthat, mlr, h2o, text2vec, MASS, covr, knitr,
+rmarkdown, sessioninfo, magick, keras, ranger",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+lingtypology,C:/Users/pech/Documents/R/win-library/3.6,1.0.14,NA,R (>= 3.5.0),"leaflet, leaflet.minicharts, stats, utils, stringdist,
+grDevices, rowr",NA,"knitr, rmarkdown, testthat, covr, MASS, sp, rgeos, rgdal,
+ggplot2",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+linprog,C:/Users/pech/Documents/R/win-library/3.6,0.9-2,NA,"R (>= 2.4.0), lpSolve",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.1
+lintr,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,R (>= 3.2),"rex, crayon, codetools, cyclocomp, stringdist, testthat,
+digest, rstudioapi (>= 0.2), httr (>= 1.2.1), jsonlite, knitr,
+stats, utils, xml2 (>= 1.0.0), xmlparsedata (>= 1.0.3)",NA,"rmarkdown, mockery",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+listenv,C:/Users/pech/Documents/R/win-library/3.6,0.7.0,NA,R (>= 3.1.2),NA,NA,"R.utils, R.rsp, markdown",NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.1
+lm.beta,C:/Users/pech/Documents/R/win-library/3.6,1.5-1,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+lme4,C:/Users/pech/Documents/R/win-library/3.6,1.1-21,NA,"R (>= 3.2.0), Matrix (>= 1.2-1), methods, stats","graphics, grid, splines, utils, parallel, MASS, lattice, boot,
+nlme (>= 3.1-123), minqa (>= 1.1.15), nloptr (>= 1.0.4)","Rcpp (>= 0.10.5), RcppEigen","knitr, rmarkdown, PKPDmodels, MEMSS, testthat (>= 0.8.1),
+ggplot2, mlmRev, optimx (>= 2013.8.6), gamm4, pbkrtest, HSAUR2,
+numDeriv, car, dfoptim",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+lmerTest,C:/Users/pech/Documents/R/win-library/3.6,3.1-0,NA,"R (>= 3.2.5), lme4 (>= 1.1-10), stats, methods","numDeriv, MASS, ggplot2",NA,"pbkrtest (>= 0.4-3), tools",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+lmtest,C:/Users/pech/Documents/R/win-library/3.6,0.9-37,NA,"R (>= 3.0.0), stats, zoo",graphics,NA,"car, strucchange, sandwich, dynlm, stats4, survival, AER",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+logcondens,C:/Users/pech/Documents/R/win-library/3.6,2.1.5,NA,R (>= 2.10),"ks, graphics, stats",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+loo,C:/Users/pech/Documents/R/win-library/3.6,2.1.0,NA,R (>= 3.1.2),"graphics, matrixStats (>= 0.52), parallel, stats, checkmate",NA,"bayesplot (>= 1.5.0), brms (>= 2.2.0), ggplot2, knitr,
+rmarkdown, rstan, rstanarm (>= 2.17.4), rstantools, spdep,
+testthat",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+lpSolve,C:/Users/pech/Documents/R/win-library/3.6,5.6.13.3,NA,NA,NA,NA,NA,NA,LGPL-2,NA,NA,NA,NA,yes,3.6.1
+lubridate,C:/Users/pech/Documents/R/win-library/3.6,1.7.4,NA,"methods, R (>= 3.0.0)","stringr, Rcpp (>= 0.12.13),","Rcpp,","testthat, knitr, covr","chron, fts, timeSeries, timeDate, tis, tseries, xts, zoo",GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+lwgeom,C:/Users/pech/Documents/R/win-library/3.6,0.1-7,NA,R (>= 3.3.0),"Rcpp, units, sf (>= 0.6-0)","Rcpp, sf (>= 0.6-0)","covr, sp, geosphere, testthat",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+magic,C:/Users/pech/Documents/R/win-library/3.6,1.5-9,NA,"R (>= 2.10), abind",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+magick,C:/Users/pech/Documents/R/win-library/3.6,2.2,NA,NA,"Rcpp (>= 0.12.12), magrittr, curl",Rcpp,"av (>= 0.3), spelling, jsonlite, methods, knitr, rmarkdown,
+rsvg, webp, pdftools, ggplot2, raster, rgdal, gapminder,
+IRdisplay, tesseract (>= 2.0), gifski",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+magrittr,C:/Users/pech/Documents/R/win-library/3.6,1.5,NA,NA,NA,NA,"testthat, knitr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+mallet,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,rJava,NA,NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.0
+manipulate,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,R (>= 2.11.1),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+manipulateWidget,C:/Users/pech/Documents/R/win-library/3.6,0.10.0,NA,NA,"shiny (>= 1.0.3), miniUI, htmltools, htmlwidgets, knitr,
+methods, tools, base64enc, grDevices, codetools, webshot",NA,"dygraphs, leaflet, plotly, xts, rmarkdown, testthat, covr",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,no,3.6.1
+mapdata,C:/Users/pech/Documents/R/win-library/3.6,2.3.0,NA,"R (>= 2.14.0), maps (>= 2.0-7)",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+mapproj,C:/Users/pech/Documents/R/win-library/3.6,1.2.6,NA,"R (>= 3.0.0), maps (>= 2.3-0)","stats, graphics",NA,NA,NA,Lucent Public License,NA,NA,NA,NA,yes,3.6.1
+maps,C:/Users/pech/Documents/R/win-library/3.6,3.3.0,NA,R (>= 3.0.0),"graphics, utils",NA,"mapproj (>= 1.2-0), mapdata (>= 2.3.0), sp, maptools,
+rnaturalearth",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+maptools,C:/Users/pech/Documents/R/win-library/3.6,0.9-8,NA,"R (>= 2.10), sp (>= 1.0-11)","foreign (>= 0.8), methods, grid, lattice, stats, utils,
+grDevices",NA,"rgeos (>= 0.1-8), spatstat (>= 1.60), PBSmapping, maps,
+RColorBrewer, raster, polyclip, spatstat.utils","gpclib, RArcInfo",GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+mapview,C:/Users/pech/Documents/R/win-library/3.6,2.7.0,NA,"methods, R (>= 2.10)","base64enc, brew, htmltools, htmlwidgets, lattice, leafem,
+leaflet (>= 2.0.0), leafpop, png, raster, Rcpp (>= 0.11.3),
+satellite, scales (>= 0.2.5), sf, sp, svglite, uuid,
+viridisLite, webshot",Rcpp,"covr, dplyr, knitr, lwgeom, plainview, rmarkdown, stars,
+testthat",NA,GPL (>= 3) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+markdown,C:/Users/pech/Documents/R/win-library/3.6,1.1,NA,R (>= 2.11.1),"utils, xfun, mime (>= 0.3)",NA,"knitr, RCurl",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+MASS,C:/Users/pech/Documents/R/win-library/3.6,7.3-51.4,recommended,"R (>= 3.1.0), grDevices, graphics, stats, utils",methods,NA,"lattice, nlme, nnet, survival",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+Matrix,C:/Users/pech/Documents/R/win-library/3.6,1.2-17,recommended,R (>= 3.2.0),"methods, graphics, grid, stats, utils, lattice",NA,"expm, MASS","MatrixModels, graph, SparseM, sfsmisc",GPL (>= 2) | file LICENCE,NA,NA,NA,NA,yes,3.6.1
+matrixcalc,C:/Users/pech/Documents/R/win-library/3.6,1.0-3,NA,R (>= 2.0.1),NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.0
+MatrixModels,C:/Users/pech/Documents/R/win-library/3.6,0.4-1,NA,R (>= 3.0.1),"stats, methods, Matrix (>= 1.1-5)",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+matrixStats,C:/Users/pech/Documents/R/win-library/3.6,0.55.0,NA,R (>= 2.12.0),NA,NA,"base64enc, ggplot2, knitr, microbenchmark, R.devices, R.rsp",NA,Artistic-2.0,NA,NA,NA,NA,yes,3.6.1
+mboost,C:/Users/pech/Documents/R/win-library/3.6,2.9-1,NA,"R (>= 3.2.0), methods, stats, parallel, stabs (>= 0.5-0)","Matrix, survival, splines, lattice, nnls, quadprog, utils,
+graphics, grDevices, partykit (>= 1.2-1)",NA,"TH.data, MASS, fields, BayesX, gbm, mlbench, RColorBrewer,
+rpart (>= 4.0-3), randomForest, nnet, testthat (>= 0.10.0),
+kangar00",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+mc2d,C:/Users/pech/Documents/R/win-library/3.6,0.1-18,NA,"R (>= 2.10.0), mvtnorm","stats, grDevices, graphics, utils",NA,"fitdistrplus, survival",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+mclust,C:/Users/pech/Documents/R/win-library/3.6,5.4.5,NA,R (>= 3.0),"stats, utils, graphics, grDevices",NA,"knitr (>= 1.12), rmarkdown (>= 0.9), mix (>= 1.0), geometry
+(>= 0.3-6), MASS",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+MCMCglmm,C:/Users/pech/Documents/R/win-library/3.6,2.29,NA,"Matrix, coda, ape","corpcor, tensorA, cubature, methods",NA,"rgl, combinat, mvtnorm, orthopolynom",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+mda,C:/Users/pech/Documents/R/win-library/3.6,0.4-10,NA,"R (>= 1.9.0), stats, class",NA,NA,earth,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+memoise,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,NA,digest (>= 0.6.3),NA,"testthat, aws.s3, httr, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+merTools,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,"R (>= 3.0.2), arm, lme4 (>= 1.1-11), methods","dplyr, mvtnorm, foreach, shiny, abind, ggplot2, blme, broom,",NA,"testthat, knitr, rmarkdown, parallel, nlme, future.apply,
+rstanarm, Amelia, DT",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+mgcv,C:/Users/pech/Documents/R/win-library/3.6,1.8-29,recommended,"R (>= 2.14.0), nlme (>= 3.1-64)","methods, stats, graphics, Matrix, splines, utils",NA,"parallel, survival, MASS",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+mice,C:/Users/pech/Documents/R/win-library/3.6,3.6.0,NA,"methods, R (>= 2.10.0), lattice","broom, dplyr, grDevices, graphics, MASS, mitml, nnet,
+parallel, Rcpp, rlang, rpart, splines, stats, survival, utils",Rcpp,"AGD, CALIBERrfimpute, gamlss, lme4, mitools, nlme, pan,
+randomForest, Zelig, BSDA, knitr, rmarkdown, testthat, HSAUR3,
+micemd, miceadds, tidyr",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+microbenchmark,C:/Users/pech/Documents/R/win-library/3.6,1.4-7,NA,NA,"graphics, stats",NA,"ggplot2, multcomp, RUnit",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+mime,C:/Users/pech/Documents/R/win-library/3.6,0.7,NA,NA,tools,NA,NA,NA,GPL,NA,NA,NA,NA,yes,3.6.0
+miniUI,C:/Users/pech/Documents/R/win-library/3.6,0.1.1.1,NA,NA,"shiny (>= 0.13), htmltools (>= 0.3), utils",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+minqa,C:/Users/pech/Documents/R/win-library/3.6,1.2.4,NA,NA,Rcpp (>= 0.9.10),Rcpp,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+misc3d,C:/Users/pech/Documents/R/win-library/3.6,0.8-4,NA,NA,NA,NA,"rgl, tkrplot, MASS",NA,GPL,NA,NA,NA,NA,NA,3.6.1
+mitml,C:/Users/pech/Documents/R/win-library/3.6,0.3-7,NA,NA,"pan, jomo, haven, grDevices, graphics, stats, utils",NA,"mice, miceadds, Amelia, lme4, nlme, geepack, survival, knitr,
+rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+mitools,C:/Users/pech/Documents/R/win-library/3.6,2.4,NA,NA,"DBI, methods, stats",NA,"RODBC, foreign",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+mlapi,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,methods,"R6 (>= 2.2.1), Matrix (>= 1.1)",NA,knitr,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+mlbench,C:/Users/pech/Documents/R/win-library/3.6,2.1-1,NA,R (>= 2.10),NA,NA,lattice,NA,GPL-2,NA,NA,NA,NA,NA,3.6.1
+MLmetrics,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,R (>= 2.10),"stats, utils, ROCR",NA,e1071,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+mlmRev,C:/Users/pech/Documents/R/win-library/3.6,1.0-7,NA,"lme4, R (>= 2.10)",NA,NA,lattice,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+mlr,C:/Users/pech/Documents/R/win-library/3.6,2.15.0,NA,"ParamHelpers (>= 1.10), R (>= 3.0.2)","backports (>= 1.1.0), BBmisc (>= 1.11), checkmate (>= 1.8.2),
+data.table, ggplot2, methods, parallelMap (>= 1.3), stats,
+stringi, survival, utils, XML",NA,"ada, adabag, bartMachine, batchtools, brnn, bst, C50, care,
+caret (>= 6.0-57), class, clue, cluster, ClusterR, clusterSim
+(>= 0.44-5), clValid, cmaes, cowplot, CoxBoost, crs, Cubist,
+deepnet, DiceKriging, DiscriMiner, e1071, earth, elasticnet,
+emoa, evtree, extraTrees, fda.usc, FDboost, flare, FNN, fpc,
+frbs, FSelector, FSelectorRcpp (>= 0.2.1), gbm, GenSA, ggpubr,
+glmnet, GPfit, h2o (>= 3.6.0.8), Hmisc, hrbrthemes, irace (>=
+2.0), kernlab, kknn, klaR, knitr, laGP, LiblineaR, lintr (>=
+1.0.0.9001), MASS, mboost, mco, mda, memoise, mlbench, mldr,
+mlrMBO, mmpf, modeltools, mRMRe, neuralnet, nnet, nodeHarvest
+(>= 0.7-3), numDeriv, pamr, pander, party, penalized (>=
+0.9-47), pls, PMCMR (>= 4.1), praznik (>= 5.0.0), randomForest,
+randomForestSRC (>= 2.7.0), ranger (>= 0.8.0), rappdirs,
+refund, rex, rFerns, rgenoud, rknn, rmarkdown, ROCR,
+rotationForest, rpart, RRF, rrlda, rsm, RSNNS, RWeka, sda, sf,
+smoof, sparseLDA, stepPlr, survAUC, svglite, SwarmSVM,
+testthat, tgp, TH.data, wavelets, xgboost (>= 0.6-2)",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+mnormt,C:/Users/pech/Documents/R/win-library/3.6,1.5-5,NA,R (>= 2.2.0),NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.0
+mockery,C:/Users/pech/Documents/R/win-library/3.6,0.4.2,NA,NA,testthat,NA,"knitr, rmarkdown (>= 1.0), R6",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ModelMetrics,C:/Users/pech/Documents/R/win-library/3.6,1.2.2,NA,R (>= 3.2.2),"Rcpp, data.table",Rcpp,testthat,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+modelplotr,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.1.0),"ggplot2 (>= 2.2.1), gridExtra (>= 2.3.0), magrittr (>= 1.5.0),
+dplyr (>= 0.7.7), RColorBrewer (>= 1.1.2), ggfittext (>=
+0.6.0), scales (>= 1.0.0), rlang (>= 0.3.1)",NA,"mlr (>= 2.12.1), caret (>= 6.0), randomForest (>= 4.6.14),
+nnet(>= 7.3-12), e1071, h2o, keras, knitr, rmarkdown, testthat,
+xgboost, stringr, kableExtra, lattice, ranger, glmnet",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+modelr,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,R (>= 3.2),"broom, dplyr, magrittr, purrr (>= 0.2.2), rlang (>= 0.2.0),
+tibble, tidyr (>= 0.8.0)",NA,"compiler, covr, ggplot2, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+modeltools,C:/Users/pech/Documents/R/win-library/3.6,0.2-22,NA,"stats, stats4",methods,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+moonBook,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,R (>= 3.1.2),"nortest, survival, sjmisc, purrr, stringr, magrittr",NA,"testthat, knitr, ggplot2, ztable, sjlabelled, rmarkdown",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+multcomp,C:/Users/pech/Documents/R/win-library/3.6,1.4-10,NA,"stats, graphics, mvtnorm (>= 1.0-10), survival (>= 2.39-4),
+TH.data (>= 1.0-2)","sandwich (>= 2.3-0), codetools",NA,"lme4 (>= 0.999375-16), nlme, robustbase, coin, MASS, foreign,
+xtable, lmtest, coxme (>= 2.2-1), SimComp, ISwR, tram (>=
+0.2-5)",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+multicool,C:/Users/pech/Documents/R/win-library/3.6,0.1-10,NA,"methods, Rcpp (>= 0.11.2)",NA,Rcpp,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+munsell,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,NA,"colorspace, methods",NA,"ggplot2, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+mvnfast,C:/Users/pech/Documents/R/win-library/3.6,0.2.5,NA,NA,Rcpp (>= 0.12.0),"Rcpp, RcppArmadillo, BH","knitr, rmarkdown, testthat, mvtnorm, microbenchmark, MASS,
+plyr, RhpcBLASctl",NA,GPL (>= 2.0),NA,NA,NA,NA,yes,3.6.1
+mvtnorm,C:/Users/pech/Documents/R/win-library/3.6,1.0-11,NA,R(>= 3.5.0),"stats, methods",NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+mycor,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,R (>= 3.1.1),lattice,NA,"knitr, testthat",NA,CC0,NA,NA,NA,NA,no,3.6.1
+network,C:/Users/pech/Documents/R/win-library/3.6,1.15,NA,"R (>= 2.10), utils","tibble, magrittr",NA,"sna, statnet.common, testthat, covr",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+nleqslv,C:/Users/pech/Documents/R/win-library/3.6,3.3.2,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+nlme,C:/Users/pech/Documents/R/win-library/3.6,3.1-141,recommended,R (>= 3.4.0),"graphics, stats, utils, lattice",NA,"Hmisc, MASS",NA,GPL (>= 2) | file LICENCE,NA,NA,NA,NA,yes,3.6.1
+nloptr,C:/Users/pech/Documents/R/win-library/3.6,1.2.1,NA,NA,NA,NA,"testthat (>= 0.8.1), knitr, rmarkdown, inline (>= 0.3.14)",NA,LGPL-3,NA,NA,NA,NA,yes,3.6.1
+NLP,C:/Users/pech/Documents/R/win-library/3.6,0.2-0,NA,R (>= 3.2.0),utils,NA,NA,"udpipe, spacyr, cleanNLP",GPL-3,NA,NA,NA,NA,no,3.6.0
+nnet,C:/Users/pech/Documents/R/win-library/3.6,7.3-12,recommended,"R (>= 2.14.0), stats, utils",NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+nnls,C:/Users/pech/Documents/R/win-library/3.6,1.4,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.0
+nortest,C:/Users/pech/Documents/R/win-library/3.6,1.0-4,NA,NA,stats,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+numDeriv,C:/Users/pech/Documents/R/win-library/3.6,2016.8-1.1,NA,R (>= 2.11.1),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+nycflights13,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,R (>= 3.2),tibble,NA,dplyr,NA,CC0,NA,NA,NA,NA,no,3.6.1
+officer,C:/Users/pech/Documents/R/win-library/3.6,0.3.5,NA,NA,"Rcpp (>= 0.12.12), R6, grDevices, base64enc, zip (>= 2.0.0),
+digest,uuid,stats, magrittr,htmltools,rlang, xml2 (>= 1.1.0)",Rcpp,"testthat, devEMF,tibble,ggplot2, rmarkdown, knitr, rsvg",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+oompaBase,C:/Users/pech/Documents/R/win-library/3.6,3.2.9,NA,R (>= 3.0),"methods, graphics, grDevices, stats, cluster",NA,NA,NA,Apache License (== 2.0),NA,NA,NA,NA,no,3.6.1
+openssl,C:/Users/pech/Documents/R/win-library/3.6,1.4.1,NA,NA,askpass,NA,"testthat, digest, knitr, rmarkdown, jsonlite, jose, sodium",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+openxlsx,C:/Users/pech/Documents/R/win-library/3.6,4.1.0.1,NA,R (>= 3.3.0),"methods, Rcpp, grDevices, stats, utils, zip",Rcpp,"knitr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+ordinal,C:/Users/pech/Documents/R/win-library/3.6,2019.4-25,NA,"R (>= 2.13.0), stats, methods","ucminf, MASS, Matrix, numDeriv",NA,"lme4, nnet, xtable, testthat (>= 0.8), tools",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+packrat,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,R (>= 3.0.0),"tools, utils",NA,"testthat (>= 0.7), devtools, httr, knitr, rmarkdown",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+pacman,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,R (>= 3.5.0),"remotes, methods, stats, utils",NA,"BiocManager, knitr, lattice, testthat (>= 0.9.0), XML",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+padr,C:/Users/pech/Documents/R/win-library/3.6,0.5.0,NA,R (>= 3.0.0),"Rcpp, dplyr (>= 0.6.0), lubridate, rlang",Rcpp,"ggplot2, testthat, knitr, rmarkdown, lazyeval, tidyr,
+data.table, lintr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+paletteer,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 2.10),"gameofthrones (>= 1.0.0), ggthemes (>= 4.0.0), jcolors,
+oompaBase, harrypotter (>= 2.1.0), palr, pals, scico,
+viridisLite, rlang",NA,"covr, testthat, ggplot2, knitr, rmarkdown",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+palr,C:/Users/pech/Documents/R/win-library/3.6,0.0.6,NA,R (>= 2.10),NA,NA,"knitr, raster, rmarkdown, testthat, covr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+pals,C:/Users/pech/Documents/R/win-library/3.6,1.5,NA,"R (>= 2.10), maps,","dichromat, colorspace, graphics, grDevices, mapproj, methods,
+rgl, stats",NA,"classInt, ggplot2, knitr, latticeExtra, reshape2, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+pamr,C:/Users/pech/Documents/R/win-library/3.6,1.56.1,NA,"R (>= 2.10), cluster, survival",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+pan,C:/Users/pech/Documents/R/win-library/3.6,1.6,NA,NA,NA,NA,"mitools, lme4",NA,GPL-3,NA,no,NA,NA,yes,3.6.1
+pander,C:/Users/pech/Documents/R/win-library/3.6,0.6.3,NA,R (>= 2.15.0),"grDevices, graphics, methods, utils, stats, digest, tools,
+Rcpp",Rcpp,"grid, lattice, ggplot2 (>= 0.9.2), sylly, sylly.en,
+futile.logger, survival, microbenchmark, zoo, nlme, descr,
+MASS, knitr, rmarkdown, tables, reshape, memisc, Epi,
+randomForest, tseries, gtable, rms, forecast, data.table",NA,AGPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+parallelMap,C:/Users/pech/Documents/R/win-library/3.6,1.4,NA,R (>= 3.0.0),"BBmisc (>= 1.8), checkmate (>= 1.8.0), parallel, stats, utils",NA,"BatchJobs (>= 1.8), batchtools (>= 0.9.6), data.table, Rmpi,
+testthat",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,no,3.6.1
+parameters,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,R (>= 3.0),"insight (>= 0.5.0), bayestestR (>= 0.3.0), methods, stats,
+tools, utils",NA,"AER, aod, BayesFM, BayesFactor, betareg, boot, brms, cAIC4,
+covr, dplyr, DRR, EGAnet (>= 0.7), FactoMineR, fastICA, gamlss,
+gee, geepack, GLMMadaptive, glmmTMB, knitr, lavaan, lme4,
+lmerTest, logspline, MASS, Matrix, MCMCglmm, mgcv, MuMIn,
+nFactors, nlme, panelr, pbkrtest, plm, projpred, pscl, psych,
+randomForest, rmarkdown, rstanarm, see, survey, survival,
+testthat, VGAM, Zelig",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+ParamHelpers,C:/Users/pech/Documents/R/win-library/3.6,1.12,NA,NA,"backports, BBmisc (>= 1.10), checkmate (>= 1.8.2), fastmatch,
+methods",NA,"akima, eaf, emoa, GGally, ggplot2, gridExtra, grid, irace (>=
+2.1), lhs, plyr, reshape2, testthat",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+parsedate,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,NA,rematch2,NA,"covr, testthat, withr",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+parsnip,C:/Users/pech/Documents/R/win-library/3.6,0.0.4,NA,R (>= 2.10),"dplyr (>= 0.8.0.1), rlang (>= 0.3.1), purrr, utils, tibble (>=
+2.1.1), generics, glue, magrittr, stats, tidyr, globals,
+prettyunits, vctrs (>= 0.2.0)",NA,"testthat, knitr, rmarkdown, survival, keras, xgboost, covr,
+C50, sparklyr (>= 1.0.0), earth, glmnet, kernlab, kknn,
+randomForest, ranger, rpart, MASS, nlme",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+party,C:/Users/pech/Documents/R/win-library/3.6,1.3-3,NA,"R (>= 3.0.0), methods, grid, stats, mvtnorm (>= 1.0-2),
+modeltools (>= 0.2-21), strucchange","survival (>= 2.37-7), coin (>= 1.1-0), zoo, sandwich (>=
+1.1-1)",mvtnorm,"TH.data (>= 1.0-3), mlbench, colorspace, MASS, vcd, ipred,
+varImp",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+partykit,C:/Users/pech/Documents/R/win-library/3.6,1.2-5,NA,"R (>= 3.1.0), graphics, grid, libcoin (>= 1.0-0), mvtnorm","grDevices, stats, utils, survival, Formula (>= 1.2-1), inum
+(>= 1.0-0), rpart (>= 4.1-11)",NA,"XML, pmml, rJava, sandwich, strucchange, vcd, AER, mlbench,
+TH.data (>= 1.0-3), coin (>= 1.1-0), RWeka (>= 0.4-19),
+datasets, parallel, psychotools (>= 0.3-0), psychotree, party
+(>= 1.3-0)",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+pastecs,C:/Users/pech/Documents/R/win-library/3.6,1.3.21,NA,NA,"boot, stats, graphics, utils, grDevices",NA,"svUnit, covr",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+PASWR,C:/Users/pech/Documents/R/win-library/3.6,1.1,NA,"e1071, MASS, lattice",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.1
+pbapply,C:/Users/pech/Documents/R/win-library/3.6,1.4-2,NA,R (>= 3.2.0),parallel,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+pbkrtest,C:/Users/pech/Documents/R/win-library/3.6,0.4-7,NA,"R (>= 3.2.3), lme4 (>= 1.1.10)","Matrix (>= 1.2.3), parallel, MASS, methods",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+pcaPP,C:/Users/pech/Documents/R/win-library/3.6,1.9-73,NA,NA,mvtnorm,NA,NA,NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.0
+pdp,C:/Users/pech/Documents/R/win-library/3.6,0.7.0,NA,R (>= 3.2.5),"ggplot2 (>= 0.9.0), grDevices, gridExtra, lattice, magrittr,
+methods, mgcv, plyr, stats, viridis, utils",NA,"adabag, AmesHousing, C50, caret, Cubist, doParallel, dplyr,
+e1071, earth, gbm, ipred, keras, kernlab, MASS, mda, nnet,
+party, partykit, progress, randomForest, ranger, rpart,
+testthat, xgboost (>= 0.6-0), knitr, rmarkdown, vip",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+pec,C:/Users/pech/Documents/R/win-library/3.6,2019.11.03,NA,"R (>= 2.9.0), prodlim (>= 1.4.9)","foreach (>= 1.4.2), rms (>= 4.2-0), survival (>= 2.37-7),
+timereg (>= 1.8.9)",NA,"randomForestSRC, party, cmprsk (>= 2.2-7), rpart, CoxBoost,
+crrstep, riskRegression (>= 1.0.8), lava (>= 1.4.1), Hmisc (>=
+3.14-4)",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+PerfMeas,C:/Users/pech/Documents/R/win-library/3.6,1.2.1,NA,"limma, graph, RBGL",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+performance,C:/Users/pech/Documents/R/win-library/3.6,0.4.0,NA,R (>= 3.0),"insight (>= 0.6.0), bayestestR (>= 0.4.0)",NA,"AER, betareg, brms, bigutilsr, dbscan, covr, glmmTMB, ICS,
+ICSOutlier, lavaan, lme4, loo, Matrix, MASS, mlogit, nlme,
+ordinal, parallel, pscl, psych, randomForest, rmarkdown,
+rstanarm, rstantools, see (>= 0.2.1), survival, solitude,
+testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+PerformanceAnalytics,C:/Users/pech/Documents/R/win-library/3.6,1.5.3,NA,"R (>= 3.0.0), xts (>= 0.10.0)","methods, quadprog, zoo",NA,"dygraphs, Hmisc, MASS, quantmod, gamlss, gamlss.dist,
+robustbase, quantreg, gplots, testthat",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+pillar,C:/Users/pech/Documents/R/win-library/3.6,1.4.2,NA,NA,"cli, crayon (>= 1.3.4), fansi, rlang (>= 0.3.0), utf8 (>=
+1.1.0), vctrs",NA,"knitr, lubridate, testthat, withr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+pingr,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,NA,"processx, utils",NA,"covr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+pkgbuild,C:/Users/pech/Documents/R/win-library/3.6,1.0.6,NA,R (>= 3.1),"callr (>= 3.2.0), cli, crayon, desc, prettyunits, R6,
+rprojroot, withr (>= 2.1.2)",NA,"Rcpp, testthat, covr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+pkgconfig,C:/Users/pech/Documents/R/win-library/3.6,2.0.3,NA,NA,utils,NA,"covr, testthat, disposables (>= 1.0.3)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+pkgdown,C:/Users/pech/Documents/R/win-library/3.6,1.4.1,NA,R (>= 3.1.0),"callr (>= 2.0.2), cli, crayon, desc, digest, evaluate, fs (>=
+1.2.0), fansi, highlight, httr, magrittr, MASS, memoise,
+openssl, purrr, processx, rematch2, rlang (>= 0.3.0), rmarkdown
+(>= 1.1.9007), rstudioapi, tibble, tools, whisker, withr, xml2
+(>= 1.1.1), yaml",NA,"covr, htmlwidgets, jsonlite, knitr, leaflet, pkgload (>=
+1.0.2), testthat (>= 2.1.0), rticles, rsconnect",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+pkgload,C:/Users/pech/Documents/R/win-library/3.6,1.0.2,NA,NA,"desc, methods, pkgbuild, rlang, rprojroot, rstudioapi, utils,
+withr",NA,"bitops, covr, Rcpp, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+PKI,C:/Users/pech/Documents/R/win-library/3.6,0.1-5.1,NA,"R (>= 2.9.0), base64enc",NA,NA,NA,gmp,GPL-2 | GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.0
+plogr,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,NA,NA,NA,Rcpp,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+plot3D,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,R (>= 2.15),"misc3d, stats, graphics, grDevices",NA,NA,NA,GPL (>= 3.0),NA,NA,NA,NA,no,3.6.1
+plot3Drgl,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,"rgl, plot3D, R (>= 3.2.3)",grDevices,NA,NA,NA,GPL (>= 3.0),NA,NA,NA,NA,no,3.6.1
+plotfunctions,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,R (>= 2.10),NA,NA,"knitr, sp",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+plotGoogleMaps,C:/Users/pech/Documents/R/win-library/3.6,2.2,NA,"R (>= 2.15.0), sp, spacetime","rgdal, maptools,lattice, raster",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+plotly,C:/Users/pech/Documents/R/win-library/3.6,4.9.0,NA,"R (>= 3.2.0), ggplot2 (>= 3.0.0)","tools, scales, httr, jsonlite (>= 1.6), magrittr, digest,
+viridisLite, base64enc, htmltools (>= 0.3.6), htmlwidgets (>=
+1.3), tidyr, hexbin, RColorBrewer, dplyr, tibble, lazyeval (>=
+0.2.0), rlang, crosstalk, purrr, data.table, promises",NA,"MASS, maps, ggthemes, GGally, testthat, knitr, devtools,
+shiny (>= 1.1.0), shinytest (>= 1.3.0), curl, rmarkdown,
+vdiffr, Cairo, broom, webshot, listviewer, dendextend, sf,
+maptools, rgeos, png, IRdisplay, processx, plotlyGeoAssets,
+forcats",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+plotmo,C:/Users/pech/Documents/R/win-library/3.6,3.5.6,NA,"R (>= 3.4.0), Formula (>= 1.2-3), plotrix, TeachingDemos",NA,NA,"C50 (>= 0.1.0-24), earth (>= 5.1.0), gbm (>= 2.1.1), glmnet
+(>= 2.0.5), glmnetUtils (>= 1.0.3), MASS (>= 7.3-45), mlr (>=
+2.12.1), neuralnet (>= 1.33), partykit (>= 1.2-2), pre (>=
+0.5.0), rpart (>= 4.1-10), rpart.plot (>= 2.1.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+plotrix,C:/Users/pech/Documents/R/win-library/3.6,3.7-6,NA,R (>= 3.5.0),"grDevices, graphics, stats, utils",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+pls,C:/Users/pech/Documents/R/win-library/3.6,2.7-2,NA,R (>= 2.10),"grDevices, graphics, methods, stats",NA,"MASS, parallel, Rmpi, testthat, RUnit",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+plyr,C:/Users/pech/Documents/R/win-library/3.6,1.8.4,NA,R (>= 3.1.0),Rcpp (>= 0.11.0),Rcpp,"abind, testthat, tcltk, foreach, doParallel, itertools,
+iterators, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+png,C:/Users/pech/Documents/R/win-library/3.6,0.1-7,NA,R (>= 2.9.0),NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.0
+polspline,C:/Users/pech/Documents/R/win-library/3.6,1.1.16,NA,NA,"stats, graphics",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+polyclip,C:/Users/pech/Documents/R/win-library/3.6,1.10-0,NA,R (>= 3.0.0),NA,NA,NA,NA,BSL,NA,NA,NA,NA,yes,3.6.0
+polynom,C:/Users/pech/Documents/R/win-library/3.6,1.4-0,NA,NA,"stats, graphics",NA,"knitr, rmarkdown",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+ppcor,C:/Users/pech/Documents/R/win-library/3.6,1.1,NA,"R (>= 2.6.0), MASS",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+prabclus,C:/Users/pech/Documents/R/win-library/3.6,2.3-1,NA,"R (>= 2.10), MASS, mclust",NA,NA,"spdep, spatialreg, bootstrap, maptools, foreign, mvtnorm",NA,GPL,NA,NA,NA,NA,no,3.6.1
+praise,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,NA,NA,NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+prediction,C:/Users/pech/Documents/R/win-library/3.6,0.3.14,NA,R (>= 3.5.0),"utils, stats, data.table",NA,"datasets, methods, testthat","AER, aod, betareg, biglm, brglm, caret, crch, e1071, earth,
+ff, ffbase, gam (>= 1.15), gee, glmnet, glmx, kernlab, lme4,
+MASS, mclogit, mda, mlogit, MNP, nlme, nnet, ordinal, plm,
+pscl, quantreg, rpart, sampleSelection, speedglm, survey (>=
+3.31-5), survival, truncreg, VGAM",MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+prettydoc,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,NA,rmarkdown (>= 1.0),NA,"knitr, KernSmooth",NA,Apache License (>= 2.0),NA,NA,NA,NA,no,3.6.1
+prettyunits,C:/Users/pech/Documents/R/win-library/3.6,1.0.2,NA,NA,"magrittr, assertthat, methods",NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+pROC,C:/Users/pech/Documents/R/win-library/3.6,1.15.3,NA,R (>= 2.14),"methods, plyr, Rcpp (>= 0.11.1)",Rcpp,"microbenchmark, tcltk, MASS, logcondens, doParallel,
+testthat, vdiffr, ggplot2",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+processx,C:/Users/pech/Documents/R/win-library/3.6,3.4.1,NA,NA,"ps (>= 1.2.0), R6, utils",NA,"callr (>= 3.2.0), codetools, covr, crayon, curl, debugme,
+parallel, testthat, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+prodlim,C:/Users/pech/Documents/R/win-library/3.6,2018.04.18,NA,R (>= 2.9.0),"Rcpp (>= 0.11.5), stats, graphics, survival, KernSmooth, lava",Rcpp,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+profileModel,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,R (>= 2.6.0),NA,NA,"MASS, gnm",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+progress,C:/Users/pech/Documents/R/win-library/3.6,1.2.2,NA,NA,"hms, prettyunits, R6, crayon",NA,"Rcpp, testthat, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+proj4,C:/Users/pech/Documents/R/win-library/3.6,1.0-8.1,NA,R (>= 2.0.0),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+promises,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,NA,"R6, Rcpp, later, rlang, stats, magrittr","later, Rcpp","testthat, future, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+proto,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,NA,NA,NA,"testthat, covr",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+proxy,C:/Users/pech/Documents/R/win-library/3.6,0.4-23,NA,R (>= 3.4.0),"stats, utils",NA,cba,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+proxyC,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,"R (>= 3.1.0), methods","Matrix (>= 1.2), Rcpp (>= 0.12.12), RcppParallel","Rcpp, RcppParallel, RcppArmadillo (>= 0.7.600.1.0)","testthat, proxy",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+PRROC,C:/Users/pech/Documents/R/win-library/3.6,1.3.1,NA,NA,NA,NA,"testthat, ggplot2, ROCR",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+pryr,C:/Users/pech/Documents/R/win-library/3.6,0.1.4,NA,R (>= 3.1.0),"stringr, codetools, methods, Rcpp (>= 0.11.0)",Rcpp,testthat (>= 0.8.0),NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+ps,C:/Users/pech/Documents/R/win-library/3.6,1.3.0,NA,R (>= 3.1),utils,NA,"callr, covr, curl, pingr, processx (>= 3.1.0), R6, rlang,
+testthat, tibble",NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+psych,C:/Users/pech/Documents/R/win-library/3.6,1.8.12,NA,R (>= 2.10),"mnormt,parallel,stats,graphics,grDevices,methods,foreign,lattice,nlme",NA,"GPArotation, lavaan, sem, lme4,Rcsdp, graph, Rgraphviz",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+Publish,C:/Users/pech/Documents/R/win-library/3.6,2018.04.17,NA,prodlim (>= 1.5.4),"survival (>= 2.38), data.table (>= 1.10.4), lava (>= 1.5.1),
+multcomp (>= 1.4)",NA,"lme4 (>= 1.1), mets (>= 1.1.1), pec (>= 2.4.4),
+riskRegression (>= 1.4.3), testthat, smcfcs (>= 1.3.0), rms (>=
+5.1), mitools (>= 2.3), nlme (>= 3.1-131)",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+purrr,C:/Users/pech/Documents/R/win-library/3.6,0.3.3,NA,R (>= 3.2),"magrittr (>= 1.5), rlang (>= 0.3.1)",NA,"covr, crayon, dplyr (>= 0.7.8), knitr, rmarkdown, testthat,
+tibble, tidyselect",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+pwr,C:/Users/pech/Documents/R/win-library/3.6,1.2-2,NA,NA,"stats, graphics",NA,"ggplot2, scales, knitr, rmarkdown",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+qap,C:/Users/pech/Documents/R/win-library/3.6,0.1-1,NA,NA,NA,NA,testthat,NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+quadprog,C:/Users/pech/Documents/R/win-library/3.6,1.5-7,NA,R (>= 3.1.0),NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+Quandl,C:/Users/pech/Documents/R/win-library/3.6,2.10.0,NA,"R (>= 2.15.0), xts","httr (>= 0.6.1), zoo, jsonlite (>= 0.9.14)",NA,"testthat (>= 0.10.0), roxygen2, timeSeries",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+quanteda,C:/Users/pech/Documents/R/win-library/3.6,1.5.1,NA,"R (>= 3.1.0), methods","data.table (>= 1.9.6), extrafont, fastmatch, ggplot2 (>=
+2.2.0), ggrepel, lubridate, magrittr, Matrix (>= 1.2), network,
+RSpectra, Rcpp (>= 0.12.12), RcppParallel, sna, SnowballC,
+spacyr, stopwords, stringi, xml2, yaml, proxyC (>= 0.1.4)","Rcpp, RcppParallel, RcppArmadillo (>= 0.7.600.1.0)","ca, dplyr, DT, e1071, entropy, ExPosition, lda, lsa, proxy,
+purrr, RColorBrewer, rmarkdown, slam, spelling, stm, svs,
+testthat, text2vec, tibble, tidytext, tm (>= 0.6), topicmodels,
+xtable, knitr, igraph, wordcloud",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+quantmod,C:/Users/pech/Documents/R/win-library/3.6,0.4-15,NA,"R (>= 3.2.0), xts(>= 0.9-0), zoo, TTR(>= 0.2), methods",curl,NA,"DBI,RMySQL,RSQLite,timeSeries,XML,downloader,jsonlite(>= 1.1)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+QuantPsyc,C:/Users/pech/Documents/R/win-library/3.6,1.5,NA,"boot, MASS",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,NA,3.6.1
+quantreg,C:/Users/pech/Documents/R/win-library/3.6,5.51,NA,"R (>= 2.6), stats, SparseM","methods, graphics, Matrix, MatrixModels",NA,"tripack, akima, MASS, survival, rgl, logspline, nor1mix,
+Formula, zoo, R.rsp",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+questionr,C:/Users/pech/Documents/R/win-library/3.6,0.7.0,NA,R (>= 2.10),"shiny (>= 1.0.5), miniUI, rstudioapi, highr, classInt,
+htmltools, graphics, stats, utils, labelled (>= 2.0.0)",NA,"memisc, testthat, roxygen2, dplyr, tidyr, janitor, forcats,
+knitr",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+qvcalc,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,NA,NA,NA,"relimp, MASS","psychotools, survival",GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+R.methodsS3,C:/Users/pech/Documents/R/win-library/3.6,1.7.1,NA,R (>= 2.13.0),utils,NA,NA,NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.0
+R.oo,C:/Users/pech/Documents/R/win-library/3.6,1.22.0,NA,"R (>= 2.13.0), R.methodsS3 (>= 1.7.1)","methods, utils",NA,tools,NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.0
+R.utils,C:/Users/pech/Documents/R/win-library/3.6,2.9.0,NA,"R (>= 2.14.0), R.oo (>= 1.22.0)","methods, utils, tools, R.methodsS3 (>= 1.7.1)",NA,digest (>= 0.6.10),NA,LGPL (>= 2.1),NA,NA,NA,NA,no,3.6.1
+r2d3,C:/Users/pech/Documents/R/win-library/3.6,0.2.3,NA,R (>= 3.1.2),"htmlwidgets (>= 1.2), htmltools, jsonlite, rstudioapi",NA,"knitr, rmarkdown, shiny, shinytest, testthat, webshot",NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,no,3.6.1
+R6,C:/Users/pech/Documents/R/win-library/3.6,2.4.0,NA,R (>= 3.0),NA,NA,"knitr, microbenchmark, pryr, testthat, ggplot2, scales",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+RAdwords,C:/Users/pech/Documents/R/win-library/3.6,0.1.18,NA,R (>= 3.0.0),"RCurl, rjson",NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+randomForest,C:/Users/pech/Documents/R/win-library/3.6,4.6-14,NA,"R (>= 3.2.2), stats",NA,NA,"RColorBrewer, MASS",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+randomForestSRC,C:/Users/pech/Documents/R/win-library/3.6,2.9.1,NA,"R (>= 3.5.0),",parallel,NA,"survival, pec, prodlim, mlbench, akima, caret, imbalance",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+ranger,C:/Users/pech/Documents/R/win-library/3.6,0.11.2,NA,R (>= 3.1),"Rcpp (>= 0.11.2), Matrix","Rcpp, RcppEigen","survival, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+RANN,C:/Users/pech/Documents/R/win-library/3.6,2.6.1,NA,NA,NA,NA,testthat,NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+RApiDatetime,C:/Users/pech/Documents/R/win-library/3.6,0.0.4,NA,NA,NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+rapidjsonr,C:/Users/pech/Documents/R/win-library/3.6,1.1,NA,NA,NA,NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.0
+rappdirs,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,"R (>= 2.14), methods",NA,NA,"testthat, roxygen2",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+rapportools,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,reshape,"plyr, pander",NA,NA,NA,AGPL-3,NA,NA,NA,NA,no,3.6.1
+raster,C:/Users/pech/Documents/R/win-library/3.6,3.0-7,NA,"sp (>= 1.2-0), R (>= 3.0.0)","Rcpp, methods",Rcpp,"rgdal (>= 0.9-1), rgeos (>= 0.3-8), ncdf4, igraph, tcltk,
+parallel, rasterVis, MASS, sf, testthat",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+rattle,C:/Users/pech/Documents/R/win-library/3.6,5.2.0,NA,R (>= 2.13.0),"stats, utils, ggplot2, grDevices, graphics, magrittr, methods,
+stringi, stringr, tidyr, dplyr, XML, rpart.plot",NA,"pmml (>= 1.2.13), bitops, colorspace, ada, amap, arules,
+arulesViz, biclust, cairoDevice, cba, cluster, corrplot, descr,
+doBy, e1071, ellipse, fBasics, foreign, fpc, gdata, ggdendro,
+ggraptR, gplots, grid, gridExtra, gtools, gWidgetsRGtk2,
+hmeasure, Hmisc, kernlab, Matrix, mice, nnet, party, playwith,
+plyr, psych, randomForest, rattle.data, RColorBrewer, readxl,
+reshape, rggobi, RGtk2, ROCR, RODBC, rpart, scales, SnowballC,
+survival, timeDate, tm, verification, wskm, RGtk2Extras,
+xgboost",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+rcmdcheck,C:/Users/pech/Documents/R/win-library/3.6,1.3.3,NA,NA,"callr (>= 3.1.1.9000), cli (>= 1.1.0), crayon, desc (>=
+1.2.0), digest, pkgbuild, prettyunits, R6, rprojroot,
+sessioninfo (>= 1.1.1), utils, withr, xopen",NA,"covr, knitr, mockery, rmarkdown, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+RColorBrewer,C:/Users/pech/Documents/R/win-library/3.6,1.1-2,NA,R (>= 2.0.0),NA,NA,NA,NA,Apache License 2.0,NA,NA,NA,NA,no,3.6.0
+Rcpp,C:/Users/pech/Documents/R/win-library/3.6,1.0.2,NA,R (>= 3.0.0),"methods, utils",NA,"RUnit, inline, rbenchmark, knitr, rmarkdown, pinp, pkgKitten
+(>= 0.1.2)",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+RcppArmadillo,C:/Users/pech/Documents/R/win-library/3.6,0.9.800.1.0,NA,R (>= 3.3.0),"Rcpp (>= 0.11.0), stats, utils, methods",Rcpp,"tinytest, Matrix, pkgKitten, reticulate, rmarkdown, knitr,
+pinp, slam",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+RcppEigen,C:/Users/pech/Documents/R/win-library/3.6,0.3.3.5.0,NA,R (>= 2.15.1),"Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils",Rcpp,"inline, RUnit, pkgKitten, microbenchmark",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+RcppParallel,C:/Users/pech/Documents/R/win-library/3.6,4.4.4,NA,R (>= 3.0.2),NA,NA,"Rcpp, RUnit, knitr, rmarkdown",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+RcppProgress,C:/Users/pech/Documents/R/win-library/3.6,0.4.1,NA,NA,NA,NA,"RcppArmadillo, devtools, roxygen2, testthat",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+RcppRoll,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 2.15.1),Rcpp,Rcpp,"zoo, testthat",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+RCurl,C:/Users/pech/Documents/R/win-library/3.6,1.95-4.12,NA,"R (>= 3.0.0), methods, bitops",NA,NA,"Rcompression, XML",NA,BSD,NA,NA,NA,NA,yes,3.6.0
+reactlog,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.0.2),jsonlite (>= 0.9.16),NA,"shiny, knitr, rmarkdown, htmltools",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+readbitmap,C:/Users/pech/Documents/R/win-library/3.6,0.1.5,NA,NA,"bmp, jpeg, png, tiff",NA,"pixmap, testthat",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+readr,C:/Users/pech/Documents/R/win-library/3.6,1.3.1,NA,R (>= 3.1),"Rcpp (>= 0.12.0.5), tibble, hms (>= 0.4.1), R6, clipr, crayon,
+methods","Rcpp, BH","curl, testthat, knitr, rmarkdown, stringi, covr, spelling",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+readxl,C:/Users/pech/Documents/R/win-library/3.6,1.3.1,NA,NA,"cellranger, Rcpp (>= 0.12.18), tibble (>= 1.3.1), utils","progress, Rcpp","covr, knitr, rmarkdown, rprojroot (>= 1.1), testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+rebus,C:/Users/pech/Documents/R/win-library/3.6,0.1-3,NA,R (>= 3.1.0),"rebus.base (>= 0.0-3), rebus.datetimes, rebus.numbers,
+rebus.unicode (>= 0.0-2)",NA,testthat,NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+rebus.base,C:/Users/pech/Documents/R/win-library/3.6,0.0-3,NA,R (>= 3.1.0),stats,NA,"stringi, testthat",NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+rebus.datetimes,C:/Users/pech/Documents/R/win-library/3.6,0.0-1,NA,R (>= 3.1.0),rebus.base,NA,"stats, testthat",NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+rebus.numbers,C:/Users/pech/Documents/R/win-library/3.6,0.0-1,NA,R (>= 3.1.0),"rebus.base, utils",NA,testthat,NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+rebus.unicode,C:/Users/pech/Documents/R/win-library/3.6,0.0-2,NA,R (>= 3.1.0),rebus.base (>= 0.0-2),NA,stringi,NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+recipes,C:/Users/pech/Documents/R/win-library/3.6,0.1.7,NA,"R (>= 3.1), dplyr","generics, glue, gower, ipred, lubridate, magrittr, Matrix,
+purrr (>= 0.2.3), rlang (>= 0.4.0), stats, tibble, tidyr (>=
+0.8.3), tidyselect (>= 0.2.5), timeDate, utils, withr",NA,"covr, ddalpha, dimRed (>= 0.2.2), fastICA, ggplot2, igraph,
+kernlab, knitr, pls, RANN, RcppRoll, rmarkdown, rpart, rsample,
+RSpectra, testthat (>= 2.1.0)",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+RefManageR,C:/Users/pech/Documents/R/win-library/3.6,1.2.12,NA,R (>= 3.0),"xml2, jsonlite, utils, plyr, tools, httr, bibtex (>= 0.4.1),
+lubridate (>= 1.5.0), stringr, methods",NA,"knitr, testthat,",NA,GPL-2 | GPL-3 | BSD_3_clause + file LICENSE,NA,NA,NA,NA,no,3.6.1
+registry,C:/Users/pech/Documents/R/win-library/3.6,0.5-1,NA,R (>= 2.6.0),utils,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+reinstallr,C:/Users/pech/Documents/R/win-library/3.6,0.1.4,NA,R (>= 3.3.0),NA,NA,testthat,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+relaimpo,C:/Users/pech/Documents/R/win-library/3.6,2.2-3,NA,"R(>= 2.2.1), MASS, boot, survey, mitools, graphics","methods, corpcor",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+relimp,C:/Users/pech/Documents/R/win-library/3.6,1.0-5,NA,R (>= 2.0.0),"stats, utils",NA,"tcltk, nnet, MASS, Rcmdr",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+rematch,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,NA,NA,NA,"covr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rematch2,C:/Users/pech/Documents/R/win-library/3.6,2.1.0,NA,NA,tibble,NA,"covr, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+remotes,C:/Users/pech/Documents/R/win-library/3.6,2.1.0,NA,R (>= 3.0.0),"methods, stats, tools, utils",NA,"brew, callr, codetools, curl, covr, git2r (>= 0.23.0), knitr,
+mockery, pkgbuild (>= 1.0.1), pingr, rmarkdown, rprojroot,
+testthat, withr",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+reprex,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.1),"callr (>= 2.0.0), clipr (>= 0.4.0), fs, rlang, rmarkdown,
+utils, whisker, withr",NA,"covr, devtools, fortunes, knitr, miniUI, rprojroot,
+rstudioapi, shiny, styler (>= 1.0.2), testthat (>= 2.0.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+reshape,C:/Users/pech/Documents/R/win-library/3.6,0.8.8,NA,R (>= 2.6.1),plyr,NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+reshape2,C:/Users/pech/Documents/R/win-library/3.6,1.4.3,NA,R (>= 3.1),"plyr (>= 1.8.1), Rcpp, stringr",Rcpp,"covr, lattice, testthat (>= 0.8.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+reticulate,C:/Users/pech/Documents/R/win-library/3.6,1.13,NA,R (>= 3.0),"utils, graphics, jsonlite, Rcpp (>= 0.12.7), Matrix",Rcpp,"testthat, knitr, callr, rmarkdown",NA,Apache License 2.0,NA,NA,NA,NA,yes,3.6.1
+retimes,C:/Users/pech/Documents/R/win-library/3.6,0.1-2,NA,methods,NA,NA,NA,NA,GPL-3,NA,NA,NA,NA,yes,3.6.0
+reviewR,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,NA,"rvest, dplyr, lubridate, stringr, magrittr, purrr, tripR,
+trustpilotR, yelpR",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+rex,C:/Users/pech/Documents/R/win-library/3.6,1.1.2,NA,NA,"magrittr, lazyeval",NA,"testthat, knitr, rmarkdown, dplyr, ggplot2, Hmisc, stringr,
+rvest, roxygen2, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rgdal,C:/Users/pech/Documents/R/win-library/3.6,1.4-6,NA,"R (>= 3.5.0), methods, sp (>= 1.1-0)","grDevices, graphics, stats, utils",sp,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rgeos,C:/Users/pech/Documents/R/win-library/3.6,0.5-2,NA,"R (>= 3.3.0), methods, sp (>= 1.1-0)","utils, stats, graphics",sp,"maptools (>= 0.8-5), testthat, XML, maps, rgdal",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rgexf,C:/Users/pech/Documents/R/win-library/3.6,0.15.3,NA,"XML, Rook, igraph",NA,NA,NA,NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+rgl,C:/Users/pech/Documents/R/win-library/3.6,0.100.30,NA,R (>= 3.2.0),"graphics, grDevices, stats, utils, htmlwidgets, htmltools,
+knitr, jsonlite (>= 0.9.20), shiny, magrittr, crosstalk,
+manipulateWidget (>= 0.9.0)",NA,"MASS, rmarkdown, deldir, orientlib, lattice, misc3d,
+rstudioapi, magick, plotrix (>= 3.7-3), tripack, interp,
+alphashape3d",NA,GPL,NA,NA,NA,NA,yes,3.6.1
+RgoogleMaps,C:/Users/pech/Documents/R/win-library/3.6,1.4.4,NA,R (>= 2.10),"graphics, stats, utils, grDevices, methods, png",NA,"PBSmapping, maptools, sp, loa, RColorBrewer, leaflet",NA,GPL,NA,NA,NA,NA,no,3.6.1
+rhub,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,NA,"assertthat, callr, cli (>= 1.1.0), crayon, desc, digest, httr,
+jsonlite, parsedate, pillar, prettyunits, processx, R6,
+rappdirs, rcmdcheck (>= 1.2.1), rematch, tibble, utils, uuid,
+whoami, withr",NA,"covr, testthat, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rio,C:/Users/pech/Documents/R/win-library/3.6,0.5.16,NA,R (>= 2.15.0),"tools, stats, utils, foreign, haven (>= 1.1.0), curl (>= 0.6),
+data.table (>= 1.9.8), readxl (>= 0.1.1), openxlsx, tibble",NA,"datasets, bit64, testthat, knitr, magrittr, clipr, csvy,
+feather, fst, hexView, jsonlite, readODS (>= 1.6.4), readr,
+rmatio, xml2 (>= 1.2.0), yaml",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+riskRegression,C:/Users/pech/Documents/R/win-library/3.6,2019.01.29,NA,"R (>= 2.9.0), data.table (>= 1.10.4), ggplot2 (>= 2.1.0),
+prodlim (>= 1.6.1)","abind, doParallel, stats, graphics, survival (>= 2.40.1), lava
+(>= 1.4.7), cmprsk, plotrix, timereg (>= 1.9.1), foreach,
+ranger, parallel, Rcpp, rms (>= 5.0-0)","Rcpp, RcppArmadillo","boot, CoxBoost, mets, mstate, party, pec, penalized, pROC,
+randomForest, randomForestSRC, rbenchmark, rpart, testthat",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rJava,C:/Users/pech/Documents/R/win-library/3.6,0.9-11,NA,"R (>= 2.5.0), methods",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+rjson,C:/Users/pech/Documents/R/win-library/3.6,0.2.20,NA,R (>= 3.1.0),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+RJSONIO,C:/Users/pech/Documents/R/win-library/3.6,1.3-1.3,NA,NA,methods,NA,NA,NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+rlang,C:/Users/pech/Documents/R/win-library/3.6,0.4.1,NA,R (>= 3.2.0),NA,NA,"cli, covr, crayon, magrittr, methods, pillar, rmarkdown,
+testthat (>= 2.0.0)",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+rlist,C:/Users/pech/Documents/R/win-library/3.6,0.4.6.1,NA,R (>= 2.15),"yaml, jsonlite, XML, data.table",NA,"testthat, stringdist, pipeR",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rlme,C:/Users/pech/Documents/R/win-library/3.6,0.5,NA,NA,"MASS, quantreg, nlme, mgcv, stringr, magic, robustbase, Rcpp,
+stats, utils, graphics",Rcpp,testthat,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rmarkdown,C:/Users/pech/Documents/R/win-library/3.6,1.16,NA,R (>= 3.0),"tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=
+0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex
+(>= 0.11), xfun, methods, stringr (>= 1.2.0)",NA,"shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble,
+fs, pkgdown, callr (>= 2.0.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+Rmisc,C:/Users/pech/Documents/R/win-library/3.6,1.5,NA,"lattice, plyr",NA,NA,"latticeExtra, Hmisc, stats4",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+Rmpfr,C:/Users/pech/Documents/R/win-library/3.6,0.7-2,NA,"gmp (>= 0.5-8), R (>= 3.3.0)","stats, utils, methods",NA,"MASS, Bessel, polynom, sfsmisc (>= 1.0-20), Matrix",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rms,C:/Users/pech/Documents/R/win-library/3.6,5.1-3.1,NA,"Hmisc (>= 4.1-1), survival (>= 2.40-1), lattice, ggplot2 (>=
+2.2), SparseM","methods, quantreg, rpart, nlme (>= 3.1-123), polspline,
+multcomp, htmlTable (>= 1.11.0), htmltools",NA,"boot, tcltk, plotly (>= 4.5.6)",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+RMySQL,C:/Users/pech/Documents/R/win-library/3.6,0.10.17,NA,"R (>= 2.8.0), DBI (>= 0.4)",methods,NA,"RMariaDB, testthat, curl",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+rnaturalearth,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.1.1),"sp (>= 1.0.15), utils (>= 3.2.3), sf (>= 0.3-4)",NA,"rgdal, knitr (>= 1.12.3), testthat (>= 0.9.1), httr (>=
+1.1.0), devtools (>= 1.10.0), rnaturalearthdata (>= 0.1.0),
+rnaturalearthhires (>= 0.1.0), raster (>= 2.5-2), rgeos",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rnaturalearthdata,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.1.1),sp (>= 1.0.15),NA,"knitr (>= 1.12.3), testthat (>= 0.9.1)",NA,CC0,NA,NA,NA,NA,no,3.6.1
+rnn,C:/Users/pech/Documents/R/win-library/3.6,0.9.8,NA,R (>= 3.2.2),"sigmoid, shiny",NA,"testthat, knitr, rmarkdown",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+robotstxt,C:/Users/pech/Documents/R/win-library/3.6,0.6.2,NA,R (>= 3.0.0),"stringr (>= 1.0.0), httr (>= 1.0.0), spiderbar (>= 0.2.0),
+future (>= 1.6.2), future.apply (>= 1.0.0), magrittr, utils",NA,"knitr, rmarkdown, dplyr, testthat, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+robust,C:/Users/pech/Documents/R/win-library/3.6,0.4-18.1,NA,fit.models,"graphics, stats, utils, lattice, MASS, robustbase, rrcov",NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+robustbase,C:/Users/pech/Documents/R/win-library/3.6,0.93-5,NA,R (>= 3.1.0),"stats, graphics, utils, methods, DEoptimR",NA,"grid, MASS, lattice, boot, cluster, Matrix, robust,
+fit.models, MPV, xtable, ggplot2, GGally, RColorBrewer,
+reshape2, sfsmisc, catdata, doParallel, foreach, skewt",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+robustlmm,C:/Users/pech/Documents/R/win-library/3.6,2.3,NA,"lme4 (>= 1.1-9), Matrix (>= 1.0-13), R (>= 3.2.0)","ggplot2, lattice, nlme, methods, robustbase (>= 0.93), xtable,
+Rcpp (>= 0.12.2), fastGHQuad","Rcpp, RcppEigen, robustbase, cubature (> 1.3-8)","digest, reshape2, microbenchmark",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+ROCR,C:/Users/pech/Documents/R/win-library/3.6,1.0-7,NA,"gplots, methods",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+RODBC,C:/Users/pech/Documents/R/win-library/3.6,1.3-16,NA,R (>= 3.0.0),stats,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+Rook,C:/Users/pech/Documents/R/win-library/3.6,1.1-1,NA,R (>= 2.13.0),"utils, tools, methods, brew",NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+rowr,C:/Users/pech/Documents/R/win-library/3.6,1.1.3,NA,R (>= 3.0.1),methods,NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.0
+roxygen2,C:/Users/pech/Documents/R/win-library/3.6,6.1.1,NA,R (>= 3.1),"brew, commonmark, desc (>= 1.2.0), digest, methods, pkgload
+(>= 1.0.2), purrr, R6 (>= 2.1.2), Rcpp (>= 0.11.0), stringi,
+stringr (>= 1.0.0), utils, xml2",Rcpp,"covr, devtools, knitr, rmarkdown, testthat (>= 0.8.0)",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rpart,C:/Users/pech/Documents/R/win-library/3.6,4.1-15,recommended,"R (>= 2.15.0), graphics, stats, grDevices",NA,NA,survival,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+rpart.plot,C:/Users/pech/Documents/R/win-library/3.6,3.0.8,NA,"R (>= 3.4.0), rpart (>= 4.1-10)",NA,NA,earth (>= 5.1.0),NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+RPostgreSQL,C:/Users/pech/Documents/R/win-library/3.6,0.6-2,NA,"R (>= 2.9.0), methods, DBI (>= 0.3)",NA,NA,NA,NA,GPL-2 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+rprojroot,C:/Users/pech/Documents/R/win-library/3.6,1.3-2,NA,R (>= 3.0.0),backports,NA,"testthat, mockr, knitr, withr, rmarkdown",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+rrcov,C:/Users/pech/Documents/R/win-library/3.6,1.4-7,NA,"R (>= 2.10), robustbase (>= 0.92.1), methods","stats, stats4, mvtnorm, lattice, cluster, pcaPP",NA,"grid, MASS, ellipse",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rsample,C:/Users/pech/Documents/R/win-library/3.6,0.0.5,NA,"R (>= 3.1), tidyr","dplyr, purrr, tibble, rlang (>= 0.4.0), methods, generics,
+utils, tidyselect, furrr",NA,"ggplot2, testthat, rmarkdown, knitr, AmesHousing, recipes (>=
+0.1.4), broom",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+rsconnect,C:/Users/pech/Documents/R/win-library/3.6,0.8.15,NA,R (>= 3.0.0),"curl, jsonlite, openssl, packrat (>= 0.4.8-1), rstudioapi (>=
+0.5), yaml (>= 2.1.5)",NA,"RCurl, callr, httpuv, knitr, plumber (>= 0.3.2), reticulate,
+rmarkdown (>= 1.1), shiny, sourcetools, testthat, xtable",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+Rserve,C:/Users/pech/Documents/R/win-library/3.6,1.7-3.1,NA,R (>= 1.5.0),NA,NA,RSclient,NA,GPL-2 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+RSpectra,C:/Users/pech/Documents/R/win-library/3.6,0.15-0,NA,R (>= 3.0.2),"Matrix (>= 1.1-0), Rcpp (>= 0.11.5)","Rcpp, RcppEigen (>= 0.3.3.3.0)","knitr, rmarkdown, prettydoc",NA,MPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+RSQLite,C:/Users/pech/Documents/R/win-library/3.6,2.1.2,NA,R (>= 3.1.0),"bit64, blob (>= 1.2.0), DBI (>= 1.0.0), memoise, methods,
+pkgconfig, Rcpp (>= 0.12.7)","BH, plogr (>= 0.2.0), Rcpp","DBItest, knitr, rmarkdown, testthat",NA,LGPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+rstan,C:/Users/pech/Documents/R/win-library/3.6,2.19.2,NA,"R (>= 3.4.0), StanHeaders (> 2.18.1), ggplot2 (>= 2.0.0)","methods, stats4, inline, gridExtra (>= 2.0.0), Rcpp (>=
+0.12.0), loo (>= 2.0.0), pkgbuild","Rcpp (>= 0.12.0), RcppEigen (>= 0.3.3.3.0), BH (>= 1.69.0),
+StanHeaders (> 2.18.1)","RUnit, RcppEigen (>= 0.3.3.3.0), BH (>= 1.66), parallel,
+KernSmooth, shinystan (>= 2.3.0), bayesplot (>= 1.5.0),
+rmarkdown, rstantools, rstudioapi, Matrix, knitr (>= 1.15.1)",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+rstanarm,C:/Users/pech/Documents/R/win-library/3.6,2.19.2,NA,"R (>= 3.4.0), Rcpp (>= 0.12.0), methods","bayesplot (>= 1.7.0), ggplot2 (>= 2.2.1), lme4 (>= 1.1-8), loo
+(>= 2.1.0), Matrix (>= 1.2-13), nlme (>= 3.1-124), rstan (>=
+2.19.1), rstantools (>= 2.0.0), shinystan (>= 2.3.0), stats,
+survival (>= 2.40.1), utils","StanHeaders (>= 2.19.0), rstan (>= 2.19.1), BH (>= 1.66.0),
+Rcpp (>= 0.12.0), RcppEigen (>= 0.3.3.3.0)","betareg, data.table (>= 1.10.0), digest, gridExtra, HSAUR3,
+knitr (>= 1.15.1), MASS, mgcv (>= 1.8-13), rmarkdown, roxygen2,
+testthat (>= 1.0.2)",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+rstantools,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,NA,"stats, utils, Rcpp (>= 0.12.16), desc",NA,"rstan (>= 2.17.2), usethis (>= 1.5.1), testthat (>= 2.0.0),
+knitr, pkgbuild, pkgload, roxygen2 (>= 6.0.1), rmarkdown,
+rstudioapi",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+rstudioapi,C:/Users/pech/Documents/R/win-library/3.6,0.10,NA,NA,NA,NA,"testthat, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+Rttf2pt1,C:/Users/pech/Documents/R/win-library/3.6,1.3.7,NA,R (>= 2.15),NA,NA,NA,NA,file LICENSE,yes,NA,NA,NA,yes,3.6.0
+rtweet,C:/Users/pech/Documents/R/win-library/3.6,0.6.9,NA,R (>= 3.1.0),"httr (>= 1.3.0), jsonlite (>= 0.9.22), magrittr (>= 1.5.0),
+tibble (>= 1.3.4), utils, progress, Rcpp, httpuv",Rcpp,"ggplot2, knitr, magick, openssl, readr, rmarkdown, testthat
+(>= 2.1.0), webshot, covr, igraph",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+rversions,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,NA,"curl, xml2 (>= 1.0.0), utils",NA,"mockery, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+rvest,C:/Users/pech/Documents/R/win-library/3.6,0.3.4,NA,"R (>= 3.2), xml2","httr (>= 0.5), magrittr, selectr",NA,"covr, knitr, png, rmarkdown, spelling, stringi (>= 0.3.1),
+testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+rvg,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.0),"grDevices, Rcpp (>= 0.12.12), officer (>= 0.3.5), gdtools (>=
+0.1.6), xml2 (>= 1.0.0), rlang","Rcpp, gdtools","htmltools, testthat, covr, grid",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+sandwich,C:/Users/pech/Documents/R/win-library/3.6,2.5-1,NA,R (>= 2.10.0),"stats, utils, zoo",NA,"AER, car, geepack, lattice, lmtest, MASS, multiwayvcov,
+parallel, pcse, plm, pscl, scatterplot3d, stats4, strucchange,
+survival",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+sass,C:/Users/pech/Documents/R/win-library/3.6,0.1.2.1,NA,NA,digest,NA,"testthat, knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+satellite,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,"R (>= 2.10), raster, methods, utils, stats, grDevices,
+graphics","plyr, Rcpp (>= 0.10.3), tools, stats4",Rcpp,"devtools, knitr, rgdal, testthat, rmarkdown",NA,GPL (>= 3) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+scales,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 3.2),"farver (>= 2.0.0), labeling, munsell (>= 0.5), R6,
+RColorBrewer, viridisLite, lifecycle",NA,"bit64, covr, dichromat, hms, testthat (>= 2.1.0), ggplot2",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+scatterplot3d,C:/Users/pech/Documents/R/win-library/3.6,0.3-41,NA,R (>= 2.7.0),"grDevices, graphics, stats",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.0
+scico,C:/Users/pech/Documents/R/win-library/3.6,1.1.0,NA,R (>= 2.10),grDevices,NA,"ggplot2, testthat, dplyr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+SDMTools,C:/Users/pech/Documents/R/win-library/3.6,1.1-221.2,NA,NA,R.utils,NA,"adehabitat, raster, sp",NA,GPL (>= 3),NA,NA,NA,NA,yes,3.6.1
+selectr,C:/Users/pech/Documents/R/win-library/3.6,0.4-1,NA,R (>= 3.0),"methods, stringr, R6",NA,"testthat, XML, xml2",NA,BSD_3_clause + file LICENCE,NA,NA,NA,NA,no,3.6.1
+seriation,C:/Users/pech/Documents/R/win-library/3.6,1.2-8,NA,R (>= 2.14.0),"TSP, qap, grid, cluster, gclus, dendextend, colorspace, MASS,
+gplots, registry, methods, stats, grDevices",NA,"biclust, testthat, DendSer, GA",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+servr,C:/Users/pech/Documents/R/win-library/3.6,0.15,NA,R (>= 3.0.0),"mime (>= 0.2), httpuv (>= 1.4.0), xfun, jsonlite",NA,"tools, later, rstudioapi, knitr (>= 1.9), rmarkdown",NA,GPL,NA,NA,NA,NA,no,3.6.1
+sessioninfo,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,NA,"cli, tools, utils, withr",NA,"callr, covr, mockery, testthat",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+sf,C:/Users/pech/Documents/R/win-library/3.6,0.8-0,NA,"methods, R (>= 3.3.0)","classInt (>= 0.4-1), DBI (>= 0.8), graphics, grDevices, grid,
+magrittr, Rcpp (>= 0.12.18), stats, tools, units (>= 0.6-0),
+utils",Rcpp,"blob, covr, dplyr (>= 0.8-3), ggplot2, knitr, lwgeom (>=
+0.1-5), maps, maptools, mapview, microbenchmark, odbc, pillar,
+pool, raster, rgdal, rgeos, rlang, rmarkdown, RPostgres (>=
+1.1.0), RPostgreSQL, RSQLite, sp (>= 1.2-4), spatstat, stars
+(>= 0.2-0), testthat, tibble (>= 1.4.1), tidyr (>= 1.0-0), tmap
+(>= 2.0), vctrs",NA,GPL-2 | MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+sfsmisc,C:/Users/pech/Documents/R/win-library/3.6,1.1-4,NA,R (>= 3.2.0),"grDevices, methods, utils, stats",NA,"datasets, tcltk, cluster, lattice, MASS, Matrix, nlme, lokern","mgcv, rpart, nor1mix, polycor, sm, tikzDevice",GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+shades,C:/Users/pech/Documents/R/win-library/3.6,1.4.0,NA,NA,NA,NA,"testthat, covr, ggplot2",colorspace,BSD_3_clause + file LICENCE,NA,NA,NA,NA,no,3.6.1
+shape,C:/Users/pech/Documents/R/win-library/3.6,1.4.4,NA,R (>= 2.01),"stats, graphics, grDevices",NA,NA,NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.0
+shapefiles,C:/Users/pech/Documents/R/win-library/3.6,0.7,NA,"R (>= 1.6.0), foreign",NA,NA,NA,NA,GPL,NA,NA,NA,NA,NA,3.6.1
+shiny,C:/Users/pech/Documents/R/win-library/3.6,1.4.0,NA,"R (>= 3.0.2), methods","utils, grDevices, httpuv (>= 1.5.2), mime (>= 0.3), jsonlite
+(>= 0.9.16), xtable, digest, htmltools (>= 0.4.0), R6 (>= 2.0),
+sourcetools, later (>= 1.0.0), promises (>= 1.1.0), tools,
+crayon, rlang (>= 0.4.0), fastmap (>= 1.0.0)",NA,"datasets, Cairo (>= 1.5-5), testthat (>= 2.1.1), knitr (>=
+1.6), markdown, rmarkdown, ggplot2, reactlog (>= 1.0.0),
+magrittr, yaml",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+shinyAce,C:/Users/pech/Documents/R/win-library/3.6,0.4.1,NA,R (>= 3.3.0),"shiny (>= 1.0.5), jsonlite, utils, tools",NA,"testthat (>= 2.0.0), dplyr (>= 0.8.3)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+shinyBS,C:/Users/pech/Documents/R/win-library/3.6,0.61,NA,NA,"shiny (>= 0.11), htmltools",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+shinydashboard,C:/Users/pech/Documents/R/win-library/3.6,0.7.1,NA,R (>= 3.0),"utils, shiny (>= 1.0.0), htmltools (>= 0.2.6), promises",NA,NA,NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,no,3.6.1
+shinyjs,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,R (>= 3.1.0),"digest (>= 0.6.8), htmltools (>= 0.2.9), jsonlite, shiny (>=
+1.0.0)",NA,"knitr (>= 1.7), rmarkdown, shinyAce, testthat (>= 0.9.1), V8
+(>= 0.6)",NA,AGPL-3,NA,NA,NA,NA,no,3.6.1
+shinystan,C:/Users/pech/Documents/R/win-library/3.6,2.5.0,NA,"R (>= 3.1.0), shiny (>= 1.0.3)","bayesplot (>= 1.5.0), colourpicker, DT (>= 0.2), dygraphs (>=
+1.1.1.2), ggplot2 (>= 2.1.1), gridExtra, gtools, markdown (>=
+0.7.4), methods, reshape2, rsconnect (>= 0.4.2), rstan (>=
+2.17.1), stats, shinyjs (>= 0.6.0), shinythemes (>= 1.0.1),
+threejs (>= 0.2.1), utils, xtable, xts (>= 0.9-7)",NA,"coda, knitr (>= 1.9), rmarkdown (>= 0.8.1), rstanarm (>=
+2.17.4), testthat",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+shinythemes,C:/Users/pech/Documents/R/win-library/3.6,1.1.2,NA,R (>= 3.0.0),shiny (>= 0.11),NA,NA,NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+showtext,C:/Users/pech/Documents/R/win-library/3.6,0.7,NA,"sysfonts (>= 0.7.1), showtextdb (>= 2.0)",grDevices,NA,"knitr, rmarkdown, prettydoc, curl, jsonlite",NA,Apache License (>= 2.0),NA,NA,NA,NA,yes,3.6.1
+showtextdb,C:/Users/pech/Documents/R/win-library/3.6,2.0,NA,NA,"sysfonts (>= 0.7.1), utils",NA,curl,NA,Apache License (>= 2.0),NA,NA,NA,NA,no,3.6.1
+sigmoid,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 3.2.2),NA,NA,"covr, knitr, rmarkdown, ggplot2, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+sjlabelled,C:/Users/pech/Documents/R/win-library/3.6,1.1.1,NA,R (>= 3.2),"haven (>= 1.1.2), insight (>= 0.4.1), magrittr, purrr, rlang,
+stats, tidyselect, tools, utils",NA,"dplyr, sjmisc, sjPlot, knitr, rmarkdown, snakecase, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+sjmisc,C:/Users/pech/Documents/R/win-library/3.6,2.8.2,NA,R (>= 3.2),"dplyr (>= 0.8.0), insight (>= 0.5.0), magrittr, methods,
+purrr, rlang, sjlabelled (>= 1.1.1), stats, tidyselect (>=
+0.2.5), utils",NA,"ggplot2, graphics, haven (>= 1.1.2), mice, sjPlot, sjstats,
+knitr, rmarkdown, stringdist, testthat, tidyr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+sjPlot,C:/Users/pech/Documents/R/win-library/3.6,2.7.2,NA,"R (>= 3.2), graphics, grDevices, stats, utils","bayestestR (>= 0.3.0), broom, dplyr (>= 0.8.1), forcats,
+ggeffects (>= 0.12.0), glmmTMB, ggplot2 (>= 3.2.0), ggrepel,
+knitr, insight (>= 0.5.0), lme4 (>= 1.1-12), magrittr, MASS,
+modelr, nlme, parameters (>= 0.2.0), performance (>= 0.3.0),
+psych, purrr, rlang, scales, sjlabelled (>= 1.1.0), sjmisc (>=
+2.8.2), sjstats (>= 0.17.5), tidyr (>= 1.0.0)",NA,"brms, car, cluster, cowplot, GPArotation, gridExtra,
+ggridges, httr, pscl, rstanarm, survey, TMB, Zelig, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+sjstats,C:/Users/pech/Documents/R/win-library/3.6,0.17.6,NA,R (>= 3.2),"bayestestR (>= 0.2.5), broom, dplyr (>= 0.8.1), emmeans,
+insight (>= 0.4.1), lme4, magrittr, MASS, modelr, parameters
+(>= 0.1.0), performance (>= 0.3.0), purrr, rlang, sjlabelled
+(>= 1.1.0), sjmisc (>= 2.8.1), stats, tidyr, utils",NA,"brms, car, coin, ggplot2, graphics, httr, knitr, mediation,
+nlme, pbkrtest (>= 0.4-7), pscl, pwr, sandwich, sjPlot, survey,
+rstan, rstanarm, VGAM, Zelig, testthat",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+skimr,C:/Users/pech/Documents/R/win-library/3.6,1.0.7,NA,R (>= 3.1.2),"cli, dplyr (>= 0.7), magrittr, pander, purrr, rlang, stats,
+stringr (>= 1.1), knitr (>= 1.2), tibble (>= 0.6), tidyr (>=
+0.7), tidyselect (>= 0.2.4)",NA,"extrafont, rmarkdown, testthat (>= 2.0.0), withr, covr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+slam,C:/Users/pech/Documents/R/win-library/3.6,0.1-45,NA,R (>= 3.4.0),stats,NA,NA,"Matrix, SparseM, spam",GPL-2,NA,NA,NA,NA,yes,3.6.0
+smbinning,C:/Users/pech/Documents/R/win-library/3.6,0.9,NA,"R (>= 3.2.0),sqldf,partykit,Formula",gsubfn,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+sna,C:/Users/pech/Documents/R/win-library/3.6,2.4,NA,"R (>= 2.0.0), utils, statnet.common, network",NA,NA,"rgl, numDeriv, SparseM",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+snakecase,C:/Users/pech/Documents/R/win-library/3.6,0.11.0,NA,R (>= 3.2),"stringr, stringi",NA,"testthat, covr, tibble, purrrlyr, knitr, rmarkdown, magrittr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+SnowballC,C:/Users/pech/Documents/R/win-library/3.6,0.6.0,NA,NA,NA,NA,NA,NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.0
+sourcetools,C:/Users/pech/Documents/R/win-library/3.6,0.1.7,NA,R (>= 3.0.2),NA,NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+sp,C:/Users/pech/Documents/R/win-library/3.6,1.3-1,NA,"R (>= 3.0.0), methods","utils, stats, graphics, grDevices, lattice, grid",NA,"RColorBrewer, rgdal (>= 0.8-7), rgeos (>= 0.3-13), gstat,
+maptools, deldir",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+spacetime,C:/Users/pech/Documents/R/win-library/3.6,1.2-2,NA,R (>= 3.0.0),"graphics, utils, stats, methods, lattice, sp (>= 1.1-0), zoo
+(>= 1.7-9), xts (>= 0.8-8), intervals",NA,"adehabitatLT, cshapes, diveMove, foreign, gstat (>= 1.0-16),
+maps, mapdata, maptools, plm, raster, RColorBrewer, rgdal,
+rgeos, RPostgreSQL, knitr, googleVis, ISOcodes",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+spacyr,C:/Users/pech/Documents/R/win-library/3.6,1.2,NA,"R (>= 3.0.0), methods","data.table, reticulate (>= 1.6)",NA,"dplyr, knitr, lintr, quanteda, R.rsp, rmarkdown, spelling,
+testthat, tidytext, tibble",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+spam,C:/Users/pech/Documents/R/win-library/3.6,2.4-0,NA,"R (>= 3.1), dotCall64, grid, methods",NA,NA,"spam64, fields, SparseM, Matrix, testthat, R.rsp, truncdist,
+knitr, rmarkdown",NA,LGPL-2 | BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+sparklyr,C:/Users/pech/Documents/R/win-library/3.6,1.0.4,NA,R (>= 3.2),"assertthat, base64enc, config (>= 0.2), DBI (>= 0.6-1), dplyr
+(>= 0.7.2), dbplyr (>= 1.1.0), digest, forge, generics, httr
+(>= 1.2.1), jsonlite (>= 1.4), methods, openssl (>= 0.8),
+purrr, r2d3, rappdirs, rlang (>= 0.1.4), rprojroot, rstudioapi
+(>= 0.10), tibble, tidyr, withr, xml2, ellipsis (>= 0.1.0)",NA,"broom, ggplot2, glmnet, janeaustenr, Lahman, mlbench, nnet,
+nycflights13, R6, RCurl, reshape2, shiny (>= 1.0.1), testthat",NA,Apache License 2.0 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+SparseM,C:/Users/pech/Documents/R/win-library/3.6,1.77,NA,"R (>= 2.15), methods","graphics, stats, utils",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+sparsepp,C:/Users/pech/Documents/R/win-library/3.6,1.22,NA,NA,NA,NA,Rcpp,NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,no,3.6.1
+spatial,C:/Users/pech/Documents/R/win-library/3.6,7.3-11,recommended,"R (>= 3.0.0), graphics, stats, utils",NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+spData,C:/Users/pech/Documents/R/win-library/3.6,0.3.2,NA,R (>= 3.3.0),NA,NA,"foreign, maptools, raster, rgdal, sf, sp, spDataLarge (>=
+0.3.0), spdep, spatialreg",NA,CC0,NA,NA,NA,NA,no,3.6.1
+spelling,C:/Users/pech/Documents/R/win-library/3.6,2.1,NA,NA,"commonmark, xml2, hunspell (>= 3.0), knitr",NA,pdftools,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+spiderbar,C:/Users/pech/Documents/R/win-library/3.6,0.2.2,NA,R (>= 3.2.0),Rcpp,Rcpp,"testthat, covr, robotstxt",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+spls,C:/Users/pech/Documents/R/win-library/3.6,2.2-3,NA,R (>= 2.14),"MASS, nnet, parallel, pls",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+splus2R,C:/Users/pech/Documents/R/win-library/3.6,1.2-2,NA,R (>= 2.7.2),methods,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+spotifyr,C:/Users/pech/Documents/R/win-library/3.6,2.1.1,NA,R (>= 3.3.0),"dplyr, purrr, tidyr, httr, lubridate, jsonlite, readr, rvest,
+stringr, tibble, genius",NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+sqldf,C:/Users/pech/Documents/R/win-library/3.6,0.4-11,NA,"R (>= 3.1.0), gsubfn (>= 0.6), proto, RSQLite","DBI, chron",NA,"RH2, RMySQL, RPostgreSQL, svUnit, tcltk, MASS",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+SQUAREM,C:/Users/pech/Documents/R/win-library/3.6,2017.10-1,NA,R (>= 3.0),NA,NA,setRNG,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+stabs,C:/Users/pech/Documents/R/win-library/3.6,0.6-3,NA,"R (>= 2.14.0), methods, stats, parallel","graphics, grDevices, utils",NA,"glmnet, lars, mboost (> 2.3-0), gamboostLSS (>= 1.2-0), QUIC,
+TH.data, hdi, testthat, knitr, rmarkdown, igraph, huge",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+StanHeaders,C:/Users/pech/Documents/R/win-library/3.6,2.19.0,NA,R (>= 3.4.0),NA,NA,"Rcpp, RcppEigen, BH, knitr (>= 1.15.1), rmarkdown, Matrix,
+methods, rstan",NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+stargazer,C:/Users/pech/Documents/R/win-library/3.6,5.2.2,NA,NA,"stats, utils",NA,NA,"AER, betareg, brglm, censReg, dynlm, eha, erer, ergm, fGarch,
+gee, glmx, gmm, lfe, lme4, lmtest, MASS, mclogit, mgcv, mlogit,
+mnlogit, nlme, nnet, ordinal, plm, pscl, quantreg, rms,
+relevent, robustbase, sampleSelection, spdep, survey, survival,
+Zelig",GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+stars,C:/Users/pech/Documents/R/win-library/3.6,0.4-0,NA,"R (>= 3.3.0), abind, sf (>= 0.8-0)","methods, parallel, classInt (>= 0.4-1), lwgeom, rlang, units",NA,"PCICt, RNetCDF (>= 1.8-2), covr, digest, dplyr (>= 0.7-0),
+future.apply, ggforce, ggplot2, ggthemes, gstat, httr,
+jsonlite, knitr, maps, ncdfgeom, ncmeta (>= 0.0.3), pbapply,
+plm, raster, rmarkdown, sp, spacetime, starsdata, testthat,
+tidync, viridis, xts, zoo",NA,Apache License,NA,NA,NA,NA,no,3.6.1
+statmod,C:/Users/pech/Documents/R/win-library/3.6,1.4.32,NA,R (>= 3.0.0),"stats, graphics",NA,"MASS, tweedie",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+statnet.common,C:/Users/pech/Documents/R/win-library/3.6,4.3.0,NA,R (>= 3.5),"utils, methods, coda, parallel, tools",NA,covr,NA,GPL-3 + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+stm,C:/Users/pech/Documents/R/win-library/3.6,1.3.3,NA,R (>= 3.2.2),"matrixStats, splines, slam, lda, quanteda, stringr, Matrix,
+glmnet, Rcpp (>= 0.11.3), grDevices, graphics, stats, utils,
+data.table, quadprog, parallel, methods","Rcpp, RcppArmadillo","igraph, SnowballC, tm (>= 0.6), huge, clue, wordcloud,
+KernSmooth, NLP, LDAvis, geometry, Rtsne, testthat, rsvd",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+stmCorrViz,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,R(>= 2.10.0),"jsonlite, stm, tm, SnowballC, stats, methods, utils",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+stminsights,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,NA,"stm (>= 1.3.3), tidygraph (>= 1.1.0), ggraph (>= 1.0.0),
+igraph (>= 1.2.0), ggrepel (>= 0.8.0), shiny (>= 1.1.0),
+shinyBS (>= 0.6.0), shinydashboard (>= 0.7.0), shinyjs (>=
+1.0.0), ggplot2 (>= 3.0.0), purrr (>= 0.2.0), stringr (>=
+1.3.0), dplyr (>= 0.7.0), tibble (>= 1.4.0), readr (>= 1.1.0),
+huge (>= 1.2.0), stats, scales",NA,"quanteda(>= 1.3.0), knitr, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+stopwords,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,R (>= 2.10),ISOcodes,NA,"covr, lintr, quanteda, spelling, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+storr,C:/Users/pech/Documents/R/win-library/3.6,1.2.1,NA,R (>= 3.1.0),"R6 (>= 2.1.0), digest",NA,"DBI (>= 0.6), RSQLite (>= 1.1-2), RPostgres, knitr, mockr,
+parallel, progress, rbenchmark, testthat (>= 1.0.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+strapgod,C:/Users/pech/Documents/R/win-library/3.6,0.0.4,NA,R (>= 3.2.0),"dplyr (>= 0.8.3), tidyr (>= 1.0.0), rlang, tibble, lifecycle",NA,"broom, testthat, covr, knitr, rmarkdown",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+stringdist,C:/Users/pech/Documents/R/win-library/3.6,0.9.5.5,NA,R (>= 2.15.3),parallel,NA,tinytest,NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+stringi,C:/Users/pech/Documents/R/win-library/3.6,1.4.3,NA,R (>= 2.14),"tools, utils, stats",NA,NA,NA,file LICENSE,yes,NA,NA,NA,yes,3.6.0
+stringr,C:/Users/pech/Documents/R/win-library/3.6,1.4.0,NA,R (>= 3.1),"glue (>= 1.2.0), magrittr, stringi (>= 1.1.7)",NA,"covr, htmltools, htmlwidgets, knitr, rmarkdown, testthat",NA,GPL-2 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+strucchange,C:/Users/pech/Documents/R/win-library/3.6,1.5-2,NA,"R (>= 2.10.0), zoo, sandwich","graphics, stats, utils",NA,"stats4, car, dynlm, e1071, foreach, lmtest, mvtnorm, tseries",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+styler,C:/Users/pech/Documents/R/win-library/3.6,1.2.0,NA,NA,"backports (>= 1.1.0), cli (>= 1.1.0), magrittr (>= 1.0.1),
+purrr (>= 0.2.3), rematch2 (>= 2.0.1), rlang (>= 0.1.1),
+rprojroot (>= 1.1), tibble (>= 1.4.2), tools, withr (>= 1.0.0),
+xfun (>= 0.1)",NA,"data.tree (>= 0.1.6), dplyr, here, knitr, prettycode,
+rmarkdown, rstudioapi (>= 0.7), testthat (>= 2.1.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+subselect,C:/Users/pech/Documents/R/win-library/3.6,0.14,NA,NA,"MASS, ISwR, corpcor",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+summarytools,C:/Users/pech/Documents/R/win-library/3.6,0.9.4,NA,R (>= 2.10),"checkmate, dplyr, grDevices, htmltools, lubridate, magick,
+matrixStats, methods, pander, pryr, rapportools, RCurl, stats,
+tcltk, tibble, tidyr, utils",NA,"forcats, knitr, magrittr, rmarkdown, rstudioapi",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+superpc,C:/Users/pech/Documents/R/win-library/3.6,1.09,NA,survival,NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,NA,3.6.1
+survey,C:/Users/pech/Documents/R/win-library/3.6,3.36,NA,"R (>= 3.1.0), grid, methods, Matrix, survival","stats, graphics, splines, lattice, minqa, numDeriv, mitools
+(>= 2.4)",NA,"foreign, MASS, KernSmooth, hexbin, RSQLite, RODBC, quantreg,
+parallel, CompQuadForm, DBI",NA,GPL-2 | GPL-3,NA,NA,NA,NA,no,3.6.1
+survival,C:/Users/pech/Documents/R/win-library/3.6,2.44-1.1,recommended,R (>= 2.13.0),"graphics, Matrix, methods, splines, stats, utils",NA,NA,NA,LGPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+svglite,C:/Users/pech/Documents/R/win-library/3.6,1.2.2,NA,R (>= 3.0.0),"Rcpp, gdtools (>= 0.1.6)","Rcpp, gdtools, BH","htmltools, testthat, xml2 (>= 1.0.0), covr, fontquiver (>=
+0.2.0), knitr, rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+sys,C:/Users/pech/Documents/R/win-library/3.6,3.3,NA,NA,NA,NA,"unix (>= 1.4), spelling, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+sysfonts,C:/Users/pech/Documents/R/win-library/3.6,0.8,NA,NA,NA,NA,"curl, jsonlite",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+systemfonts,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,NA,NA,NA,"testthat (>= 2.1.0), covr, knitr, rmarkdown, tools",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tau,C:/Users/pech/Documents/R/win-library/3.6,0.0-21,NA,R (>= 2.10),NA,NA,tm,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+TeachingDemos,C:/Users/pech/Documents/R/win-library/3.6,2.10,NA,NA,NA,NA,"tkrplot, lattice, MASS, rgl, tcltk, tcltk2, png, ggplot2,
+logspline, maptools, R2wd, manipulate",NA,Artistic-2.0,NA,NA,NA,NA,no,3.6.1
+tensorA,C:/Users/pech/Documents/R/win-library/3.6,0.36.1,NA,"R (>= 2.2.0),stats",NA,NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+tensorflow,C:/Users/pech/Documents/R/win-library/3.6,2.0.0,NA,R (>= 3.1),"config, jsonlite (>= 1.2), processx, reticulate (>= 1.10),
+tfruns (>= 1.0), utils, yaml, rstudioapi (>= 0.7)",NA,"testthat, keras, tfestimators",NA,Apache License 2.0,NA,NA,NA,NA,no,3.6.1
+testit,C:/Users/pech/Documents/R/win-library/3.6,0.11,NA,NA,NA,NA,rstudioapi,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+testthat,C:/Users/pech/Documents/R/win-library/3.6,2.2.1,NA,R (>= 3.1),"cli, crayon (>= 1.3.4), digest, evaluate, magrittr, methods,
+praise, R6 (>= 2.2.0), rlang (>= 0.3.0), withr (>= 2.0.0)",NA,"covr, curl (>= 0.9.5), devtools, knitr, rmarkdown, usethis,
+vctrs (>= 0.1.0), xml2",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+text2vec,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,"R (>= 3.2.0), methods","Matrix (>= 1.1), Rcpp (>= 0.11), RcppParallel (>= 4.3.14),
+digest (>= 0.6.8), foreach(>= 1.4.3), data.table(>= 1.9.6),
+irlba (>= 2.2.1), R6 (>= 2.1.2), futile.logger (>= 1.4.3),
+stringi (>= 1.1.5), mlapi (>= 0.1.0)","Rcpp, RcppParallel, digest, sparsepp (>= 0.2.0)","doParallel, testthat, covr, knitr, rmarkdown, glmnet,
+parallel, tokenizers, magrittr",NA,GPL (>= 2) | file LICENSE,NA,NA,NA,NA,yes,3.6.0
+textcat,C:/Users/pech/Documents/R/win-library/3.6,1.0-6,NA,R (>= 3.2.0),"tau (>= 0.0-11), slam",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+textmineR,C:/Users/pech/Documents/R/win-library/3.6,3.0.4,NA,"R (>= 3.0.2), Matrix","gtools, magrittr, methods, parallel, text2vec (>= 0.5),
+stopwords, stringr, Rcpp, RcppProgress, RSpectra","Rcpp, RcppArmadillo, RcppProgress","digest, dplyr, igraph, knitr, lda, MASS, rmarkdown,
+SnowballC, stringi, testthat, tibble, tidyr, tidytext,
+topicmodels, wordcloud",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tfruns,C:/Users/pech/Documents/R/win-library/3.6,1.4,NA,R (>= 3.1),"utils, jsonlite (>= 1.2), base64enc, yaml, config, magrittr,
+whisker, tidyselect, rlang, rstudioapi (>= 0.7), reticulate",NA,"testthat, knitr",NA,Apache License 2.0,NA,NA,NA,NA,no,3.6.1
+TH.data,C:/Users/pech/Documents/R/win-library/3.6,1.0-10,NA,"R (>= 2.10.0), survival, MASS",NA,NA,"dplyr, gdata, plyr",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+thief,C:/Users/pech/Documents/R/win-library/3.6,0.3,NA,"R (>= 3.0.2), forecast (>= 7.2)","hts, ggplot2",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+threejs,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,"R (>= 3.0.0), igraph (>= 1.0.0)","htmlwidgets (>= 0.3.2), base64enc, crosstalk, methods, stats",NA,maps,"knitr, shiny",MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ThresholdROC,C:/Users/pech/Documents/R/win-library/3.6,2.7,NA,R (>= 3.1.0),"MASS, numDeriv, pROC",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+tibble,C:/Users/pech/Documents/R/win-library/3.6,2.1.3,NA,R (>= 3.1.0),"cli, crayon (>= 1.3.4), fansi (>= 0.4.0), methods, pillar (>=
+1.3.1), pkgconfig, rlang (>= 0.3.0), utils",NA,"bench, covr, dplyr, htmltools, import, knitr, mockr,
+nycflights13, rmarkdown, testthat, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tictoc,C:/Users/pech/Documents/R/win-library/3.6,1.0,NA,"R (>= 3.0.3), methods",NA,NA,NA,NA,Apache License (== 2.0) | file LICENSE,NA,NA,NA,NA,no,3.6.0
+tidygraph,C:/Users/pech/Documents/R/win-library/3.6,1.1.2,NA,NA,"tibble, dplyr (>= 0.8), igraph, magrittr, utils, rlang, R6,
+Rcpp, tools, stats, tidyr, pillar",Rcpp,"network, data.tree, ape, graph, methods, testthat, covr,
+seriation, netrankr, influenceR, NetSwan",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tidylog,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,NA,"dplyr, tidyr, glue, clisymbols",NA,"testthat, covr, lintr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+tidymodels,C:/Users/pech/Documents/R/win-library/3.6,0.0.3,NA,R (>= 3.1),"broom (>= 0.5.2), cli (>= 1.1.0), crayon (>= 1.3.4), dials (>=
+0.0.3), dplyr (>= 0.8.3), ggplot2 (>= 3.2.1), infer (>= 0.5.0),
+magrittr (>= 1.5), parsnip (>= 0.0.3.1), pillar (>= 1.4.2),
+purrr (>= 0.3.2), recipes (>= 0.1.7), rlang (>= 0.4.0), rsample
+(>= 0.0.5), rstudioapi (>= 0.10), tibble (>= 2.1.3), tidytext
+(>= 0.2.2), tidypredict (>= 0.4.3), tidyposterior (>= 0.0.2),
+yardstick (>= 0.0.4)",NA,"covr, knitr, rmarkdown, testthat, xml2",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+tidyposterior,C:/Users/pech/Documents/R/win-library/3.6,0.0.2,NA,R (>= 2.10),"rsample (>= 0.0.2), tidyr (>= 0.7.1), dplyr, rstanarm (>=
+2.15.3), rlang, utils, purrr, tibble, generics, ggplot2,",NA,"knitr, testthat, covr",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+tidypredict,C:/Users/pech/Documents/R/win-library/3.6,0.4.3,NA,R (>= 3.1),"dplyr (>= 0.7), rlang, purrr, knitr, generics, tibble",NA,"dbplyr, testthat (>= 2.1.0), randomForest, ranger, earth,
+rmarkdown, nycflights13, RSQLite, methods, DBI, covr, xgboost,
+Cubist, mlbench, partykit, yaml, parsnip",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+tidyquant,C:/Users/pech/Documents/R/win-library/3.6,0.5.8,NA,"R (>= 3.0.0), lubridate, PerformanceAnalytics, quantmod (>=
+0.4-13)","dplyr (>= 0.8.3), ggplot2, httr, lazyeval, magrittr, purrr,
+Quandl, stringr, tibble, tidyr (>= 1.0.0), timetk, TTR, xml2,
+xts, rlang, rstudioapi, crayon, cli",NA,"tidyverse, alphavantager, broom, knitr, rmarkdown, testthat,
+tibbletime, scales, Rblpapi, readxl",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+tidyr,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.1),"dplyr (>= 0.8.2), ellipsis (>= 0.1.0), glue, magrittr, purrr,
+Rcpp, rlang, stringi, tibble (>= 2.1.1), tidyselect (>= 0.2.5),
+utils, vctrs (>= 0.2.0), lifecycle",Rcpp,"covr, jsonlite, knitr, repurrrsive (>= 1.0.0), rmarkdown,
+readr, testthat (>= 2.1.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tidyselect,C:/Users/pech/Documents/R/win-library/3.6,0.2.5,NA,R (>= 3.1),"glue (>= 1.3.0), purrr, rlang (>= 0.2.2), Rcpp (>= 0.12.0)","Rcpp (>= 0.12.0),","covr, dplyr, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+tidystringdist,C:/Users/pech/Documents/R/win-library/3.6,0.1.4,NA,NA,"attempt, rlang, stringdist, tibble",NA,"dplyr, knitr, magrittr, rmarkdown, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+tidytext,C:/Users/pech/Documents/R/win-library/3.6,0.2.2,NA,R (>= 2.10),"rlang, dplyr, stringr, hunspell, generics, Matrix, tokenizers,
+janeaustenr, purrr (>= 0.1.1), methods, stopwords",NA,"readr, tidyr, XML, tm, quanteda, knitr, rmarkdown, ggplot2,
+reshape2, wordcloud, topicmodels, NLP, scales, gutenbergr,
+testthat, vdiffr, mallet, stm, data.table, broom, textdata",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+tidyverse,C:/Users/pech/Documents/R/win-library/3.6,1.2.1,NA,NA,"broom (>= 0.4.2), cli (>= 1.0.0), crayon (>= 1.3.4), dplyr (>=
+0.7.4), dbplyr (>= 1.1.0), forcats (>= 0.2.0), ggplot2 (>=
+2.2.1), haven (>= 1.1.0), hms (>= 0.3), httr (>= 1.3.1),
+jsonlite (>= 1.5), lubridate (>= 1.7.1), magrittr (>= 1.5),
+modelr (>= 0.1.1), purrr (>= 0.2.4), readr (>= 1.1.1), readxl
+(>= 1.0.0), reprex (>= 0.1.1), rlang (>= 0.1.4), rstudioapi (>=
+0.7), rvest (>= 0.3.2), stringr (>= 1.2.0), tibble (>= 1.3.4),
+tidyr (>= 0.7.2), xml2 (>= 1.1.1)",NA,"feather (>= 0.3.1), knitr (>= 1.17), rmarkdown (>= 1.7.4)",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,no,3.6.1
+tiff,C:/Users/pech/Documents/R/win-library/3.6,0.1-5,NA,R (>= 2.9.0),NA,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.0
+tikzDevice,C:/Users/pech/Documents/R/win-library/3.6,0.12.3,NA,R (>= 2.14.0),"filehash (>= 2.3), png",NA,"evaluate, formatR, ggplot2, knitr, lattice, maps, scales,
+stringr, testthat (>= 0.8.1), withr",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+timeDate,C:/Users/pech/Documents/R/win-library/3.6,3043.102,NA,"R (>= 2.15.1), graphics, utils, stats, methods",NA,NA,"date, RUnit",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.0
+timereg,C:/Users/pech/Documents/R/win-library/3.6,1.9.4,NA,"R (>= 2.15), survival","lava, numDeriv, stats, graphics, grDevices, utils, methods",NA,"mets,",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+timetk,C:/Users/pech/Documents/R/win-library/3.6,0.1.2,NA,R (>= 3.3.0),"dplyr (>= 0.7.0), lazyeval (>= 0.2.0), lubridate (>= 1.6.0),
+padr (>= 0.3.0), purrr (>= 0.2.2), readr (>= 1.0.0), stringi
+(>= 1.1.5), tibble (>= 1.2), tidyr (>= 0.6.1), xts (>= 0.9-7),
+zoo (>= 1.7-14)",NA,"tidyverse, broom, forcats, forecast, knitr, rmarkdown,
+robets, scales, stringr, testthat, tidyquant, fracdiff,
+timeDate, timeSeries, tseries",NA,GPL (>= 3),NA,NA,NA,NA,no,3.6.1
+tinytex,C:/Users/pech/Documents/R/win-library/3.6,0.16,NA,NA,xfun (>= 0.5),NA,"testit, rstudioapi",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+tm,C:/Users/pech/Documents/R/win-library/3.6,0.7-6,NA,"R (>= 3.2.0), NLP (>= 0.2-0)","Rcpp, parallel, slam (>= 0.1-37), stats, tools, utils,
+graphics, xml2","BH, Rcpp","antiword, filehash, methods, pdftools, Rcampdf, Rgraphviz,
+Rpoppler, SnowballC, testthat, tm.lexicon.GeneralInquirer",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+TMB,C:/Users/pech/Documents/R/win-library/3.6,1.7.15,NA,R (>= 3.0.0),"graphics, methods, stats, utils, Matrix (>= 1.0-12)","Matrix, RcppEigen","numDeriv, parallel",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+tokenizers,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.1.3),"stringi (>= 1.0.1), Rcpp (>= 0.12.3), SnowballC (>= 0.5.1)",Rcpp,"covr, knitr, rmarkdown, stopwords (>= 0.9.0), testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+topicmodels,C:/Users/pech/Documents/R/win-library/3.6,0.2-8,NA,R (>= 2.15.0),"stats4, methods, modeltools, slam, tm (>= 0.6)",NA,"lasso2, lattice, lda, OAIHarvester, SnowballC,
+corpus.JSS.papers",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+transformr,C:/Users/pech/Documents/R/win-library/3.6,0.1.1,NA,NA,"Rcpp (>= 0.12.15), tweenr, rlang, sf, lpSolve",Rcpp,magrittr,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+tree,C:/Users/pech/Documents/R/win-library/3.6,1.0-40,NA,"R (>= 3.6.0), grDevices, graphics, stats",NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+treemap,C:/Users/pech/Documents/R/win-library/3.6,2.4-2,NA,R (>= 2.10),"colorspace, data.table (>= 1.8.8), ggplot2, grid, gridBase,
+igraph, methods, RColorBrewer, shiny (>= 0.12.0)",NA,knitr,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+triebeard,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,NA,Rcpp,Rcpp,"knitr, rmarkdown, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+trimcluster,C:/Users/pech/Documents/R/win-library/3.6,0.1-2.1,NA,R (>= 1.9.0),NA,NA,fpc,NA,GPL,NA,NA,NA,NA,no,3.6.1
+tripR,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,NA,"dplyr, lubridate, rvest, xml2, stringr, purrr,readr,glue",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+trustpilotR,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,NA,"rvest, tidyverse, lubridate, stringr, dplyr, magrittr, purrr,
+jsonlite",NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+tseries,C:/Users/pech/Documents/R/win-library/3.6,0.10-47,NA,R (>= 2.10.0),"graphics, stats, utils, quadprog, zoo, quantmod (>= 0.4-9)",NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+TSP,C:/Users/pech/Documents/R/win-library/3.6,1.1-7,NA,R (>= 2.14.0),"graphics, foreach, utils, methods, stats, grDevices",NA,"maps, sp, maptools, testthat",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+TTR,C:/Users/pech/Documents/R/win-library/3.6,0.23-5,NA,NA,"xts (>= 0.10-0), zoo, curl",xts,RUnit,quantmod,GPL-2,NA,NA,NA,NA,yes,3.6.1
+tweenr,C:/Users/pech/Documents/R/win-library/3.6,1.0.1,NA,R (>= 3.2.0),"Rcpp (>= 0.12.3), grDevices, farver, magrittr, rlang",Rcpp,"testthat, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+txtq,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,NA,"base64url, filelock, R6",NA,"parallel, purrr, testthat (>= 2.1.0)",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+ucminf,C:/Users/pech/Documents/R/win-library/3.6,1.1-4,NA,NA,NA,NA,numDeriv,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.0
+udapi,C:/Users/pech/Documents/R/win-library/3.6,0.1.3,NA,NA,"httr, curl",NA,testthat,NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+udpipe,C:/Users/pech/Documents/R/win-library/3.6,0.8.3,NA,R (>= 2.10),"Rcpp (>= 0.11.5), data.table (>= 1.9.6), Matrix, methods",Rcpp,"knitr, topicmodels, lattice, parallel",NA,MPL-2.0,NA,NA,NA,NA,yes,3.6.1
+udunits2,C:/Users/pech/Documents/R/win-library/3.6,0.13,NA,R (>= 2.10.0),NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,yes,3.6.0
+units,C:/Users/pech/Documents/R/win-library/3.6,0.6-5,NA,R (>= 3.0.2),Rcpp,Rcpp (>= 0.12.10),"udunits2, NISTunits, measurements, xml2, tibble, pillar (>=
+1.3.0), knitr, testthat, ggforce, rmarkdown, magrittr",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+urca,C:/Users/pech/Documents/R/win-library/3.6,1.3-0,NA,"R (>= 2.0.0), methods","nlme, graphics, stats",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+urltools,C:/Users/pech/Documents/R/win-library/3.6,1.7.3,NA,R (>= 2.10),"Rcpp, methods, triebeard",Rcpp,"testthat, knitr",NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.1
+uroot,C:/Users/pech/Documents/R/win-library/3.6,2.1-0,NA,"R (>= 3.0.0), stats",NA,NA,NA,NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+usethis,C:/Users/pech/Documents/R/win-library/3.6,1.5.1,NA,R (>= 3.2),"clipr (>= 0.3.0), clisymbols, crayon, curl (>= 2.7), desc, fs
+(>= 1.3.0), gh, git2r (>= 0.23), glue (>= 1.3.0), purrr, rlang,
+rprojroot (>= 1.2), rstudioapi, stats, utils, whisker, withr,
+yaml",NA,"covr, knitr, magick, pkgdown (>= 1.1.0), rmarkdown, roxygen2,
+spelling (>= 1.2), styler (>= 1.0.2), testthat (>= 2.1.0)",NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+utf8,C:/Users/pech/Documents/R/win-library/3.6,1.1.4,NA,R (>= 2.10),NA,NA,"knitr, rmarkdown, testthat",NA,Apache License (== 2.0) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+uuid,C:/Users/pech/Documents/R/win-library/3.6,0.1-2,NA,R (>= 2.9.0),NA,NA,NA,NA,MIT + file LICENSE,NA,NA,NA,NA,yes,3.6.0
+vctrs,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,R (>= 3.2),"backports, ellipsis (>= 0.2.0), digest, glue, rlang (>=
+0.4.0), zeallot",NA,"bit64, covr, crayon, generics, knitr, pillar (>= 1.4.1),
+pkgdown, rmarkdown, testthat, tibble",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+vdiffr,C:/Users/pech/Documents/R/win-library/3.6,0.3.1,NA,R (>= 3.2.0),"devtools, diffobj, fontquiver (>= 0.2.0), freetypeharfbuzz (>=
+0.2.5), gdtools, glue, grDevices, htmlwidgets (>= 0.6),
+htmltools, purrr (>= 0.2.0), rlang, R6, Rcpp, shiny, testthat
+(>= 1.0.0), usethis (>= 1.4.0), xml2 (>= 1.0.0)","freetypeharfbuzz, gdtools, Rcpp, BH","crayon, ggplot2 (>= 3.2.0), roxygen2, rstudioapi, withr, yaml",NA,GPL-3 | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+VGAM,C:/Users/pech/Documents/R/win-library/3.6,1.1-1,NA,"R (>= 3.4.0), methods, stats, stats4, splines",NA,NA,"VGAMdata, MASS, mgcv",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+vipor,C:/Users/pech/Documents/R/win-library/3.6,0.4.5,NA,R (>= 3.0.0),"stats, graphics",NA,"testthat, beeswarm, lattice, ggplot2, beanplot, vioplot,
+ggbeeswarm,",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+viridis,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,"R (>= 2.10), viridisLite (>= 0.3.0)","stats, ggplot2 (>= 1.0.1), gridExtra",NA,"hexbin (>= 1.27.0), scales, MASS, knitr, dichromat,
+colorspace, rasterVis, httr, mapproj, vdiffr, svglite (>=
+1.2.0), testthat, covr, rmarkdown, rgdal",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+viridisLite,C:/Users/pech/Documents/R/win-library/3.6,0.3.0,NA,R (>= 2.10),NA,NA,"hexbin (>= 1.27.0), ggplot2 (>= 1.0.1), testthat, covr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+visNetwork,C:/Users/pech/Documents/R/win-library/3.6,2.0.8,NA,R (>= 3.0),"htmlwidgets, htmltools, jsonlite, magrittr, utils, methods,
+grDevices, stats",NA,"knitr, rmarkdown, webshot, igraph, rpart, shiny,
+shinyWidgets, colourpicker, sparkline, ggraph, tidygraph,
+flashClust",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+vlad,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,R (>= 2.10),Rcpp (>= 0.12.12),"Rcpp, RcppArmadillo","dplyr, ggplot2, parallel, rmarkdown, spcadjust (>= 1.1),
+testthat, tidyr",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+webshot,C:/Users/pech/Documents/R/win-library/3.6,0.5.1,NA,R (>= 3.0),"magrittr, jsonlite, callr",NA,"httpuv, knitr, rmarkdown, shiny",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+whisker,C:/Users/pech/Documents/R/win-library/3.6,0.4,NA,NA,NA,NA,markdown,NA,GPL-3,NA,NA,NA,NA,no,3.6.1
+whoami,C:/Users/pech/Documents/R/win-library/3.6,1.3.0,NA,NA,"httr, jsonlite, utils",NA,"covr, mockery, testthat, withr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+widyr,C:/Users/pech/Documents/R/win-library/3.6,0.1.2,NA,NA,"dplyr, tidyr, reshape2, tidytext, purrr, Matrix, broom",NA,"ggraph, igraph, gapminder, testthat, covr, knitr,
+topicmodels, janeaustenr, rmarkdown, unvotes (>= 0.2.0),
+countrycode, fuzzyjoin, ggplot2, maps, irlba",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+withr,C:/Users/pech/Documents/R/win-library/3.6,2.1.2,NA,R (>= 3.0.2),"stats, graphics, grDevices",NA,"testthat, covr, lattice, DBI, RSQLite, methods, knitr,
+rmarkdown",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+wordcloud,C:/Users/pech/Documents/R/win-library/3.6,2.6,NA,"methods, RColorBrewer",Rcpp (>= 0.9.4),Rcpp,"tm (>= 0.6), slam",NA,LGPL-2.1,NA,NA,NA,NA,yes,3.6.1
+wordcloud2,C:/Users/pech/Documents/R/win-library/3.6,0.2.1,NA,R (>= 3.1.0),"htmlwidgets, base64enc, grDevices, graphics",NA,"knitr, rmarkdown, webshot",shiny (>= 0.12),GPL-2,NA,NA,NA,NA,no,3.6.1
+WRS2,C:/Users/pech/Documents/R/win-library/3.6,1.0-0,NA,R (>= 3.2.0),"MASS, reshape, plyr, stats, graphics, grDevices, utils, mc2d",NA,"knitr, car, ggplot2, colorspace, mediation, GGally",NA,GPL-3,NA,NA,NA,NA,yes,3.6.1
+xaringan,C:/Users/pech/Documents/R/win-library/3.6,0.12,NA,NA,"htmltools, knitr (>= 1.21), servr (>= 0.13), xfun (>= 0.6),
+rmarkdown",NA,"rstudioapi, testit",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+xfun,C:/Users/pech/Documents/R/win-library/3.6,0.10,NA,NA,"stats, tools",NA,"testit, parallel, rstudioapi, tinytex, mime, markdown, knitr,
+htmltools, base64enc, remotes, rmarkdown",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+xgboost,C:/Users/pech/Documents/R/win-library/3.6,0.90.0.2,NA,R (>= 3.3.0),"Matrix (>= 1.1-0), methods, data.table (>= 1.9.6), magrittr
+(>= 1.5), stringi (>= 0.5.2)",NA,"knitr, rmarkdown, ggplot2 (>= 1.0.1), DiagrammeR (>= 0.9.0),
+Ckmeans.1d.dp (>= 3.3.1), vcd (>= 1.3), testthat, lintr, igraph
+(>= 1.0.1), jsonlite, float",NA,Apache License (== 2.0) | file LICENSE,NA,NA,NA,NA,yes,3.6.1
+xlsx,C:/Users/pech/Documents/R/win-library/3.6,0.6.1,NA,NA,"rJava, xlsxjars, grDevices, utils",NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.0
+xlsxjars,C:/Users/pech/Documents/R/win-library/3.6,0.6.1,NA,rJava,NA,NA,NA,NA,GPL-3,NA,NA,NA,NA,no,3.6.0
+XML,C:/Users/pech/Documents/R/win-library/3.6,3.98-1.20,NA,"R (>= 2.13.0), methods, utils",NA,NA,"bitops, RCurl",NA,BSD_2_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.0
+xml2,C:/Users/pech/Documents/R/win-library/3.6,1.2.2,NA,R (>= 3.1.0),"Rcpp, methods",Rcpp (>= 0.12.12),"covr, curl, httr, knitr, magrittr, mockery, rmarkdown,
+testthat (>= 2.1.0)",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+xmlparsedata,C:/Users/pech/Documents/R/win-library/3.6,1.0.3,NA,R (>= 3.0.0),NA,NA,"covr, testthat, xml2",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+xopen,C:/Users/pech/Documents/R/win-library/3.6,1.0.0,NA,R (>= 3.1),processx,NA,"ps, testthat",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+xslt,C:/Users/pech/Documents/R/win-library/3.6,1.3,NA,xml2 (>= 1.1.0),NA,"Rcpp, xml2",testthat,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+xtable,C:/Users/pech/Documents/R/win-library/3.6,1.8-4,NA,R (>= 2.10.0),"stats, utils",NA,"knitr, plm, zoo, survival",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+xts,C:/Users/pech/Documents/R/win-library/3.6,0.11-2,NA,zoo (>= 1.7-12),methods,zoo,"timeSeries, timeDate, tseries, chron, fts, tis, RUnit",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+yaml,C:/Users/pech/Documents/R/win-library/3.6,2.2.0,NA,NA,NA,NA,RUnit,NA,BSD_3_clause + file LICENSE,NA,NA,NA,NA,yes,3.6.0
+yardstick,C:/Users/pech/Documents/R/win-library/3.6,0.0.4,NA,R (>= 2.10),"dplyr, utils, pROC (>= 1.15.0), rlang (>= 0.4.0), tidyselect,
+Rcpp, generics",Rcpp,"testthat, covr, purrr, tidyr, ggplot2, knitr, kableExtra,
+rmarkdown",NA,GPL-2,NA,NA,NA,NA,yes,3.6.1
+yelpR,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,NA,"rvest, tidyverse, lubridate, stringr, dplyr, magrittr",NA,NA,NA,-,NA,NA,NA,NA,no,3.6.1
+yesno,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,R (>= 3.1.0),utils,NA,"testthat, covr",NA,GPL (>= 2),NA,NA,NA,NA,no,3.6.1
+zeallot,C:/Users/pech/Documents/R/win-library/3.6,0.1.0,NA,NA,NA,NA,"testthat, knitr, rmarkdown, purrr, magrittr",NA,MIT + file LICENSE,NA,NA,NA,NA,no,3.6.1
+zip,C:/Users/pech/Documents/R/win-library/3.6,2.0.4,NA,NA,NA,NA,"covr, processx, R6, testthat, withr",NA,CC0,NA,NA,NA,NA,yes,3.6.1
+zoo,C:/Users/pech/Documents/R/win-library/3.6,1.8-6,NA,"R (>= 3.1.0), stats","utils, graphics, grDevices, lattice (>= 0.20-27)",NA,"coda, chron, DAAG, fts, ggplot2, mondate, scales,
+strucchange, timeDate, timeSeries, tis, tseries, xts",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+ztable,C:/Users/pech/Documents/R/win-library/3.6,0.2.0,NA,R (>= 3.1.2),"stringr, magrittr, RColorBrewer, flextable, officer, moonBook,
+scales",NA,"MASS, survival, testthat, knitr, rmarkdown",NA,GPL-2,NA,NA,NA,NA,no,3.6.1
+base,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,methods,NA,Part of R 3.6.1,NA,NA,NA,NA,NA,3.6.1
+boot,C:/Program Files/R/R-3.6.1/library,1.3-22,recommended,"R (>= 3.0.0), graphics, stats",NA,NA,"MASS, survival",NA,Unlimited,NA,NA,NA,NA,no,3.6.1
+class,C:/Program Files/R/R-3.6.1/library,7.3-15,recommended,"R (>= 3.0.0), stats, utils",MASS,NA,NA,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+cluster,C:/Program Files/R/R-3.6.1/library,2.1.0,recommended,R (>= 3.3.0),"graphics, grDevices, stats, utils",NA,"MASS, Matrix",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+codetools,C:/Program Files/R/R-3.6.1/library,0.2-16,recommended,R (>= 2.1),NA,NA,NA,NA,GPL,NA,NA,NA,NA,no,3.6.1
+compiler,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,NA,3.6.1
+datasets,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,NA,3.6.1
+foreign,C:/Program Files/R/R-3.6.1/library,0.8-71,recommended,R (>= 3.0.0),"methods, utils, stats",NA,NA,NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+graphics,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,grDevices,NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+grDevices,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,KernSmooth,NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+grid,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"grDevices, utils",NA,lattice,NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+KernSmooth,C:/Program Files/R/R-3.6.1/library,2.23-15,recommended,"R (>= 2.5.0), stats",NA,NA,MASS,NA,Unlimited,NA,NA,NA,NA,yes,3.6.1
+lattice,C:/Program Files/R/R-3.6.1/library,0.20-38,recommended,R (>= 3.0.0),"grid, grDevices, graphics, stats, utils",NA,"KernSmooth, MASS, latticeExtra",chron,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+MASS,C:/Program Files/R/R-3.6.1/library,7.3-51.4,recommended,"R (>= 3.1.0), grDevices, graphics, stats, utils",methods,NA,"lattice, nlme, nnet, survival",NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+Matrix,C:/Program Files/R/R-3.6.1/library,1.2-17,recommended,R (>= 3.2.0),"methods, graphics, grid, stats, utils, lattice",NA,"expm, MASS","MatrixModels, graph, SparseM, sfsmisc",GPL (>= 2) | file LICENCE,NA,NA,NA,NA,yes,3.6.1
+methods,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"utils, stats",NA,codetools,NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+mgcv,C:/Program Files/R/R-3.6.1/library,1.8-28,recommended,"R (>= 2.14.0), nlme (>= 3.1-64)","methods, stats, graphics, Matrix, splines, utils",NA,"parallel, survival, MASS",NA,GPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+nlme,C:/Program Files/R/R-3.6.1/library,3.1-140,recommended,R (>= 3.4.0),"graphics, stats, utils, lattice",NA,"Hmisc, MASS",NA,GPL (>= 2) | file LICENCE,NA,NA,NA,NA,yes,3.6.1
+nnet,C:/Program Files/R/R-3.6.1/library,7.3-12,recommended,"R (>= 2.14.0), stats, utils",NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+parallel,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"tools, compiler",NA,methods,"snow, nws, Rmpi",Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+rpart,C:/Program Files/R/R-3.6.1/library,4.1-15,recommended,"R (>= 2.15.0), graphics, stats, grDevices",NA,NA,survival,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+spatial,C:/Program Files/R/R-3.6.1/library,7.3-11,recommended,"R (>= 3.0.0), graphics, stats, utils",NA,NA,MASS,NA,GPL-2 | GPL-3,NA,NA,NA,NA,yes,3.6.1
+splines,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"graphics, stats",NA,"Matrix, methods",NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+stats,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"utils, grDevices, graphics",NA,"MASS, Matrix, SuppDists, methods, stats4",NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+stats4,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,"graphics, methods, stats",NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,NA,3.6.1
+survival,C:/Program Files/R/R-3.6.1/library,2.44-1.1,recommended,R (>= 2.13.0),"graphics, Matrix, methods, splines, stats, utils",NA,NA,NA,LGPL (>= 2),NA,NA,NA,NA,yes,3.6.1
+tcltk,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,utils,NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+tools,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,"codetools, methods, xml2, curl, commonmark",NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1
+translations,C:/Program Files/R/R-3.6.1/library,3.6.1,NA,NA,NA,NA,NA,NA,Part of R 3.6.1,NA,NA,NA,NA,NA,3.6.1
+utils,C:/Program Files/R/R-3.6.1/library,3.6.1,base,NA,NA,NA,"methods, xml2, commonmark",NA,Part of R 3.6.1,NA,NA,NA,NA,yes,3.6.1

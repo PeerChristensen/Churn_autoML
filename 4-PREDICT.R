@@ -14,9 +14,23 @@ h2o.init(nthreads = -1)
 # LOAD & PREPROCESS NEW DATA
 
 new_data <- read_csv("churn_data_current.csv") %>%
-  select(-HasLittPref) %>%
   mutate_if(is.character,factor) %>%
-  dplyr::select(-`FirstOrderDate within 3 months`,-IsFree)
+  dplyr::select(-`FirstOrderDate within 3 months`,
+                -IsFree,
+                -HasLittPref)
+
+# 
+# df <- read_csv("new_churn_training5.csv") %>%
+#   mutate(Perm_anyperm = factor(Perm_anyperm),
+#          Churned30    = factor(Churned30),
+#          Perm_recommendations = factor(Perm_recommendations),
+#          Perm_newsletter      = factor(Perm_newsletter),
+#          MatasUser = factor(MatasUser),
+#          CoopUser  = factor(CoopUser)) %>%
+#   mutate_if(is.character, factor) %>%
+#   select(-IsFree,-HasLittPref) %>%
+#   drop_na() %>%
+#   filter(DaysSinceLatestSignup > 30)
 
 Customer_Key <- new_data$Customer_Key
 
