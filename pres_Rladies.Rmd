@@ -1,0 +1,212 @@
+---
+title: "Churn Prediction with H2O AutoML"
+author: "Peer Christensen"
+date: "2019-12-05"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,cache=F)
+```
+
+class: inverse, center, middle
+
+# EDA
+
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r echo = F}
+
+df <- read_csv("new_churn_training.csv") %>%
+  mutate(Perm_anyperm = factor(Perm_anyperm),
+         Churned30 = factor(Churned30),
+       Perm_recommendations = factor(Perm_recommendations),
+       Perm_newsletter = factor(Perm_newsletter),
+       MatasUser = factor(MatasUser),
+       CoopUser = factor(CoopUser)) %>%
+  mutate_if(is.character,factor) %>%
+  select(-Customer_Key, -IsFree,-PremiumEbookRatio) %>%
+  drop_na() %>%
+  filter(DaysSinceLatestSignup > 30) 
+```
+
+```{r}
+dim(df)
+```
+
+
+### Checking for target class (im)balance
+
+```{r}
+table(df$Churned30)
+           
+round(prop.table(table(df$Churned30)),3)*100
+
+```
+
+---
+
+```{r}
+names(df[1:50])
+```
+
+---
+
+```{r echo =F}
+
+f_lit_mean <- df %>% 
+  select(starts_with("F0")) %>%
+  transmute(m = rowMeans(.)) %>%
+  pull(m)
+
+s_lit_mean <- df %>% 
+  select(starts_with("S0")) %>%
+  transmute(m = rowMeans(.))  %>%
+  pull(m)
+
+f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
+
+df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
+
+today <- max(as.Date(df$DateStatus)) 
+# today <- as.Date(now()) 
+
+df$DateLatestSignup <- today - lubridate::days(df$DaysSinceLatestSignup)
+df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
+
+df <- df %>%
+  dplyr::select(-DateStatus,-DateLatestSignup)
+
+
+```
+
+---
+
+## Correlation funnel
+
+```{r}
+library(correlationfunnel)
+
+df_binned <- df %>%
+  binarize(n_bins = 5, thresh_infreq = 0.01, name_infreq = "OTHER", one_hot = TRUE)
+
+df_churn_corr <- df_binned %>%
+  correlate(Churned30__1)
+
+```
+
+---
+
+```{r}
+df_churn_corr %>%
+  plot_correlation_funnel()
+```
+
+---
+
+```{r}
+df_churn_corr %>%
+  arrange(desc(correlation)) %>%
+  top_n(15) %>%
+  plot_correlation_funnel()
+```
+
+---
+
+## Plotting Churn against the best predictors
+
+```{r}
+red   <- "#c51924"
+blue  <- "#028ccc"
+
+top_features <- df_churn_corr %>%
+  top_n(15) %>%
+  filter(feature != "Churned30") %>%
+  pull(feature) %>% 
+  as.vector()
+
+numeric_features <- df %>%
+  select(top_features) %>%
+  select_if(is.numeric) %>% 
+  names()
+
+categorical_features <- df %>%
+  select(top_features) %>%
+  select_if(is.factor) %>% 
+  names()
+```
+
+---
+
+Churn ~ Numeric variables
+
+```{r}
+p1 <- df %>%
+  select(Churned30,numeric_features) %>%
+  gather(variable, value,-Churned30) %>%
+  ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
+  facet_wrap(~variable,scales="free",ncol=3) +
+  geom_density(alpha = 0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 0, hjust = 1),
+        legend.position = "top",
+        legend.text = element_text(size=18),
+        legend.title = element_text(size=18)) +
+  scale_fill_manual(values=c(red,blue)) +
+  scale_colour_manual(values=c(red,blue))
+```
+---
+```{r}
+p1
+```
+
+---
+
+Churn ~ Categorical variables
+
+```{r}
+p2 <- df %>%
+  select(Churned30,categorical_features) %>%
+  gather(variable, value,-Churned30) %>%
+  mutate(value = ifelse(is.na(value),"na",value)) %>%
+  count(Churned30, variable, value) %>%
+  ggplot(aes(x = reorder(value,-n), y = n, fill = Churned30, color = Churned30)) +
+  facet_wrap(~ variable, ncol = 3, scales = "free") +
+  geom_bar(stat = "identity", alpha = 0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top",
+        legend.text = element_text(size=18),
+        legend.title = element_text(size=18)) +
+  scale_fill_manual(values=c(red,blue)) +
+  scale_colour_manual(values=c(red,blue))
+```
+---
+```{r}
+p2
+```
+
+---
+
+class: inverse, center, middle
+
+# Preprocessing
+
+---
+
+class: inverse, center, middle
+
+# Preprocess
+
+---
+

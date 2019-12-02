@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Churn Prediction with H2O AutoML</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Peer Christensen" />
+    <meta name="date" content="2019-12-05" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Churn Prediction with H2O AutoML
+### Peer Christensen
+### 2019-12-05
+
+---
+
+
+
+
+class: inverse, center, middle
+
+# EDA
+
+---
+
+
+```r
+library(tidyverse)
+```
+
+
+
+
+```r
+dim(df)
+```
+
+```
+## [1] 27465    67
+```
+
+
+### Checking for target class (im)balance
+
+
+```r
+table(df$Churned30)
+```
+
+```
+## 
+##     0     1 
+## 25948  1517
+```
+
+```r
+round(prop.table(table(df$Churned30)),3)*100
+```
+
+```
+## 
+##    0    1 
+## 94.5  5.5
+```
+
+---
+
+
+```r
+names(df[1:50])
+```
+
+```
+##  [1] "Churned30"                "SubscriptionCount"       
+##  [3] "DaysSinceLatestSignup"    "SubscriptionSignupSeason"
+##  [5] "DaysSinceLatestOrder"     "TotalOrderCount"         
+##  [7] "TotalNetRevenue"          "DaysSinceFirstOrder"     
+##  [9] "PlusOrderCount"           "PlusNetRevenue"          
+## [11] "PlusQuantityBought"       "PersonalSavingsTotal"    
+## [13] "PersonalSavings30days"    "PlusDigitalShare"        
+## [15] "F001"                     "F002"                    
+## [17] "F003"                     "F004"                    
+## [19] "F005"                     "F006"                    
+## [21] "F007"                     "F008"                    
+## [23] "F009"                     "F010"                    
+## [25] "F011"                     "F012"                    
+## [27] "F013"                     "F014"                    
+## [29] "F015"                     "F016"                    
+## [31] "F017"                     "F018"                    
+## [33] "F019"                     "F020"                    
+## [35] "F021"                     "F022"                    
+## [37] "F023"                     "S001"                    
+## [39] "S002"                     "S003"                    
+## [41] "S004"                     "S005"                    
+## [43] "S006"                     "S007"                    
+## [45] "S008"                     "StreamingCost"           
+## [47] "PremiumMembershipSource"  "AppLogins"               
+## [49] "RFM_cluster"              "DateStatus"
+```
+
+---
+
+
+
+---
+
+## Correlation funnel
+
+
+```r
+library(correlationfunnel)
+
+df_binned &lt;- df %&gt;%
+  binarize(n_bins = 5, thresh_infreq = 0.01, name_infreq = "OTHER", one_hot = TRUE)
+
+df_churn_corr &lt;- df_binned %&gt;%
+  correlate(Churned30__1)
+```
+
+---
+
+
+```r
+df_churn_corr %&gt;%
+  plot_correlation_funnel()
+```
+
+![](pres_Rladies_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+df_churn_corr %&gt;%
+  arrange(desc(correlation)) %&gt;%
+  top_n(15) %&gt;%
+  plot_correlation_funnel()
+```
+
+![](pres_Rladies_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+---
+
+## Plotting Churn against the best predictors
+
+
+```r
+red   &lt;- "#c51924"
+blue  &lt;- "#028ccc"
+
+top_features &lt;- df_churn_corr %&gt;%
+  top_n(15) %&gt;%
+  filter(feature != "Churned30") %&gt;%
+  pull(feature) %&gt;% 
+  as.vector()
+
+numeric_features &lt;- df %&gt;%
+  select(top_features) %&gt;%
+  select_if(is.numeric) %&gt;% 
+  names()
+
+categorical_features &lt;- df %&gt;%
+  select(top_features) %&gt;%
+  select_if(is.factor) %&gt;% 
+  names()
+```
+
+---
+
+Churn ~ Numeric variables
+
+
+```r
+p1 &lt;- df %&gt;%
+  select(Churned30,numeric_features) %&gt;%
+  gather(variable, value,-Churned30) %&gt;%
+  ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
+  facet_wrap(~variable,scales="free",ncol=2) +
+  geom_density(alpha = 0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 0, hjust = 1),
+        legend.position = "top",
+        legend.text = element_text(size=18),
+        legend.title = element_text(size=18)) +
+  scale_fill_manual(values=c(red,blue)) +
+  scale_colour_manual(values=c(red,blue))
+```
+---
+
+```r
+p1
+```
+
+![](pres_Rladies_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+
+Churn ~ Categorical variables
+
+
+```r
+p2 &lt;- df %&gt;%
+  select(Churned30,categorical_features) %&gt;%
+  gather(variable, value,-Churned30) %&gt;%
+  mutate(value = ifelse(is.na(value),"na",value)) %&gt;%
+  count(Churned30, variable, value) %&gt;%
+  ggplot(aes(x = reorder(value,-n), y = n, fill = Churned30, color = Churned30)) +
+  facet_wrap(~ variable, ncol = 3, scales = "free") +
+  geom_bar(stat = "identity", alpha = 0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top",
+        legend.text = element_text(size=18),
+        legend.title = element_text(size=18)) +
+  scale_fill_manual(values=c(red,blue)) +
+  scale_colour_manual(values=c(red,blue))
+```
+---
+
+```r
+p2
+```
+
+![](pres_Rladies_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+---
+
+class: inverse, center, middle
+
+# Preprocessing
+
+---
+
+class: inverse, center, middle
+
+# Preprocess
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
