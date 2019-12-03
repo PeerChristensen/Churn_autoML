@@ -6,22 +6,26 @@ Sys.setlocale("LC_ALL","English")
 
 library(tidyverse)
 library(correlationfunnel)
+library(caret)
+library(VGAM)
 
 red   <- "#c51924"
 blue  <- "#028ccc"
 
-df <- read_csv("new_churn_training5.csv") %>%
+df <- read_csv("new_churn_training.csv") %>%
   mutate(Perm_anyperm = factor(Perm_anyperm),
-         IsFree = factor(IsFree),
          Churned30 = factor(Churned30),
        Perm_recommendations = factor(Perm_recommendations),
        Perm_newsletter = factor(Perm_newsletter),
        MatasUser = factor(MatasUser),
        CoopUser = factor(CoopUser)) %>%
   mutate_if(is.character,factor) %>%
-  select(-Customer_Key, -IsFree) %>%
+  select(-Customer_Key, -IsFree,-PremiumEbookRatio) %>%
   drop_na() %>%
   filter(DaysSinceLatestSignup > 30) 
+
+#class balance
+prop.table(table(df$Churned30))
 
 # add F_S ratio
 
@@ -80,19 +84,26 @@ ggsave("figures/correlation_funnel_churn.png",height=7, width = 7)
 ####################################################
 # Distributions
 
+#choosing the best predictors for exploration
+# top correlation with churn
+top_features <- df_churn_corr %>%
+  top_n(15) %>%
+  filter(feature != "Churned30") %>%
+  pull(feature) %>% 
+  as.vector()
 
-# Churned30 ~ numeric
-num_vars <- df %>%
-  select_if(is.numeric) %>%
+numeric_features <- df %>%
+  select(top_features) %>%
+  select_if(is.numeric) %>% 
+  names()
+
+categorical_features <- df %>%
+  select(top_features) %>%
+  select_if(is.factor) %>% 
   names()
 
 df %>%
-  select(Churned30,num_vars) %>%
-  select(Churned30,DaysSinceLatestSignup,
-         DateLatestSignup_month,
-         DaysSinceFirstOrder,PersonalSavingsTotal,
-         PlusOrderCount,
-         TotalOrderCount) %>%
+  select(Churned30,numeric_features) %>%
   gather(variable, value,-Churned30) %>%
   ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
   facet_wrap(~variable,scales="free",ncol=2) +
@@ -109,12 +120,7 @@ ggsave("figures/eda_numeric.png")
 # Churned30 ~ numeric - transformed
 
 df %>%
-  select(Churned30,num_vars) %>%
-  select(Churned30,DaysSinceLatestSignup,
-         DateLatestSignup_month,
-         DaysSinceFirstOrder,PersonalSavingsTotal,
-         PlusOrderCount,
-         TotalOrderCount) %>%
+  select(Churned30,numeric_features) %>%
   mutate_if(is.numeric, yeo.johnson,lambda=.9) %>%
   gather(variable, value,-Churned30) %>%
   ggplot(aes(x=value, fill = Churned30,colour=Churned30)) +
@@ -132,7 +138,7 @@ ggsave("figures/eda_numeric_transformed.png")
 # Churned30 ~ categorical
 
 df %>%
-  select_if(is.factor) %>%
+  select(Churned30, categorical_features) %>%
   gather(variable, value, -Churned30) %>%
   mutate(value = ifelse(is.na(value),"na",value)) %>%
   count(Churned30, variable, value) %>%
@@ -151,7 +157,7 @@ ggsave("figures/eda_categorical.png", height=10, width = 7)
 # Churned30 ~ categorical - proportions
 
 df %>%
-  select_if(is.factor) %>%
+  select(Churned30, categorical_features) %>%
   gather(variable, value, -Churned30) %>%
   mutate(value = ifelse(is.na(value),"na",value)) %>%
   count(Churned30, variable, value) %>%
@@ -169,4 +175,3 @@ df %>%
   scale_fill_manual(values=c(red,blue)) +
   scale_colour_manual(values=c(red,blue))
 ggsave("figures/eda_categorical_proportions.png", height=10, width = 7)
-
