@@ -19,7 +19,7 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models10/{list.files('models10', pattern = 'best')}")
+model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
