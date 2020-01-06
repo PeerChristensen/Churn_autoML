@@ -7,48 +7,51 @@ Sys.setlocale("LC_ALL","English")
 library(h2o)
 library(tidyverse)
 library(recipes)
+library(RODBC)
 
 h2o.init(nthreads = -1)
 
 ##################################################
 # LOAD & PREPROCESS NEW DATA
 
-new_data <- read_csv("churn_data_current.csv") %>%
+channel <-odbcConnect("saxo034", uid="R", pwd="sqlR2017")
+
+sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnPredict3]"
+
+df <- sqlQuery(channel, sqlquery) %>% 
+  as_tibble() %>%
+  mutate(
+    Perm_anyperm    = factor(Perm_anyperm),
+    Perm_recommendations = factor(Perm_recommendations),
+    Perm_newsletter = factor(Perm_newsletter),
+    MatasUser       = factor(MatasUser),
+    CoopUser        = factor(CoopUser)) %>%
   mutate_if(is.character,factor) %>%
-  dplyr::select(-`FirstOrderDate within 3 months`,
-                -IsFree,
-                -HasLittPref)
+  mutate_if(is.integer,as.numeric) %>%
+  drop_na()
 
-# 
-# df <- read_csv("new_churn_training5.csv") %>%
-#   mutate(Perm_anyperm = factor(Perm_anyperm),
-#          Churned30    = factor(Churned30),
-#          Perm_recommendations = factor(Perm_recommendations),
-#          Perm_newsletter      = factor(Perm_newsletter),
-#          MatasUser = factor(MatasUser),
-#          CoopUser  = factor(CoopUser)) %>%
-#   mutate_if(is.character, factor) %>%
-#   select(-IsFree,-HasLittPref) %>%
-#   drop_na() %>%
-#   filter(DaysSinceLatestSignup > 30)
+close(channel)
 
-Customer_Key <- new_data$Customer_Key
+Customer_Key <- df$Customer_Key
 
-new_data <- new_data %>%
+df <- df %>%
   select(-Customer_Key)
 
-new_data$AverageOrderSize <- new_data$TotalNetRevenue / new_data$TotalOrderCount
+#############################################
+# FEATURE ENGINEERING
 
-today <- max(as.Date(new_data$DateStatus)) 
+df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
+
+today <- max(as.Date(df$DateStatus)) 
 # today <- as.Date(now()) 
 
-new_data$DateLatestSignup <- today - lubridate::days(new_data$DaysSinceLatestSignup)
-new_data$DateLatestSignup_month <- lubridate::month(new_data$DateLatestSignup)
+df$DateLatestSignup <- today - lubridate::days(df$DaysSinceLatestSignup)
+df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
 
-new_data <- new_data %>%
+df <- df %>%
   dplyr::select(-DateStatus,-DateLatestSignup)
 
-# add F_S ratio
+# add F_S ratio an PCs
 
 f_lit_mean <- df %>% 
   select(starts_with("F0")) %>%
@@ -64,11 +67,11 @@ f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
 
 #PCA
 s_lit_vars <- df %>% 
-  select(starts_with("S0")) %>%
+  select(contains("S0")) %>%
   names()
 
 f_lit_vars <- df %>% 
-  select(starts_with("F0")) %>%
+  select(contains("F0")) %>%
   names()
 
 pca_s <- prcomp(df[s_lit_vars], scale = FALSE) 
@@ -82,15 +85,35 @@ df <- df %>%
     pc_f2 = pca_f$x[,2]
   )
 
-#remove original f-s variables
+# remove original f-s variables
 
 df <- df %>%
   select(-f_lit_vars,-s_lit_vars)
 
 
+# Postal code
+
+df <- df %>%
+  mutate(PostalCode = as.character(PostalCode)) %>%
+  mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
+  mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
+                                str_starts(PostalCode,"1") ~ "København",
+                                str_starts(PostalCode,"2") ~ "København og omegn",
+                                str_starts(PostalCode,"30") ~ "Nordsjælland",
+                                str_starts(PostalCode,"37") ~ "Bornholm",
+                                str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
+                                str_starts(PostalCode,"4") ~ "Sjælland og øer",
+                                str_starts(PostalCode,"5") ~ "Fyn",
+                                str_starts(PostalCode,"6") ~ "Sønderjylland",
+                                str_starts(PostalCode,"7") ~ "Vestjylland",
+                                str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
+                                str_starts(PostalCode,"8") ~ "Nordjylland",
+                                PostalCode == "Ukendt"     ~ "Ukendt")) %>%
+  mutate(PostalCode = as.factor(PostalCode))
+
 recipe_churn <- readRDS("recipe_preprocess.rds")
 
-new_data <- bake(recipe_churn, new_data = new_data) %>%
+new_data <- bake(recipe_churn, new_data = df) %>%
   select(-Churned30)
 
 new_hf <- as.h2o(new_data)
@@ -98,7 +121,7 @@ new_hf <- as.h2o(new_data)
 ############################################
 # LOAD MODEL
 
-model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
+model_path <- glue::glue("models/{list.files('models', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
@@ -112,7 +135,7 @@ table(predictions$predict)
 prop.table(table(predictions$predict))
 
 new_predictions <- predictions %>%
-  mutate(predict = if_else(p1 >= 0.138,1,0))
+  mutate(predict = if_else(p1 >= 0.6,1,0))
 
 table(new_predictions$predict)
 prop.table(table(new_predictions$predict))
@@ -152,15 +175,14 @@ new_data_Churn <- new_data_Churn %>%
   select(-Customer_Key)
 
 # run explain() on the explainer
-explanation <- lime::explain(x = new_data_Churn[1:100,], 
+explanation <- lime::explain(x = new_data_Churn[1:5,], 
                              explainer = explainer, 
                              labels = "p1",
                              n_features = 3,
-                             feature_select = "none",
                              kernel_width = 0.5)
 
 #lime::plot_explanations(explanation)
-#lime::plot_features(explanation)
+lime::plot_features(explanation)
 #ggsave("figures/local_explanation_churners.png",height = 10, width = 11)
 
 case_numbers <- tibble(Customer_Key = Customer_Key_churn,case = as.character(1:length(Customer_Key_churn)))

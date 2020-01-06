@@ -19,15 +19,35 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-model_path <- glue::glue("models10/{list.files('models10', pattern = 'best')}")
+model_path <- glue::glue("models/{list.files('models', pattern = 'best')}")
 
 mod <- h2o.loadModel(model_path)
 
-train_data  <- read_csv("preprocessed_data/train_data_new.csv") %>%
-  mutate(Churned30 = factor(Churned30))
+train_data  <- read_csv("preprocessed_data/train_data.csv") %>%
+  mutate_if(is.character,factor) %>%
+  mutate(
+    Perm_anyperm    = factor(Perm_anyperm),
+    Churned30       = factor(Churned30),
+    Perm_recommendations = factor(Perm_recommendations),
+    Perm_newsletter = factor(Perm_newsletter),
+    MatasUser       = factor(MatasUser),
+    CoopUser        = factor(CoopUser)) %>%
+  mutate_if(is.character,factor) %>%
+  mutate_if(is.integer,as.numeric) %>%
+  drop_na()
 
-test_data  <- read_csv("preprocessed_data/test_data_new.csv")  %>%
-  mutate(Churned30 = factor(Churned30))  
+test_data  <- read_csv("preprocessed_data/test_data.csv")  %>%
+  mutate_if(is.character,factor) %>%
+  mutate(
+    Perm_anyperm    = factor(Perm_anyperm),
+    Churned30       = factor(Churned30),
+    Perm_recommendations = factor(Perm_recommendations),
+    Perm_newsletter = factor(Perm_newsletter),
+    MatasUser       = factor(MatasUser),
+    CoopUser        = factor(CoopUser)) %>%
+  mutate_if(is.character,factor) %>%
+  mutate_if(is.integer,as.numeric) %>%
+  drop_na()
 
 Customer_Key <- test_data$Customer_Key
 
@@ -250,10 +270,6 @@ h2o.varimp_plot(mod, num_of_features = 15)
 ####################################################
 # LOCAL EXPLANATIONS
 
-# Xtrain <- as.data.frame(train_hf)
-# Xtest <- as.data.frame(test_hf)
-
-
 # run lime() on training set
 explainer <- lime::lime(x = train_data, 
                         model = mod)
@@ -388,7 +404,7 @@ scores_and_ntiles <- scores_and_ntiles %>%
 
 plot_input <- plotting_scope(prepared_input = scores_and_ntiles,scope="compare_datasets")
 
-save_path <- "C:/Users/pech/Desktop/Projects/Churn_2.0/figures/"
+#save_path <- "C:/Users/pech/Desktop/Projects/Churn_2.0/figures/"
 
 #Cumulative gains
 plot_cumgains(data = plot_input, highlight_ntile = 20,

@@ -8,26 +8,33 @@ library(tidyverse)
 library(h2o)
 library(caret)
 library(recipes)
+library(RODBC)
 
-# df <- read_csv("churn_data_training.csv") %>%
-df <- read_csv("new_churn_training5.csv") %>%
-  mutate(Perm_anyperm = factor(Perm_anyperm),
-         Churned30    = factor(Churned30),
-         Perm_recommendations = factor(Perm_recommendations),
-         Perm_newsletter      = factor(Perm_newsletter),
-         MatasUser = factor(MatasUser),
-         CoopUser  = factor(CoopUser)) %>%
-  mutate_if(is.character, factor) %>%
-  select(-IsFree) %>%
-  drop_na() %>%
-  filter(DaysSinceLatestSignup > 30)
+channel <-odbcConnect("saxo034", uid="R", pwd="sqlR2017")
+
+sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTrain3]"
+
+df <- sqlQuery(channel, sqlquery) %>% 
+  as_tibble() %>%
+  mutate(
+    Perm_anyperm    = factor(Perm_anyperm),
+    Churned30       = factor(Churned30),
+    Perm_recommendations = factor(Perm_recommendations),
+    Perm_newsletter = factor(Perm_newsletter),
+    MatasUser       = factor(MatasUser),
+    CoopUser        = factor(CoopUser)) %>%
+  mutate_if(is.character,factor) %>%
+  mutate_if(is.integer,as.numeric) %>%
+  drop_na()
+
+close(channel)
 
 Customer_Key <- df$Customer_Key
 
 df <- df %>%
   select(-Customer_Key)
 
-##################################################
+#############################################
 # FEATURE ENGINEERING
 
 df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
@@ -41,7 +48,7 @@ df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
 df <- df %>%
   dplyr::select(-DateStatus,-DateLatestSignup)
 
-# add F_S ratio
+# add F_S ratio an PCs
 
 f_lit_mean <- df %>% 
   select(starts_with("F0")) %>%
@@ -57,11 +64,11 @@ f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
 
 #PCA
 s_lit_vars <- df %>% 
-  select(starts_with("S0")) %>%
-           names()
+  select(contains("S0")) %>%
+  names()
 
 f_lit_vars <- df %>% 
-  select(starts_with("F0")) %>%
+  select(contains("F0")) %>%
   names()
 
 pca_s <- prcomp(df[s_lit_vars], scale = FALSE) 
@@ -75,10 +82,30 @@ df <- df %>%
     pc_f2 = pca_f$x[,2]
   )
 
-#remove original f-s variables
+# remove original f-s variables
 
 df <- df %>%
   select(-f_lit_vars,-s_lit_vars)
+
+# Postal code
+
+df <- df %>%
+  mutate(PostalCode = as.character(PostalCode)) %>%
+  mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
+  mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
+                                str_starts(PostalCode,"1") ~ "København",
+                                str_starts(PostalCode,"2") ~ "København og omegn",
+                                str_starts(PostalCode,"30") ~ "Nordsjælland",
+                                str_starts(PostalCode,"37") ~ "Bornholm",
+                                str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
+                                str_starts(PostalCode,"4") ~ "Sjælland og øer",
+                                str_starts(PostalCode,"5") ~ "Fyn",
+                                str_starts(PostalCode,"6") ~ "Sønderjylland",
+                                str_starts(PostalCode,"7") ~ "Vestjylland",
+                                str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
+                                str_starts(PostalCode,"8") ~ "Nordjylland",
+                                PostalCode == "Ukendt"     ~ "Ukendt"))
+
 
 ##################################################
 # FEATURE SELECTION
@@ -96,17 +123,10 @@ index <- createDataPartition(df$Churned30, p = 0.7, list = FALSE)
 train_data <- df[index, ]
 test_data  <- df[-index, ]
 
-index2 <- createDataPartition(test_data$Churned30, p = 0.5, list = FALSE)
-
-valid_data <- test_data[-index2, ]
-test_data <- test_data[index2, ]
-
 Customer_Key_train <- train_data$Customer_Key
-Customer_Key_valid <- valid_data$Customer_Key
 Customer_Key_test <- test_data$Customer_Key
 
 train_data <- train_data %>% select(-Customer_Key)
-valid_data <- valid_data %>% select(-Customer_Key)
 test_data  <- test_data %>% select(-Customer_Key)
 
 ####################################
@@ -124,35 +144,18 @@ recipe_churn <- recipe(Churned30 ~ ., train_data) %>%
 train_data <- bake(recipe_churn, new_data = train_data) %>%
   select(Churned30, everything())
 
-valid_data <- bake(recipe_churn, new_data = valid_data) %>%
-  select(Churned30, everything())
-
 test_data <- bake(recipe_churn, new_data = test_data) %>%
   select(Churned30, everything())
 
 # save recipe
 saveRDS(recipe_churn,"recipe_preprocess.rds")
 
-# train_data$Churned30 <- factor(train_data$Churned30)
-# valid_data$Churned30 <- factor(valid_data$Churned30)
-# test_data$Churned30  <- factor(test_data$Churned30)
-
 summary(train_data$Churned30, exact_quantiles = TRUE)
 summary(test_data$Churned30, exact_quantiles = TRUE)
-summary(valid_data$Churned30, exact_quantiles = TRUE)
 
 train_data$Customer_Key <- Customer_Key_train
-valid_data$Customer_Key <- Customer_Key_valid
 test_data$Customer_Key <- Customer_Key_test
 
-
-write_csv(train_data,"preprocessed_data/train_data_new.csv")
-write_csv(valid_data,"preprocessed_data/valid_data_new.csv")
-write_csv(test_data,"preprocessed_data/test_data_new.csv")
-
-#write_csv(train_data,"preprocessed_data/train_data.csv")
-#write_csv(valid_data,"preprocessed_data/valid_data.csv")
-#write_csv(test_data,"preprocessed_data/test_data.csv")
-
-
+write_csv(train_data,"preprocessed_data/train_data.csv")
+write_csv(test_data,"preprocessed_data/test_data.csv")
 

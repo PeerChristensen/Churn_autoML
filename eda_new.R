@@ -7,27 +7,46 @@ Sys.setlocale("LC_ALL","English")
 library(tidyverse)
 library(correlationfunnel)
 library(caret)
-library(VGAM)#
+library(VGAM)
+library(RODBC)
 
 red   <- "#c51924"
 blue  <- "#028ccc"
 
-df <- read_csv("new_churn_training.csv") %>%
-  mutate(Perm_anyperm = factor(Perm_anyperm),
-         Churned30 = factor(Churned30),
-       Perm_recommendations = factor(Perm_recommendations),
-       Perm_newsletter = factor(Perm_newsletter),
-       MatasUser = factor(MatasUser),
-       CoopUser = factor(CoopUser)) %>%
+channel <-odbcConnect("saxo034", uid="R", pwd="sqlR2017")
+
+sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTraining2]"
+
+df <- sqlQuery(channel, sqlquery) %>% 
+  as_tibble() %>%
+  mutate(
+    Perm_anyperm    = factor(Perm_anyperm),
+    Churned30       = factor(Churned30),
+    Perm_recommendations = factor(Perm_recommendations),
+    Perm_newsletter = factor(Perm_newsletter),
+    MatasUser       = factor(MatasUser),
+    CoopUser        = factor(CoopUser)) %>%
   mutate_if(is.character,factor) %>%
-  select(-Customer_Key, -IsFree,-PremiumEbookRatio) %>%
-  drop_na() %>%
-  filter(DaysSinceLatestSignup > 30) 
+  mutate_if(is.integer,as.numeric) %>%
+  select(-Customer_Key) %>%
+  drop_na()
 
 #class balance
 prop.table(table(df$Churned30))
 
-# add F_S ratio
+
+df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
+
+today <- max(as.Date(df$DateStatus)) 
+# today <- as.Date(now()) 
+
+df$DateLatestSignup <- today - lubridate::days(df$DaysSinceLatestSignup)
+df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
+
+df <- df %>%
+  dplyr::select(-DateStatus,-DateLatestSignup)
+
+# add F_S ratio an PCs
 
 f_lit_mean <- df %>% 
   select(starts_with("F0")) %>%
@@ -41,17 +60,30 @@ s_lit_mean <- df %>%
 
 f_ratio <- f_lit_mean / (s_lit_mean +f_lit_mean)
 
-df$AverageOrderSize <- df$TotalNetRevenue / df$TotalOrderCount
+#PCA
+s_lit_vars <- df %>% 
+  select(starts_with("S0")) %>%
+  names()
 
-today <- max(as.Date(df$DateStatus)) 
-# today <- as.Date(now()) 
+f_lit_vars <- df %>% 
+  select(starts_with("F0")) %>%
+  names()
 
-df$DateLatestSignup <- today - lubridate::days(df$DaysSinceLatestSignup)
-df$DateLatestSignup_month <- lubridate::month(df$DateLatestSignup)
+pca_s <- prcomp(df[s_lit_vars], scale = FALSE) 
+pca_f <- prcomp(df[f_lit_vars], scale = FALSE)
 
 df <- df %>%
-  dplyr::select(-DateStatus,-DateLatestSignup)
+  mutate(
+    pc_s1 = pca_s$x[,1],
+    pc_s2 = pca_s$x[,2],
+    pc_f1 = pca_f$x[,1],
+    pc_f2 = pca_f$x[,2]
+  )
 
+#remove original f-s variables
+
+df <- df %>%
+  select(-f_lit_vars,-s_lit_vars)
 
 ####################################################
 # Correlation funnel
@@ -143,7 +175,7 @@ df %>%
   mutate(value = ifelse(is.na(value),"na",value)) %>%
   count(Churned30, variable, value) %>%
   ggplot(aes(x = reorder(value,-n), y = n, fill = Churned30, color = Churned30)) +
-  facet_wrap(~ variable, ncol = 4, scales = "free") +
+  facet_wrap(~ variable, ncol = 3, scales = "free") +
   geom_bar(stat = "identity", alpha = 0.5) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
@@ -165,7 +197,7 @@ df %>%
   mutate(sum= sum(n)) %>%
   mutate(Proportion = n / sum * 100) %>%
   ggplot(aes(x = reorder(value,-n), y = Proportion, fill = Churned30, color = Churned30)) +
-  facet_wrap(~ variable, ncol = 5, scales = "free") +
+  facet_wrap(~ variable, ncol = 3, scales = "free") +
   geom_bar(stat = "identity", alpha = 0.5) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
