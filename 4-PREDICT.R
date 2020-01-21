@@ -186,7 +186,8 @@ explanation <- lime::explain(x = new_data_Churn,
 lime::plot_features(explanation)
 #ggsave("figures/local_explanation_churners.png",height = 10, width = 11)
 
-case_numbers <- tibble(Customer_Key = Customer_Key_churn,case = as.character(1:length(Customer_Key_churn)))
+case_numbers <- tibble(Customer_Key = Customer_Key_churn,
+                       case = as.character(1:length(Customer_Key_churn)))
 
 #prepare original data for joining
 df$Customer_Key <- Customer_Key
