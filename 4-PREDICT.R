@@ -93,23 +93,24 @@ df <- df %>%
 
 # Postal code
 
-df <- df %>%
-  mutate(PostalCode = as.character(PostalCode)) %>%
-  mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
-  mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
-                                str_starts(PostalCode,"1") ~ "København",
-                                str_starts(PostalCode,"2") ~ "København og omegn",
-                                str_starts(PostalCode,"30") ~ "Nordsjælland",
-                                str_starts(PostalCode,"37") ~ "Bornholm",
-                                str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
-                                str_starts(PostalCode,"4") ~ "Sjælland og øer",
-                                str_starts(PostalCode,"5") ~ "Fyn",
-                                str_starts(PostalCode,"6") ~ "Sønderjylland",
-                                str_starts(PostalCode,"7") ~ "Vestjylland",
-                                str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
-                                str_starts(PostalCode,"8") ~ "Nordjylland",
-                                PostalCode == "Ukendt"     ~ "Ukendt")) %>%
-  mutate(PostalCode = as.factor(PostalCode))
+# df <- df %>%
+#   mutate(PostalCode = as.character(PostalCode)) %>%
+#   mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
+#   mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
+#                                 str_starts(PostalCode,"1") ~ "København",
+#                                 str_starts(PostalCode,"2") ~ "København og omegn",
+#                                 str_starts(PostalCode,"30") ~ "Nordsjælland",
+#                                 str_starts(PostalCode,"37") ~ "Bornholm",
+#                                 str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
+#                                 str_starts(PostalCode,"4") ~ "Sjælland og øer",
+#                                 str_starts(PostalCode,"5") ~ "Fyn",
+#                                 str_starts(PostalCode,"6") ~ "Sønderjylland",
+#                                 str_starts(PostalCode,"7") ~ "Vestjylland",
+#                                 str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
+#                                 str_starts(PostalCode,"8") ~ "Nordjylland",
+#                                 PostalCode == "Ukendt"     ~ "Ukendt")) %>%
+#   mutate(PostalCode = if_else(is.na(PostalCode),"Ukendt",PostalCode)) %>%
+#   mutate(PostalCode = as.factor(PostalCode))
 
 recipe_churn <- readRDS("recipe_preprocess.rds")
 
@@ -135,7 +136,7 @@ table(predictions$predict)
 prop.table(table(predictions$predict))
 
 new_predictions <- predictions %>%
-  mutate(predict = if_else(p1 >= 0.6,1,0))
+  mutate(predict = if_else(p1 >= f2_threshold,1,0))
 
 table(new_predictions$predict)
 prop.table(table(new_predictions$predict))
@@ -175,10 +176,10 @@ new_data_Churn <- new_data_Churn %>%
   select(-Customer_Key)
 
 # run explain() on the explainer
-explanation <- lime::explain(x = new_data_Churn[1:5,], 
+explanation <- lime::explain(x = new_data_Churn, 
                              explainer = explainer, 
                              labels = "p1",
-                             n_features = 3,
+                             n_features = 6,
                              kernel_width = 0.5)
 
 #lime::plot_explanations(explanation)
@@ -187,11 +188,39 @@ lime::plot_features(explanation)
 
 case_numbers <- tibble(Customer_Key = Customer_Key_churn,case = as.character(1:length(Customer_Key_churn)))
 
+#prepare original data for joining
+df$Customer_Key <- Customer_Key
+
+df_long <- df %>% map_df(as.character) %>%pivot_longer(-Customer_Key,names_to ="feature")
+
 churn_output_explanation <- explanation %>% 
-  dplyr::select(case, feature,feature_weight,feature_desc) %>%
+  dplyr::select(case, feature,feature_weight) %>%
+  filter(feature_weight >0) %>%
+  group_by(case) %>%
+  top_n(3) %>%
+  ungroup() %>%
   left_join(case_numbers) %>%
-  select(Customer_Key, everything()) %>%
-  left_join(new_predictions)
+  full_join(new_predictions) %>%
+  select(Customer_Key,feature,probability = p1) %>%
+  #join actual data
+  mutate(Customer_Key = as.character(Customer_Key)) %>%
+  inner_join(df_long, by = c("Customer_Key","feature")) %>%
+  group_by(Customer_Key) %>%
+  mutate(explanation_num = paste0("explanation",row_number()),
+         value_num = paste0("value",row_number())) %>%
+  # pivot_wider
+  pivot_wider(id_cols=c(Customer_Key, probability),
+              names_from = c(explanation_num,value_num),
+              values_from = c(feature,value))
+
+new_predictions2 <- new_predictions %>%
+  mutate(Customer_Key = as.character(Customer_Key)) %>%
+         select(Customer_Key,probability=p1)
+
+colnames(churn_output_explanation) <- c("Customer_Key","probability","explanation1","explanation2","explanation3","value1","value2","value3")
+churn_output_explanation <- churn_output_explanation %>% select(Customer_Key,probability,explanation1,value1,explanation2,value2,explanation3,value3)
+
+churn_output_explanation <- churn_output_explanation %>% right_join(new_predictions2)
 
 write_csv(churn_output_explanation,"output_data/churn_output_explanation.csv")
 
