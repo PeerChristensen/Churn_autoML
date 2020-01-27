@@ -19,11 +19,8 @@ h2o.init()
 ####################################################
 # LOAD MODEL AND TEST SET
 
-<<<<<<< HEAD
+
 model_path <- glue::glue("models/{list.files('models', pattern = 'best')}")
-=======
-model_path <- glue::glue("models7/{list.files('models7', pattern = 'best')}")
->>>>>>> 45ca79a3b73ed6484fe597f13ddfa8d7735b546d
 
 mod <- h2o.loadModel(model_path)
 
@@ -94,6 +91,8 @@ intersect_max <- metrics %>% filter(round(tpr,2) == round(tnr,2)) %>%
   
 f2_threshold <- metrics %>% filter(f2 == max(f2)) %>% pull(threshold)
 
+# save threshold
+write_rds(f2_threshold,"f2_threshold.rds")
 
 f2_max <-  metrics %>% filter(f2 == max(f2)) %>% pull(f2)
 

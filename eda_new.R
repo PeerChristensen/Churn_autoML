@@ -15,7 +15,7 @@ blue  <- "#028ccc"
 
 channel <-odbcConnect("saxo034", uid="R", pwd="sqlR2017")
 
-sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTrain3]"
+sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTrain2020]"
 
 df <- sqlQuery(channel, sqlquery) %>% 
   as_tibble() %>%
@@ -30,6 +30,8 @@ df <- sqlQuery(channel, sqlquery) %>%
   mutate_if(is.integer,as.numeric) %>%
   select(-Customer_Key) %>%
   drop_na()
+
+df <- df %>% select(-missing_col_names)
 
 #class balance
 prop.table(table(df$Churned30))

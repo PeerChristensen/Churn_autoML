@@ -12,7 +12,7 @@ library(RODBC)
 
 channel <-odbcConnect("saxo034", uid="R", pwd="sqlR2017")
 
-sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTraining2]"
+sqlquery <- "SELECT * FROM [DataMartMisc].[machinelearning].[ChurnTrain2020]"
 
 df <- sqlQuery(channel, sqlquery) %>% 
   as_tibble() %>%
@@ -26,6 +26,8 @@ df <- sqlQuery(channel, sqlquery) %>%
   mutate_if(is.character,factor) %>%
   mutate_if(is.integer,as.numeric) %>%
   drop_na()
+
+df <- df %>% select(-missing_col_names)
 
 close(channel)
 
@@ -87,26 +89,26 @@ df <- df %>%
 df <- df %>%
   select(-f_lit_vars,-s_lit_vars)
 
-# Postal code - to be added, problem med nye variabler der er NuLL når Churn == 1
-# 
-# df <- df %>%
-#   mutate(PostalCode = as.character(PostalCode)) %>%
-#   mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
-#   mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
-#                                 str_starts(PostalCode,"1") ~ "København",
-#                                 str_starts(PostalCode,"2") ~ "København og omegn",
-#                                 str_starts(PostalCode,"30") ~ "Nordsjælland",
-#                                 str_starts(PostalCode,"37") ~ "Bornholm",
-#                                 str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
-#                                 str_starts(PostalCode,"4") ~ "Sjælland og øer",
-#                                 str_starts(PostalCode,"5") ~ "Fyn",
-#                                 str_starts(PostalCode,"6") ~ "Sønderjylland",
-#                                 str_starts(PostalCode,"7") ~ "Vestjylland",
-#                                 str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
-#                                 str_starts(PostalCode,"8") ~ "Nordjylland",
-#                                 PostalCode == "Ukendt"     ~ "Ukendt")) %>%
-#   mutate(PostalCode = if_else(is.na(PostalCode),"Ukendt",PostalCode)) %>%
-#   mutate(PostalCode = as.factor(PostalCode))
+#Postal code - to be added, problem med nye variabler der er NuLL når Churn == 1
+
+df <- df %>%
+  mutate(PostalCode = as.character(PostalCode)) %>%
+  mutate(PostalCode = if_else(str_length(PostalCode) == 4,PostalCode,"Ukendt")) %>%
+  mutate(PostalCode = case_when(str_starts(PostalCode,"0") ~ "organisationer og virksomheder",
+                                str_starts(PostalCode,"1") ~ "København",
+                                str_starts(PostalCode,"2") ~ "København og omegn",
+                                str_starts(PostalCode,"30") ~ "Nordsjælland",
+                                str_starts(PostalCode,"37") ~ "Bornholm",
+                                str_starts(PostalCode,"38|39") ~ "Grønland og Færøerne",
+                                str_starts(PostalCode,"4") ~ "Sjælland og øer",
+                                str_starts(PostalCode,"5") ~ "Fyn",
+                                str_starts(PostalCode,"6") ~ "Sønderjylland",
+                                str_starts(PostalCode,"7") ~ "Vestjylland",
+                                str_starts(PostalCode,"8") ~ "Øst- og Midtjylland",
+                                str_starts(PostalCode,"8") ~ "Nordjylland",
+                                PostalCode == "Ukendt"     ~ "Ukendt")) %>%
+  mutate(PostalCode = if_else(is.na(PostalCode),"Ukendt",PostalCode)) %>%
+  mutate(PostalCode = as.factor(PostalCode))
 
 
 ##################################################

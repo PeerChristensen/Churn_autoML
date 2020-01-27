@@ -84,7 +84,7 @@ for (i in 1:nrow(aml@leaderboard)) {
 }
 
 # rename file to identify the best model
-aml@leader@model_id
+file <- paste0("models/",aml@leader@model_id)
 
-
+file.rename(file, paste0(file,"_best"))
 
